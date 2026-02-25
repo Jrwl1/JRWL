@@ -47,9 +47,4 @@
     <circle cx="1120" cy="344" r="4"/>
   </g>
 
-  <g fill="#AEBBD0" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="17" font-weight="500" letter-spacing="0.08em">
-    <text x="184" y="98">MARK / GRID ANCHOR</text>
-    <text x="466" y="420">WORDMARK / SYSTEM LINE</text>
-    <text x="920" y="150">JRWL LOCKUP MAP</text>
-  </g>
 </svg>
