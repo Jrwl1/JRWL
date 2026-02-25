@@ -4,20 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>JRWL</title>
-    <meta name="description" content="Portfolio of John Lindstrom, a junior software developer building reliable web systems. Current work includes Vesipolku, PNYX, and upcoming MERN web projects." />
+    <meta
+      name="description"
+      content="Portfolio of John Lindström, a junior software developer building reliable web systems. Current work includes Vesipolku, PNYX, and active web prototypes."
+      data-i18n-content="meta.description"
+    />
 
     <link rel="canonical" href="https://jrwl.io" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="John Lindstrom" />
-    <meta property="og:title" content="John Lindstrom - Junior Software Developer" />
-    <meta property="og:description" content="Junior software developer focused on dependable, long-lived systems. Building Vesipolku and other products." />
+    <meta property="og:site_name" content="John Lindström" data-i18n-content="meta.siteName" />
+    <meta property="og:title" content="John Lindström - Junior Software Developer" data-i18n-content="meta.ogTitle" />
+    <meta
+      property="og:description"
+      content="Junior software developer focused on dependable, long-lived systems. Building Vesipolku and other products."
+      data-i18n-content="meta.ogDescription"
+    />
     <meta property="og:url" content="https://jrwl.io" />
     <meta property="og:image" content="https://jrwl.io/assets/jrwl-badge.svg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="John Lindstrom - Junior Software Developer" />
+    <meta name="twitter:title" content="John Lindström - Junior Software Developer" data-i18n-content="meta.twitterTitle" />
     <meta
       name="twitter:description"
       content="Portfolio site for a junior software developer building practical products with structure, ownership, and long-term thinking."
+      data-i18n-content="meta.twitterDescription"
     />
     <meta name="twitter:image" content="https://jrwl.io/assets/jrwl-badge.svg" />
 
@@ -41,55 +50,61 @@
 
     <div class="site-shell">
       <header class="site-header">
-        <a class="brand" href="#hero" aria-label="JRWL home anchor">
-          <img class="brand-logo" src="assets/jrwl-logo.svg" alt="JRWL logo" />
+        <a class="brand" href="#hero" aria-label="JRWL home anchor" data-i18n-aria-label="header.brandAria">
+          <img class="brand-logo" src="assets/jrwl-logo.svg" alt="JRWL logo" data-i18n-alt="header.brandAlt" />
         </a>
 
-        <nav class="header-nav" aria-label="Primary section navigation">
-          <a class="header-link" href="#hero" data-scroll>Home</a>
-          <a class="header-link" href="#projects" data-scroll>Projects</a>
-          <a class="header-link" href="#skills" data-scroll>Skills</a>
-          <a class="header-link" href="#about" data-scroll>About</a>
-          <a class="header-link" href="#contact" data-scroll>Contact</a>
+        <div class="lang-switch" role="group" aria-label="Language selector" data-i18n-aria-label="lang.selectorAria">
+          <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+          <button class="lang-btn" type="button" data-lang="fi" aria-pressed="false">FI</button>
+          <button class="lang-btn" type="button" data-lang="sv" aria-pressed="false">SV</button>
+        </div>
+
+        <nav class="header-nav" aria-label="Primary section navigation" data-i18n-aria-label="header.navAria">
+          <a class="header-link" href="#hero" data-scroll data-i18n="nav.home">Home</a>
+          <a class="header-link" href="#projects" data-scroll data-i18n="nav.projects">Projects</a>
+          <a class="header-link" href="#skills" data-scroll data-i18n="nav.skills">Skills</a>
+          <a class="header-link" href="#about" data-scroll data-i18n="nav.about">About</a>
+          <a class="header-link" href="#contact" data-scroll data-i18n="nav.contact">Contact</a>
         </nav>
       </header>
 
       <main>
         <section id="hero" class="panel hero reveal" data-reveal-delay="0" data-parallax>
           <div class="hero-copy">
-            <p class="kicker">Junior Software Developer | Turku, Finland</p>
-            <h1>I build software that holds up in real use.</h1>
-            <p class="lead">
+            <p class="kicker" data-i18n="hero.kicker">Junior Software Developer | Turku, Finland</p>
+            <h1 data-i18n="hero.title">I build software that holds up in real use.</h1>
+            <p class="lead" data-i18n="hero.lead">
               I am a solo developer building practical web products. My current live app, Vesipolku, helps water
               utility finance teams model long-term investments and pricing decisions.
             </p>
             <div class="cta-row">
-              <a class="btn btn-primary" href="https://vesipolku.jrwl.io" target="_blank" rel="noreferrer noopener" data-pulse>
+              <a class="btn btn-primary" href="https://vesipolku.jrwl.io" target="_blank" rel="noreferrer noopener" data-pulse data-i18n="hero.ctaPrimary">
                 Open vesipolku.jrwl.io
               </a>
-              <a class="btn btn-ghost" href="#projects">
+              <a class="btn btn-ghost" href="#projects" data-i18n="hero.ctaSecondary">
                 View projects
               </a>
             </div>
-            <ul class="hero-metrics" aria-label="Project status metrics">
+            <ul class="hero-metrics" aria-label="Project status metrics" data-i18n-aria-label="hero.metricsAria">
               <li>
-                <span class="metric-value">Solo</span>
-                <span class="metric-label">Built and maintained independently</span>
+                <span class="metric-value" data-i18n="hero.metric1Value">Solo</span>
+                <span class="metric-label" data-i18n="hero.metric1Label">Built and maintained independently</span>
               </li>
               <li>
-                <span class="metric-value">1 Live</span>
-                <span class="metric-label">Production app available now</span>
+                <span class="metric-value" data-i18n="hero.metric2Value">1 Live</span>
+                <span class="metric-label" data-i18n="hero.metric2Label">Production app available now</span>
               </li>
               <li>
-                <span class="metric-value">3 Building</span>
-                <span class="metric-label">Active projects in progress</span>
+                <span class="metric-value" data-i18n="hero.metric3Value">3 Building</span>
+                <span class="metric-label" data-i18n="hero.metric3Label">Active projects in progress</span>
               </li>
             </ul>
           </div>
 
           <div class="hero-art">
             <div class="hero-logo-wrap">
-              <img class="hero-logo" src="assets/jrwl-logo.svg" alt="JRWL full logo" />
+              <img class="hero-logo" src="assets/jrwl-logo.svg" alt="JRWL full logo" data-i18n-alt="hero.logoAlt" />
             </div>
             <img class="hero-map" src="assets/jrwl-logo-hero-map.svg" alt="" aria-hidden="true" />
           </div>
@@ -97,16 +112,22 @@
 
         <section id="projects" class="panel reveal" data-reveal-delay="120">
           <header class="section-head">
-            <h2>Selected projects</h2>
-            <p>One live app, one product in development, and two website prototypes online.</p>
+            <h2 data-i18n="projects.title">Selected projects</h2>
+            <p data-i18n="projects.lead">One live app, one product in development, and two website prototypes online.</p>
           </header>
 
           <div class="card-grid">
             <article class="service-card reveal" data-tilt data-reveal-delay="40">
-              <a href="https://vesipolku.jrwl.io" target="_blank" rel="noreferrer noopener" aria-label="Open vesipolku.jrwl.io">
-                <p class="chipline"><span class="status-dot status-live">Live</span><span>Water utility finance platform</span></p>
+              <a
+                href="https://vesipolku.jrwl.io"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Open vesipolku.jrwl.io"
+                data-i18n-aria-label="projects.vesipolkuAria"
+              >
+                <p class="chipline"><span class="status-dot status-live" data-i18n="status.live">Live</span><span data-i18n="projects.vesipolkuTag">Water utility finance platform</span></p>
                 <h3>Vesipolku</h3>
-                <p>
+                <p data-i18n="projects.vesipolkuDesc">
                   Vesipolku helps water utility finance teams import company data through a public API, model future
                   investment scenarios, and estimate both current pricing and yearly increases needed to fund them.
                 </p>
@@ -115,10 +136,10 @@
             </article>
 
             <article class="service-card reveal" data-tilt data-reveal-delay="80">
-              <div class="service-card-body" role="group" aria-label="PNYX project in development">
-                <p class="chipline"><span class="status-dot status-build">In development</span><span>Political accountability platform</span></p>
+              <div class="service-card-body" role="group" aria-label="PNYX project in development" data-i18n-aria-label="projects.pnyxAria">
+                <p class="chipline"><span class="status-dot status-build" data-i18n="status.inDevelopment">In development</span><span data-i18n="projects.pnyxTag">Political accountability platform</span></p>
                 <h3>PNYX</h3>
-                <p>
+                <p data-i18n="projects.pnyxDesc">
                   PNYX tracks political promises with sources and timeline status so accountability is visible, not
                   just discussed.
                 </p>
@@ -126,10 +147,16 @@
             </article>
 
             <article class="service-card reveal" data-tilt data-reveal-delay="120">
-              <a href="https://probocons.surge.sh" target="_blank" rel="noreferrer noopener" aria-label="Open probocons.surge.sh prototype">
-                <p class="chipline"><span class="status-dot status-play">Prototype</span><span>Consulting website</span></p>
+              <a
+                href="https://probocons.surge.sh"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Open probocons.surge.sh prototype"
+                data-i18n-aria-label="projects.proboconsAria"
+              >
+                <p class="chipline"><span class="status-dot status-play" data-i18n="status.prototype">Prototype</span><span data-i18n="projects.proboconsTag">Consulting website</span></p>
                 <h3>Probocons</h3>
-                <p>
+                <p data-i18n="projects.proboconsDesc">
                   Finnish consulting site prototype for ProboCons Oy, focused on occupational healthcare service
                   contract development, pricing insight, and direct contact workflow.
                 </p>
@@ -138,10 +165,16 @@
             </article>
 
             <article class="service-card reveal" data-tilt data-reveal-delay="160">
-              <a href="https://yhdessa-web.vercel.app/" target="_blank" rel="noreferrer noopener" aria-label="Open yhdessa-web.vercel.app prototype">
-                <p class="chipline"><span class="status-dot status-play">Prototype</span><span>Speech therapy website</span></p>
+              <a
+                href="https://yhdessa-web.vercel.app/"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Open yhdessa-web.vercel.app prototype"
+                data-i18n-aria-label="projects.yhdessaAria"
+              >
+                <p class="chipline"><span class="status-dot status-play" data-i18n="status.prototype">Prototype</span><span data-i18n="projects.yhdessaTag">Speech therapy website</span></p>
                 <h3>Yhdessä</h3>
-                <p>
+                <p data-i18n="projects.yhdessaDesc">
                   Finnish speech therapy service website prototype with multilingual navigation, service presentation,
                   and direct contact flow.
                 </p>
@@ -150,10 +183,10 @@
             </article>
 
             <article class="service-card reveal" data-tilt data-reveal-delay="200">
-              <a href="#hero" aria-label="Return to top">
-                <p class="chipline"><span class="status-dot status-live">Live</span><span>Portfolio and contact hub</span></p>
-                <h3>JRWL Landing Page</h3>
-                <p>
+              <a href="#hero" aria-label="Return to top" data-i18n-aria-label="projects.landingAria">
+                <p class="chipline"><span class="status-dot status-live" data-i18n="status.live">Live</span><span data-i18n="projects.landingTag">Portfolio and contact hub</span></p>
+                <h3 data-i18n="projects.landingName">JRWL Landing Page</h3>
+                <p data-i18n="projects.landingDesc">
                   This site is my portfolio home: current work, status, and direct contact.
                 </p>
                 <span class="arrow" aria-hidden="true">↗</span>
@@ -164,47 +197,47 @@
 
         <section id="skills" class="panel reveal skills-panel" data-reveal-delay="190">
           <header class="section-head">
-            <h2>Technical skills</h2>
+            <h2 data-i18n="skills.title">Technical skills</h2>
           </header>
 
           <div class="skills-grid">
             <article class="skill-card reveal" data-reveal-delay="40">
-              <h3>Core languages</h3>
-              <ul class="skill-lines" aria-label="Core programming languages">
-                <li>TypeScript</li>
-                <li>JavaScript</li>
-                <li>C#</li>
+              <h3 data-i18n="skills.core.title">Core languages</h3>
+              <ul class="skill-lines" aria-label="Core programming languages" data-i18n-aria-label="skills.coreAria">
+                <li data-i18n="skills.core.one">TypeScript</li>
+                <li data-i18n="skills.core.two">JavaScript</li>
+                <li data-i18n="skills.core.three">C#</li>
               </ul>
             </article>
 
             <article class="skill-card reveal" data-reveal-delay="80">
-              <h3>Frameworks and platforms</h3>
-              <ul class="skill-lines" aria-label="Frameworks and platforms">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>NestJS</li>
-                <li>Express</li>
-                <li>Unity (XR)</li>
+              <h3 data-i18n="skills.frameworks.title">Frameworks and platforms</h3>
+              <ul class="skill-lines" aria-label="Frameworks and platforms" data-i18n-aria-label="skills.frameworksAria">
+                <li data-i18n="skills.frameworks.one">React</li>
+                <li data-i18n="skills.frameworks.two">Next.js</li>
+                <li data-i18n="skills.frameworks.three">NestJS</li>
+                <li data-i18n="skills.frameworks.four">Express</li>
+                <li data-i18n="skills.frameworks.five">Unity (XR)</li>
               </ul>
             </article>
 
             <article class="skill-card reveal" data-reveal-delay="120">
-              <h3>Databases and data</h3>
-              <ul class="skill-lines" aria-label="Databases and data tools">
-                <li>PostgreSQL + Prisma</li>
-                <li>MongoDB + Mongoose</li>
-                <li>MySQL</li>
+              <h3 data-i18n="skills.data.title">Databases and data</h3>
+              <ul class="skill-lines" aria-label="Databases and data tools" data-i18n-aria-label="skills.dataAria">
+                <li data-i18n="skills.data.one">PostgreSQL + Prisma</li>
+                <li data-i18n="skills.data.two">MongoDB + Mongoose</li>
+                <li data-i18n="skills.data.three">MySQL</li>
               </ul>
             </article>
 
             <article class="skill-card reveal" data-reveal-delay="160">
-              <h3>Workflow and delivery</h3>
-              <ul class="skill-lines" aria-label="Workflow and delivery stack">
-                <li>pnpm workspaces + Turborepo</li>
-                <li>Git/GitHub + structured commits</li>
-                <li>ESLint + Prettier + Husky</li>
-                <li>Jest + Vitest + Playwright</li>
-                <li>Vercel, Railway, Surge, self-managed VPS</li>
+              <h3 data-i18n="skills.workflow.title">Workflow and delivery</h3>
+              <ul class="skill-lines" aria-label="Workflow and delivery stack" data-i18n-aria-label="skills.workflowAria">
+                <li data-i18n="skills.workflow.one">pnpm workspaces + Turborepo</li>
+                <li data-i18n="skills.workflow.two">Git/GitHub + structured commits</li>
+                <li data-i18n="skills.workflow.three">ESLint + Prettier + Husky</li>
+                <li data-i18n="skills.workflow.four">Jest + Vitest + Playwright</li>
+                <li data-i18n="skills.workflow.five">Vercel, Railway, Surge, self-managed VPS</li>
               </ul>
             </article>
           </div>
@@ -212,46 +245,53 @@
 
         <section id="about" class="panel about-grid reveal" data-reveal-delay="240">
           <article class="panel about-panel">
-            <h2>How I work</h2>
-            <p>
+            <h2 data-i18n="about.title">How I work</h2>
+            <p data-i18n="about.lead">
               I am a junior software developer with hands-on delivery experience from university project work and
               independent builds. I like calm execution, clear communication, and systems that stay reliable after
               release.
             </p>
 
             <ul class="focus-list">
-              <li>I ship in small iterations and keep progress visible through readable commits.</li>
-              <li>I separate frontend, backend, and data logic so changes stay predictable.</li>
-              <li>I document setup and handover so projects can be maintained by others.</li>
+              <li data-i18n="about.point1">I ship in small iterations and keep progress visible through readable commits.</li>
+              <li data-i18n="about.point2">I separate frontend, backend, and data logic so changes stay predictable.</li>
+              <li data-i18n="about.point3">I document setup and handover so projects can be maintained by others.</li>
             </ul>
           </article>
 
           <article id="contact" class="panel map-panel">
-            <h2>Background and contact</h2>
-            <p>
+            <h2 data-i18n="contact.title">Background and contact</h2>
+            <p data-i18n="contact.lead">
               Before software, I worked in safety-critical maritime roles and completed reserve officer training. It
               taught me procedure discipline, ownership, and decision-making when mistakes have real consequences.
             </p>
 
-            <ul class="focus-list contact-list" aria-label="Direct contact details">
+            <ul class="focus-list contact-list" aria-label="Direct contact details" data-i18n-aria-label="contact.listAria">
               <li><a href="tel:+358469536590">+358 46 953 6590</a></li>
               <li><a href="mailto:jrwl@jrwl.io">jrwl@jrwl.io</a></li>
-              <li>Turku, Finland</li>
+              <li data-i18n="contact.location">Turku, Finland</li>
               <li><a href="https://github.com/jrwl1" target="_blank" rel="noreferrer noopener">github.com/jrwl1</a></li>
             </ul>
 
-            <p class="small">Open to junior software developer roles.</p>
+            <p class="small" data-i18n="contact.openTo">Open to junior software developer roles.</p>
           </article>
         </section>
       </main>
 
       <footer class="site-footer">
-        <div class="socials" aria-label="Contact links">
-          <a href="https://github.com/jrwl1" target="_blank" rel="noreferrer noopener" aria-label="GitHub profile">GitHub</a>
-          <a href="mailto:jrwl@jrwl.io" aria-label="Email John Lindstrom">Email</a>
-          <a href="tel:+358469536590" aria-label="Call John Lindstrom">Phone</a>
+        <div class="socials" aria-label="Contact links" data-i18n-aria-label="footer.linksAria">
+          <a
+            href="https://github.com/jrwl1"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="GitHub profile"
+            data-i18n="footer.github"
+            data-i18n-aria-label="footer.githubAria"
+          >GitHub</a>
+          <a href="mailto:jrwl@jrwl.io" aria-label="Email John Lindström" data-i18n="footer.email" data-i18n-aria-label="footer.emailAria">Email</a>
+          <a href="tel:+358469536590" aria-label="Call John Lindström" data-i18n="footer.phone" data-i18n-aria-label="footer.phoneAria">Phone</a>
         </div>
-        <p class="copyright">© 2026 John Lindstrom. All rights reserved.</p>
+        <p class="copyright" data-i18n="footer.copyright">© 2026 John Lindström. All rights reserved.</p>
       </footer>
     </div>
 
@@ -259,7 +299,7 @@
       {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "John Lindstrom",
+        "name": "John Lindström",
         "url": "https://jrwl.io",
         "jobTitle": "Junior Software Developer",
         "sameAs": ["https://github.com/jrwl1"]

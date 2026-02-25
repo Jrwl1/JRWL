@@ -151,6 +151,51 @@ main,
   height: auto;
 }
 
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem;
+  border: 1px solid rgba(42, 51, 66, 0.86);
+  border-radius: 999px;
+  background: rgba(6, 12, 20, 0.66);
+}
+
+.lang-btn {
+  min-width: 42px;
+  height: 30px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-soft);
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color var(--t-fast) var(--ease), background var(--t-fast) var(--ease),
+    border-color var(--t-fast) var(--ease), transform var(--t-fast) var(--ease);
+}
+
+.lang-btn:hover,
+.lang-btn:focus-visible {
+  color: var(--ink);
+  border-color: color-mix(in srgb, var(--accent) 34%, var(--line));
+  background: rgba(43, 151, 255, 0.08);
+  transform: translateY(-1px);
+}
+
+.lang-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+.lang-btn.is-active {
+  color: #f8fbff;
+  border-color: color-mix(in srgb, var(--accent) 56%, var(--line));
+  background: linear-gradient(150deg, rgba(43, 151, 255, 0.2), rgba(27, 127, 228, 0.12));
+}
+
 .header-nav {
   display: inline-flex;
   flex-wrap: wrap;
@@ -462,6 +507,8 @@ h3 {
 .skill-card h3 {
   font-size: 0.95rem;
   margin-bottom: 0.35rem;
+  color: #f7fbff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.45), 0 0 14px rgba(43, 151, 255, 0.16);
 }
 
 .skill-card p {
@@ -475,12 +522,28 @@ h3 {
   padding: 0;
   list-style: none;
   display: grid;
-  gap: 0.45rem;
-  color: var(--ink-soft);
+  gap: 0.52rem;
 }
 
 .skill-lines li {
-  line-height: 1.45;
+  position: relative;
+  padding-left: 0.95rem;
+  line-height: 1.42;
+  color: color-mix(in srgb, var(--ink) 90%, var(--accent) 10%);
+  font-weight: 500;
+  text-shadow: 0 0 10px rgba(43, 151, 255, 0.08);
+}
+
+.skill-lines li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.58em;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(160deg, #2b97ff, #8cc7ff);
+  box-shadow: 0 0 8px rgba(43, 151, 255, 0.45);
 }
 
 .service-card {
@@ -748,12 +811,17 @@ h3 {
     padding: 0.45rem 0.55rem;
   }
 
+  .lang-switch {
+    margin-left: auto;
+  }
+
   .brand-logo {
     width: clamp(148px, 44vw, 208px);
   }
 
   .header-nav {
     width: 100%;
+    order: 3;
   }
 
   .header-link {
