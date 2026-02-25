@@ -1,0 +1,55 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">JRWL blueprint map</title>
+  <desc id="desc">Technical grid artwork based on the JRWL logo mark and lockup geometry.</desc>
+  <defs>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0V44" stroke="#223043" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="mapLine" x1="260" y1="166" x2="1120" y2="372" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#BCC2CB"/>
+      <stop offset="0.48" stop-color="#8FA8C4"/>
+      <stop offset="1" stop-color="#2B97FF"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#grid)" opacity="0.52"/>
+
+  <g opacity="0.35" stroke="#2A3342" stroke-width="2">
+    <rect x="194" y="122" width="176" height="176" rx="14"/>
+    <path d="M194 210H370"/>
+    <path d="M282 122V298"/>
+    <rect x="466" y="160" width="676" height="228" rx="18"/>
+    <path d="M466 274H1142"/>
+  </g>
+
+  <g stroke="url(#mapLine)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M220 148H300V188H260V228H220V148Z"/>
+    <path d="M312 148H392V228H356L312 270V148Z"/>
+    <path d="M220 240H300V320H220V240Z"/>
+    <path d="M312 240H392V320H312V280H352V240Z"/>
+    <path d="M312 224H356L312 268V224Z"/>
+
+    <path d="M514 182H612V208H560V302C560 327 541 344 515 344H476V318H506C519 318 524 312 524 300V208H514V182Z"/>
+    <path d="M640 182H732C763 182 783 199 783 226C783 248 768 262 744 269L786 344H748L715 278H676V344H640V182ZM676 208V252H728C743 252 751 244 751 230C751 216 742 208 728 208H676Z"/>
+    <path d="M816 182L840 344H870L904 234L938 344H968L992 182"/>
+    <path d="M1030 182V344H1120"/>
+  </g>
+
+  <g fill="#D7E2F2">
+    <circle cx="220" cy="148" r="4"/>
+    <circle cx="312" cy="148" r="4"/>
+    <circle cx="220" cy="240" r="4"/>
+    <circle cx="392" cy="320" r="4"/>
+    <circle cx="514" cy="182" r="4"/>
+    <circle cx="744" cy="269" r="4"/>
+    <circle cx="904" cy="234" r="4"/>
+    <circle cx="992" cy="182" r="4"/>
+    <circle cx="1120" cy="344" r="4"/>
+  </g>
+
+  <g fill="#AEBBD0" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="17" font-weight="500" letter-spacing="0.08em">
+    <text x="184" y="98">MARK / GRID ANCHOR</text>
+    <text x="466" y="420">WORDMARK / SYSTEM LINE</text>
+    <text x="920" y="150">JRWL LOCKUP MAP</text>
+  </g>
+</svg>

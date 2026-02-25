@@ -1,0 +1,29 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">JRWL badge</title>
+  <desc id="desc">Square four-panel JRWL symbol with blue signal notch.</desc>
+  <defs>
+    <linearGradient id="jrwlTopLeft" x1="24" y1="24" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#343944"/>
+      <stop offset="1" stop-color="#262B35"/>
+    </linearGradient>
+    <linearGradient id="jrwlTopRight" x1="136" y1="24" x2="232" y2="136" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2B97FF"/>
+      <stop offset="1" stop-color="#1B7FE4"/>
+    </linearGradient>
+    <linearGradient id="jrwlBottomLeft" x1="24" y1="136" x2="120" y2="232" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#BCC2CB"/>
+      <stop offset="1" stop-color="#ACB3BD"/>
+    </linearGradient>
+    <linearGradient id="jrwlBottomRight" x1="136" y1="136" x2="232" y2="232" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#383D47"/>
+      <stop offset="1" stop-color="#2A2F39"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M24 24H120V74H74V120H24V24Z" fill="url(#jrwlTopLeft)"/>
+  <path d="M136 24H232V120H188L136 168V24Z" fill="url(#jrwlTopRight)"/>
+  <rect x="24" y="136" width="96" height="96" fill="url(#jrwlBottomLeft)"/>
+  <path d="M136 136H232V232H136V182H182V136Z" fill="url(#jrwlBottomRight)"/>
+
+  <path d="M136 118H188L136 168V118Z" fill="#050910"/>
+</svg>

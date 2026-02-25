@@ -1,0 +1,37 @@
+<svg width="760" height="220" viewBox="0 0 760 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">JRWL horizontal logo</title>
+  <desc id="desc">JRWL lockup using the four-panel badge and white geometric wordmark.</desc>
+  <defs>
+    <linearGradient id="jrwlTopLeft" x1="24" y1="24" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#343944"/>
+      <stop offset="1" stop-color="#262B35"/>
+    </linearGradient>
+    <linearGradient id="jrwlTopRight" x1="136" y1="24" x2="232" y2="136" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2B97FF"/>
+      <stop offset="1" stop-color="#1B7FE4"/>
+    </linearGradient>
+    <linearGradient id="jrwlBottomLeft" x1="24" y1="136" x2="120" y2="232" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#BCC2CB"/>
+      <stop offset="1" stop-color="#ACB3BD"/>
+    </linearGradient>
+    <linearGradient id="jrwlBottomRight" x1="136" y1="136" x2="232" y2="232" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#383D47"/>
+      <stop offset="1" stop-color="#2A2F39"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(6 32) scale(0.66)">
+    <path d="M24 24H120V74H74V120H24V24Z" fill="url(#jrwlTopLeft)"/>
+    <path d="M136 24H232V120H188L136 168V24Z" fill="url(#jrwlTopRight)"/>
+    <rect x="24" y="136" width="96" height="96" fill="url(#jrwlBottomLeft)"/>
+    <path d="M136 136H232V232H136V182H182V136Z" fill="url(#jrwlBottomRight)"/>
+    <path d="M136 118H188L136 168V118Z" fill="#050910"/>
+  </g>
+
+  <g fill="#F1F3F7">
+    <path d="M228 56H304V74H271V145C271 162 258 174 240 174H210V156H236C244 156 250 151 252 145V74H228V56Z"/>
+    <path d="M318 56H390C416 56 434 71 434 94C434 111 423 124 404 130L436 174H411L383 135H336V174H318V56ZM336 74V117H389C403 117 415 108 415 94C415 81 403 74 389 74H336Z"/>
+    <path d="M450 56H472L491 145L514 90H534L557 145L576 56H598L568 174H544L524 110L504 174H480L450 56Z"/>
+    <path d="M612 56H631V156H714V174H612V56Z"/>
+  </g>
+</svg>

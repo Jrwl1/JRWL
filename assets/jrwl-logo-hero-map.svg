@@ -1,0 +1,64 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">JRWL hero logo map</title>
+  <desc id="desc">Subtle technical overlay built from the updated JRWL logo geometry.</desc>
+  <defs>
+    <linearGradient id="heroLine" x1="220" y1="164" x2="1120" y2="354" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2B97FF"/>
+      <stop offset="0.46" stop-color="#83B3DD"/>
+      <stop offset="1" stop-color="#CFD1D6"/>
+    </linearGradient>
+    <radialGradient id="heroHalo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(612 284) rotate(90) scale(220 420)">
+      <stop offset="0" stop-color="#2B97FF" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#2B97FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="heroGlow" x="0" y="0" width="1200" height="600" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="612" cy="284" rx="420" ry="220" fill="url(#heroHalo)"/>
+
+  <g opacity="0.28" stroke="#2A3342" stroke-width="2">
+    <rect x="90" y="18" width="1020" height="564" rx="34"/>
+    <rect x="168" y="78" width="864" height="444" rx="30"/>
+    <rect x="258" y="148" width="684" height="304" rx="26"/>
+  </g>
+
+  <g opacity="0.25" stroke="url(#heroLine)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" filter="url(#heroGlow)">
+    <path d="M220 164H300V204H260V244H220V164Z"/>
+    <path d="M312 164H392V244H356L312 286V164Z"/>
+    <path d="M220 256H300V336H220V256Z"/>
+    <path d="M312 256H392V336H312V296H352V256Z"/>
+    <path d="M312 240H356L312 284V240Z"/>
+
+    <path d="M514 198H612V222H560V302C560 327 541 344 515 344H476V320H506C519 320 524 314 524 302V222H514V198Z"/>
+    <path d="M640 198H732C763 198 783 215 783 242C783 264 768 278 744 285L786 344H748L715 294H676V344H640V198ZM676 222V268H728C743 268 751 260 751 246C751 231 742 222 728 222H676Z"/>
+    <path d="M816 198L840 344H870L904 246L938 344H968L992 198"/>
+    <path d="M1030 198V344H1120"/>
+  </g>
+
+  <g stroke="url(#heroLine)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M220 164H300V204H260V244H220V164Z"/>
+    <path d="M312 164H392V244H356L312 286V164Z"/>
+    <path d="M220 256H300V336H220V256Z"/>
+    <path d="M312 256H392V336H312V296H352V256Z"/>
+    <path d="M312 240H356L312 284V240Z"/>
+
+    <path d="M514 198H612V222H560V302C560 327 541 344 515 344H476V320H506C519 320 524 314 524 302V222H514V198Z"/>
+    <path d="M640 198H732C763 198 783 215 783 242C783 264 768 278 744 285L786 344H748L715 294H676V344H640V198ZM676 222V268H728C743 268 751 260 751 246C751 231 742 222 728 222H676Z"/>
+    <path d="M816 198L840 344H870L904 246L938 344H968L992 198"/>
+    <path d="M1030 198V344H1120"/>
+  </g>
+
+  <g fill="#D7E2F2" opacity="0.8">
+    <circle cx="220" cy="164" r="4"/>
+    <circle cx="312" cy="164" r="4"/>
+    <circle cx="220" cy="256" r="4"/>
+    <circle cx="392" cy="336" r="4"/>
+    <circle cx="515" cy="344" r="4"/>
+    <circle cx="744" cy="285" r="4"/>
+    <circle cx="904" cy="246" r="4"/>
+    <circle cx="992" cy="198" r="4"/>
+    <circle cx="1120" cy="344" r="4"/>
+  </g>
+</svg>
