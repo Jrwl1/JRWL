@@ -11,14 +11,14 @@
   const I18N = {
     en: {
       'meta.description':
-        'Portfolio of John Lindström, a software developer shipping production web apps. Current work includes Vesipolku, PNYX, and website projects.',
+        'Portfolio of John Lindström, software developer in Turku. Selected work includes Vesipolku, PNYX, and practical web product builds.',
       'meta.siteName': 'John Lindström',
       'meta.ogTitle': 'John Lindström - Software Developer',
       'meta.ogDescription':
-        'Software developer building and maintaining web systems with TypeScript, React, and Node.js. Vesipolku is live; PNYX is in development.',
+        'Software developer building and maintaining web products with TypeScript, React, Node.js, and PostgreSQL.',
       'meta.twitterTitle': 'John Lindström - Software Developer',
       'meta.twitterDescription':
-        'I build and maintain web products end-to-end: schema, APIs, frontend, deploys, and handover docs.',
+        'Mostly solo full-stack work: backend, frontend, data, deploys, and production upkeep.',
       'header.brandAria': 'JRWL home',
       'header.brandAlt': 'JRWL logo',
       'header.navAria': 'Primary section navigation',
@@ -29,18 +29,23 @@
       'nav.about': 'About',
       'nav.contact': 'Contact',
       'hero.kicker': 'Software Developer | Turku, Finland',
-      'hero.title': 'I ship web software that stays reliable in production.',
+      'hero.title': 'Build, deploy, maintain.',
       'hero.lead':
-        'I build and run web products end-to-end: schema, APIs, frontend, deploys, and maintenance. Vesipolku is live and used for long-range utility pricing and investment planning.',
-      'hero.ctaPrimary': 'Open vesipolku.jrwl.io',
-      'hero.ctaSecondary': 'View projects',
+        'Mostly solo work across the stack, from database changes to production fixes.',
+      'hero.stripAria': 'Primary work areas',
+      'hero.strip1': 'Backend and APIs',
+      'hero.strip2': 'Frontend',
+      'hero.strip3': 'Data and schema',
+      'hero.strip4': 'Deploys and upkeep',
+      'hero.ctaPrimary': 'View projects',
+      'hero.ctaSecondary': 'Contact',
       'hero.metricsAria': 'Project status metrics',
-      'hero.metric1Value': '1',
+      'hero.metric1Value': 'Solo',
       'hero.metric1Label': 'Built and maintained independently',
-      'hero.metric2Value': '2',
-      'hero.metric2Label': 'Apps live in production',
-      'hero.metric3Value': '3',
-      'hero.metric3Label': 'Projects in active development',
+      'hero.metric2Value': '2 live',
+      'hero.metric2Label': 'Apps in production',
+      'hero.metric3Value': '3 active',
+      'hero.metric3Label': 'Projects in development',
       'hero.logoAlt': 'JRWL full logo',
       'projects.title': 'Selected projects',
       'projects.lead': 'Two live apps, two static prototypes, and one product in development.',
@@ -118,14 +123,14 @@
     },
     fi: {
       'meta.description':
-        'John Lindströmin portfolio: ohjelmistokehittäjä, joka toimittaa tuotantokäyttöön web-sovelluksia. Nykyiset työt: Vesipolku, PNYX ja verkkosivuprojektit.',
+        'John Lindströmin portfolio. Valittuja töitä ovat Vesipolku, PNYX ja käytännön web-tuotteet.',
       'meta.siteName': 'John Lindström',
       'meta.ogTitle': 'John Lindström - Ohjelmistokehittäjä',
       'meta.ogDescription':
-        'Ohjelmistokehittäjä, joka rakentaa ja ylläpitää web-järjestelmiä TypeScriptillä, Reactilla ja Node.js:llä. Vesipolku on tuotannossa, PNYX kehityksessä.',
+        'Ohjelmistokehittäjä, joka rakentaa ja ylläpitää web-tuotteita TypeScriptillä, Reactilla, Node.js:llä ja PostgreSQL:llä.',
       'meta.twitterTitle': 'John Lindström - Ohjelmistokehittäjä',
       'meta.twitterDescription':
-        'Rakennan tuotteita päästä päähän: skeema, API:t, frontend, julkaisut ja ylläpito.',
+        'Enimmäkseen solo full-stack -työtä: backend, frontend, data, julkaisut ja tuotannon ylläpito.',
       'header.brandAria': 'JRWL etusivu',
       'header.brandAlt': 'JRWL-logo',
       'header.navAria': 'Sivun päävalikko',
@@ -136,18 +141,23 @@
       'nav.about': 'Minusta',
       'nav.contact': 'Yhteystiedot',
       'hero.kicker': 'Ohjelmistokehittäjä | Turku, Suomi',
-      'hero.title': 'Toimitan web-ohjelmistoja, jotka kestävät tuotannossa.',
+      'hero.title': 'Rakennan, julkaisen, ylläpidän.',
       'hero.lead':
-        'Rakennan ja ylläpidän web-tuotteita päästä päähän: tietomalli, API:t, frontend, julkaisut ja ylläpito. Vesipolku on tuotannossa ja sitä käytetään vesihuollon pitkän aikavälin hinnoittelun ja investointien suunnittelussa.',
-      'hero.ctaPrimary': 'Avaa vesipolku.jrwl.io',
-      'hero.ctaSecondary': 'Katso projektit',
+        'Teen enimmäkseen solo-työtä koko stackissa, tietokantamuutoksista tuotannon korjauksiin.',
+      'hero.stripAria': 'Työn pääalueet',
+      'hero.strip1': 'Backend ja API:t',
+      'hero.strip2': 'Frontend',
+      'hero.strip3': 'Data ja tietomalli',
+      'hero.strip4': 'Julkaisut ja ylläpito',
+      'hero.ctaPrimary': 'Katso projektit',
+      'hero.ctaSecondary': 'Yhteystiedot',
       'hero.metricsAria': 'Projektien tilamittarit',
-      'hero.metric1Value': '1',
+      'hero.metric1Value': 'Solo',
       'hero.metric1Label': 'Rakennettu ja ylläpidetty itsenäisesti',
-      'hero.metric2Value': '2',
+      'hero.metric2Value': '2 live',
       'hero.metric2Label': 'Sovellusta tuotannossa',
-      'hero.metric3Value': '3',
-      'hero.metric3Label': 'Projektia aktiivisesti työn alla',
+      'hero.metric3Value': '3 aktiivista',
+      'hero.metric3Label': 'Projektia kehityksessä',
       'hero.logoAlt': 'JRWL-kokolukituslogo',
       'projects.title': 'Valitut projektit',
       'projects.lead': 'Kaksi tuotannossa olevaa sovellusta, kaksi staattista prototyyppiä ja yksi kehityksessä oleva tuote.',
@@ -225,14 +235,14 @@
     },
     sv: {
       'meta.description':
-        'Portfolio för John Lindström: mjukvaruutvecklare som levererar webbappar i produktion. Aktuellt: Vesipolku, PNYX och webbplatsprojekt.',
+        'Portfolio för John Lindström. Utvalda arbeten inkluderar Vesipolku, PNYX och praktiska webbprodukter.',
       'meta.siteName': 'John Lindström',
       'meta.ogTitle': 'John Lindström - Mjukvaruutvecklare',
       'meta.ogDescription':
-        'Mjukvaruutvecklare som bygger och underhåller webbsystem med TypeScript, React och Node.js. Vesipolku är live, PNYX är under utveckling.',
+        'Mjukvaruutvecklare som bygger och underhåller webbprodukter med TypeScript, React, Node.js och PostgreSQL.',
       'meta.twitterTitle': 'John Lindström - Mjukvaruutvecklare',
       'meta.twitterDescription':
-        'Jag bygger produkter end-to-end: schema, API:er, frontend, deploy och underhåll.',
+        'Mestadels solo fullstackarbete: backend, frontend, data, driftsättning och underhåll i produktion.',
       'header.brandAria': 'JRWL startsida',
       'header.brandAlt': 'JRWL-logotyp',
       'header.navAria': 'Primär sektionsnavigering',
@@ -243,18 +253,23 @@
       'nav.about': 'Om mig',
       'nav.contact': 'Kontakt',
       'hero.kicker': 'Mjukvaruutvecklare | Åbo, Finland',
-      'hero.title': 'Jag levererar webbprogramvara som håller i produktion.',
+      'hero.title': 'Bygger, driftsätter, underhåller.',
       'hero.lead':
-        'Jag bygger och driver webbprodukter end-to-end: datamodell, API:er, frontend, deploy och underhåll. Vesipolku är live och används för långsiktig planering av taxor och investeringar inom vattenverk.',
-      'hero.ctaPrimary': 'Öppna vesipolku.jrwl.io',
-      'hero.ctaSecondary': 'Visa projekt',
+        'Arbetar oftast solo över hela stacken, från databasändringar till produktionsfixar.',
+      'hero.stripAria': 'Primära arbetsområden',
+      'hero.strip1': 'Backend och API:er',
+      'hero.strip2': 'Frontend',
+      'hero.strip3': 'Data och datamodell',
+      'hero.strip4': 'Driftsättning och underhåll',
+      'hero.ctaPrimary': 'Visa projekt',
+      'hero.ctaSecondary': 'Kontakt',
       'hero.metricsAria': 'Mätvärden för projektstatus',
-      'hero.metric1Value': '1',
+      'hero.metric1Value': 'Solo',
       'hero.metric1Label': 'Byggd och underhållen självständigt',
-      'hero.metric2Value': '2',
+      'hero.metric2Value': '2 live',
       'hero.metric2Label': 'Appar i produktion',
-      'hero.metric3Value': '3',
-      'hero.metric3Label': 'Projekt under aktiv utveckling',
+      'hero.metric3Value': '3 aktiva',
+      'hero.metric3Label': 'Projekt under utveckling',
       'hero.logoAlt': 'JRWL full logotyp',
       'projects.title': 'Utvalda projekt',
       'projects.lead': 'Två liveappar, två statiska prototyper och en produkt under utveckling.',
@@ -530,23 +545,6 @@
     hero.addEventListener('pointercancel', resetParallax);
   };
 
-  const initPulse = () => {
-    if (prefersReduced.matches) return;
-
-    const pulses = document.querySelectorAll('[data-pulse]');
-    if (pulses.length === 0) return;
-
-    let pointer = 0;
-    window.setInterval(() => {
-      const target = pulses[pointer % pulses.length];
-      target.classList.add('cta-pulse');
-      window.setTimeout(() => {
-        target.classList.remove('cta-pulse');
-      }, 1050);
-      pointer += 1;
-    }, 2600);
-  };
-
   const initSectionNav = () => {
     const links = Array.from(document.querySelectorAll('.header-link[data-scroll]'));
     if (links.length === 0) return;
@@ -628,7 +626,6 @@
     initReveals();
     initTiltCards();
     initSubtleParallax();
-    initPulse();
   };
 
   if (document.readyState === 'loading') {
