@@ -206,7 +206,7 @@ The palette is a restrained technical neutral field with one high-confidence cob
 - **Headline:** Major section titles and the contact heading; condensed and tightly tracked for fast vertical landmarks.
 - **Lead:** The role statement; larger than body copy but still sentence-led.
 - **Title:** Project names and the four current-stack technologies.
-- **Body Large:** Skills, background copy, and other high-value factual content.
+- **Body Large:** Skills, working-principle rows, and other high-value factual content.
 - **Body:** Descriptions, availability, contact details, and supporting copy.
 - **Label:** Navigation, skill categories, statuses, language controls, brand text, and footer metadata.
 - **Control:** Primary and secondary action labels.
@@ -219,7 +219,7 @@ The palette is a restrained technical neutral field with one high-confidence cob
 
 The desktop system uses a centered shell capped at 1240 pixels with 1.5rem outer gutters and a recurring 12-column grid. The header is a 74-pixel sticky rule with brand, centered navigation, and language controls. The hero fills the remaining viewport height: the name occupies seven columns, the role and actions begin at column nine, and the cobalt stack band spans all twelve columns.
 
-Sections use generous fluid vertical spacing and full-width information rows. Skill labels occupy four columns and their content occupies eight; project rows align name, description, status, and optional external-link mark without becoming cards. The closing area divides into a seven-part background field and a five-part cobalt contact field.
+Sections use generous fluid vertical spacing and full-width information rows. Skill labels occupy four columns and their content occupies eight; project rows align name, description, status, and optional external-link mark without becoming cards. The closing area divides into a seven-part working-principles field and a five-part cobalt contact field.
 
 At 860 pixels and below, the header becomes static and two-row, the navigation becomes four equal cells, the hero and section headings become single-column, the stack band becomes a two-by-two grid, and skills and the closing area stack. At 520 pixels and below, actions become full width; the stack and contact planes bleed to the viewport gutter; project statuses wrap; and the footer stacks. Layout must tolerate English, Finnish, and Swedish copy without fixed text heights, ellipsis, or clipped controls.
 
@@ -273,7 +273,7 @@ Every control and surface uses square corners. Borders are functional: 1-pixel r
 
 ### Contact Plane
 
-- **Structure:** A square, shadowless cobalt field paired directly with the background field.
+- **Structure:** A square, shadowless cobalt field paired directly with the working-principles field.
 - **Content:** White heading and links with the on-cobalt tint reserved for location copy.
 - **Focus:** Links keep their underline and use a white focus outline.
 

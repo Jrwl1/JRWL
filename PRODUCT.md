@@ -12,7 +12,7 @@ Recruiters and technical hiring managers who want a fast, current view of John L
 
 ## Product Purpose
 
-JRWL is John Lindström's personal technical profile. It stays current as his working stack changes. A visitor should understand his main tools, background, and availability within one short visit.
+JRWL is John Lindström's personal technical profile. It stays current as his working stack changes. A visitor should understand his main tools, working approach, and availability within one short visit.
 
 ## Positioning
 

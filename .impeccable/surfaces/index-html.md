@@ -11,7 +11,7 @@ Homepage (`index.html`), Persuade.
 
 ## Audience and job
 
-Recruiters and technical hiring managers scan John's current stack, background, and contact details.
+Recruiters and technical hiring managers scan John's current stack, working approach, and contact details.
 
 ## Action and content
 

@@ -453,18 +453,27 @@ a.project-row:focus-visible .project-description {
   scroll-margin-top: 74px;
 }
 
-.background-block,
+.approach-block,
 .contact-block {
   padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 5rem);
 }
 
-.background-block {
+.approach-block {
   padding-left: 0;
 }
 
-.background-block p {
+.approach-list {
   max-width: 55ch;
   margin: 2rem 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line-dark);
+  list-style: none;
+}
+
+.approach-list li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--line-dark);
+  max-width: 55ch;
   font-size: clamp(1.25rem, 2.4vw, 1.75rem);
   letter-spacing: -0.02em;
   line-height: 1.4;
@@ -646,7 +655,7 @@ a.project-row:focus-visible .project-description {
     grid-template-columns: 1fr;
   }
 
-  .background-block {
+  .approach-block {
     padding-right: 0;
   }
 

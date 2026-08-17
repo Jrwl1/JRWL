@@ -14,7 +14,7 @@
       'header.languageAria': 'Language',
       'nav.skills': 'Skills',
       'nav.projects': 'Projects',
-      'nav.about': 'Background',
+      'nav.approach': 'Approach',
       'nav.contact': 'Contact',
       'hero.summary':
         'I’m a software developer in Turku working with TypeScript, React, Node.js and PostgreSQL.',
@@ -34,9 +34,10 @@
       'status.live': 'Live',
       'status.building': 'In development',
       'status.prototype': 'Prototype',
-      'about.title': 'Background',
-      'about.copy':
-        'Before software, I worked at sea and completed reserve officer training. I still value solid procedures and clear ownership, especially in production.',
+      'approach.title': 'How I build',
+      'approach.smallest': 'Start with the smallest complete version.',
+      'approach.ownership': 'Keep ownership and boundaries clear.',
+      'approach.tests': 'Test the behavior that can actually break.',
       'contact.title': 'Contact',
       'contact.location': 'Turku, Finland',
       'footer.copy': '© 2026 John Lindström',
@@ -52,7 +53,7 @@
       'header.languageAria': 'Kieli',
       'nav.skills': 'Osaaminen',
       'nav.projects': 'Projektit',
-      'nav.about': 'Tausta',
+      'nav.approach': 'Työtapa',
       'nav.contact': 'Yhteys',
       'hero.summary':
         'Olen ohjelmistokehittäjä Turussa. Työskentelen TypeScriptin, Reactin, Node.js:n ja PostgreSQL:n parissa.',
@@ -72,9 +73,10 @@
       'status.live': 'Tuotannossa',
       'status.building': 'Kehityksessä',
       'status.prototype': 'Prototyyppi',
-      'about.title': 'Tausta',
-      'about.copy':
-        'Ennen ohjelmistoalaa työskentelin merellä ja suoritin reserviupseerikoulutuksen. Arvostan yhä selkeitä toimintatapoja ja vastuunjakoa, etenkin tuotannossa.',
+      'approach.title': 'Näin rakennan',
+      'approach.smallest': 'Aloitan pienimmästä valmiista versiosta.',
+      'approach.ownership': 'Pidän vastuut ja rajat selkeinä.',
+      'approach.tests': 'Testaan sen, mikä voi oikeasti hajota.',
       'contact.title': 'Yhteystiedot',
       'contact.location': 'Turku, Suomi',
       'footer.copy': '© 2026 John Lindström',
@@ -90,7 +92,7 @@
       'header.languageAria': 'Språk',
       'nav.skills': 'Kunskaper',
       'nav.projects': 'Projekt',
-      'nav.about': 'Bakgrund',
+      'nav.approach': 'Arbetssätt',
       'nav.contact': 'Kontakt',
       'hero.summary':
         'Jag är mjukvaruutvecklare i Åbo och arbetar med TypeScript, React, Node.js och PostgreSQL.',
@@ -110,9 +112,10 @@
       'status.live': 'Lanserad',
       'status.building': 'Under utveckling',
       'status.prototype': 'Prototyp',
-      'about.title': 'Bakgrund',
-      'about.copy':
-        'Innan jag började med mjukvara arbetade jag till sjöss och genomförde reservofficersutbildning. Jag värdesätter fortfarande tydliga rutiner och tydligt ansvar, särskilt i produktion.',
+      'approach.title': 'Så bygger jag',
+      'approach.smallest': 'Jag börjar med den minsta kompletta versionen.',
+      'approach.ownership': 'Jag håller ansvar och gränser tydliga.',
+      'approach.tests': 'Jag testar det som faktiskt kan gå sönder.',
       'contact.title': 'Kontakt',
       'contact.location': 'Åbo, Finland',
       'footer.copy': '© 2026 John Lindström',
@@ -179,7 +182,7 @@
   );
 
   const sectionLinks = [...document.querySelectorAll('[data-section-link]')];
-  const trackedSections = ['skills', 'projects', 'about']
+  const trackedSections = ['skills', 'projects', 'approach']
     .map((id) => document.getElementById(id))
     .filter(Boolean);
 

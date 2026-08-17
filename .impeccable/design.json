@@ -174,7 +174,7 @@
       },
       "body-large": {
         "displayName": "Body Large",
-        "purpose": "High-value factual content in skill and background rows."
+        "purpose": "High-value factual content in skill and working-principle rows."
       },
       "body": {
         "displayName": "Body",
