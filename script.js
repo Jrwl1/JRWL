@@ -1,636 +1,225 @@
 (() => {
-  const root = document.documentElement;
-  root.classList.add('js-ready');
-
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
-
-  const LANGUAGE_STORAGE_KEY = 'jrwl-lang';
+  const STORAGE_KEY = 'jrwl-lang';
   const SUPPORTED_LANGUAGES = ['en', 'fi', 'sv'];
 
-  const I18N = {
+  const translations = {
     en: {
+      'meta.title': 'John Lindström | Software developer',
       'meta.description':
-        'Portfolio of John Lindström, software developer in Turku. Selected work includes Vesipolku, PNYX, and practical web product builds.',
-      'meta.siteName': 'John Lindström',
-      'meta.ogTitle': 'John Lindström - Software Developer',
-      'meta.ogDescription':
-        'Software developer building and maintaining web products with TypeScript, React, Node.js, and PostgreSQL.',
-      'meta.twitterTitle': 'John Lindström - Software Developer',
-      'meta.twitterDescription':
-        'Mostly solo full-stack work: backend, frontend, data, deploys, and production upkeep.',
-      'header.brandAria': 'JRWL home',
-      'header.brandAlt': 'JRWL logo',
-      'header.navAria': 'Primary section navigation',
-      'lang.selectorAria': 'Language selector',
-      'nav.home': 'Home',
-      'nav.projects': 'Projects',
+        'John Lindström is a software developer in Turku working with TypeScript, React, Node.js, and PostgreSQL.',
+      'meta.summary': 'Current technical skills, personal projects, and contact details.',
+      'a11y.skip': 'Skip to content',
+      'header.homeAria': 'JRWL home',
+      'header.navAria': 'Primary navigation',
+      'header.languageAria': 'Language',
       'nav.skills': 'Skills',
-      'nav.about': 'About',
+      'nav.projects': 'Projects',
+      'nav.about': 'Background',
       'nav.contact': 'Contact',
-      'hero.kicker': 'Software Developer | Turku, Finland',
-      'hero.title': 'Build, deploy, maintain.',
-      'hero.lead':
-        'Mostly solo work across the stack, from database changes to production fixes.',
-      'hero.stripAria': 'Primary work areas',
-      'hero.strip1': 'Backend and APIs',
-      'hero.strip2': 'Frontend',
-      'hero.strip3': 'Data and schema',
-      'hero.strip4': 'Deploys and upkeep',
-      'hero.ctaPrimary': 'View projects',
-      'hero.ctaSecondary': 'Contact',
-      'hero.metricsAria': 'Project status metrics',
-      'hero.metric1Value': 'Solo',
-      'hero.metric1Label': 'Built and maintained independently',
-      'hero.metric2Value': '2 live',
-      'hero.metric2Label': 'Apps in production',
-      'hero.metric3Value': '3 active',
-      'hero.metric3Label': 'Projects in development',
-      'hero.logoAlt': 'JRWL full logo',
-      'projects.title': 'Selected projects',
-      'projects.lead': 'Two live apps, two static prototypes, and one product in development.',
-      'projects.vesipolkuAria': 'Open vesipolku.jrwl.io',
-      'projects.vesipolkuTag': 'Water utility finance platform',
-      'projects.vesipolkuDesc':
-        'Vesipolku imports utility company data from a public API, models long-term investment scenarios, and calculates tariff levels plus yearly increases.',
-      'projects.pnyxAria': 'PNYX project in development',
-      'projects.pnyxTag': 'Accountability platform',
-      'projects.pnyxDesc':
-        'PNYX tracks political promises with source links, milestone checkpoints, and status history.',
-      'projects.proboconsAria': 'Open probocons.surge.sh prototype',
-      'projects.proboconsTag': 'Static company website',
-      'projects.proboconsDesc':
-        "Static website I built for a relative's company, ProboCons Oy. It presents services clearly and makes contact easy.",
-      'projects.yhdessaAria': 'Open yhdessa-web.vercel.app prototype',
-      'projects.yhdessaTag': 'Speech therapy website',
-      'projects.yhdessaDesc':
-        'Static site prototype for a speech therapy service with multilingual pages and direct contact flow.',
-      'projects.landingAria': 'Return to top',
-      'projects.landingName': 'JRWL Landing Page',
-      'projects.landingTag': 'Portfolio and contact hub',
-      'projects.landingDesc': 'This is my portfolio site: project status, live links, and direct contact details.',
-      'status.live': 'Live',
-      'status.inDevelopment': 'In development',
-      'status.prototype': 'Prototype',
+      'hero.summary':
+        'I’m a software developer in Turku working with TypeScript, React, Node.js and PostgreSQL.',
+      'hero.availability': 'Open to backend and full-stack roles.',
+      'hero.email': 'Email me',
+      'hero.stackAria': 'Primary technical stack',
       'skills.title': 'Technical skills',
-      'skills.core.title': 'Core languages',
-      'skills.coreAria': 'Core programming languages',
-      'skills.core.one': 'TypeScript',
-      'skills.core.two': 'JavaScript',
-      'skills.core.three': 'C#',
-      'skills.frameworks.title': 'Frameworks and platforms',
-      'skills.frameworksAria': 'Frameworks and platforms',
-      'skills.frameworks.one': 'React',
-      'skills.frameworks.two': 'Next.js',
-      'skills.frameworks.three': 'NestJS',
-      'skills.frameworks.four': 'Express',
-      'skills.frameworks.five': 'Unity (XR)',
-      'skills.data.title': 'Databases and data',
-      'skills.dataAria': 'Databases and data tools',
-      'skills.data.one': 'PostgreSQL + Prisma',
-      'skills.data.two': 'MongoDB + Mongoose',
-      'skills.data.three': 'MySQL',
-      'skills.workflow.title': 'Workflow and delivery',
-      'skills.workflowAria': 'Workflow and delivery stack',
-      'skills.workflow.one': 'pnpm workspaces + Turborepo',
-      'skills.workflow.two': 'Git/GitHub + structured commits',
-      'skills.workflow.three': 'ESLint + Prettier + Husky',
-      'skills.workflow.four': 'Jest + Vitest + Playwright',
-      'skills.workflow.five': 'Vercel, Railway, Surge, self-managed VPS',
-      'about.title': 'How I work',
-      'about.lead':
-        'I ship in short iterations, keep scope tight, and build for maintainability from day one. Most of my work is solo, so reliability, clear documentation, and clean handover are part of the process, not an afterthought.',
-      'about.point1':
-        'I break features into small, deployable slices and keep progress visible in commit history.',
-      'about.point2':
-        'I keep strict boundaries between frontend, backend, and data so changes stay predictable and low risk.',
-      'about.point3':
-        'I write setup and handover docs so another developer can run, ship, and maintain the project without tribal knowledge.',
-      'contact.title': 'Background and contact',
-      'contact.lead':
-        'Before software, I worked in safety-critical maritime roles and completed reserve officer training. It taught me procedure discipline, ownership, and decision-making when mistakes have real consequences.',
-      'contact.listAria': 'Direct contact details',
+      'skills.application': 'Application development',
+      'skills.delivery': 'Testing and delivery',
+      'skills.cms': 'Web and CMS',
+      'projects.title': 'Personal projects',
+      'projects.note': 'A few things I build outside work.',
+      'projects.vesipolku': 'Planning tool for water utilities.',
+      'projects.pnyx': 'Political promise tracker.',
+      'projects.probocons': 'Company website.',
+      'projects.yhdessa': 'Multilingual speech therapy site.',
+      'status.live': 'Live',
+      'status.building': 'In development',
+      'status.prototype': 'Prototype',
+      'about.title': 'Background',
+      'about.copy':
+        'Before software, I worked at sea and completed reserve officer training. I still value solid procedures and clear ownership, especially in production.',
+      'contact.title': 'Contact',
       'contact.location': 'Turku, Finland',
-      'contact.openTo': 'Open to junior backend or full-stack roles.',
-      'footer.linksAria': 'Contact links',
-      'footer.github': 'GitHub',
-      'footer.githubAria': 'GitHub profile',
-      'footer.email': 'Email',
-      'footer.emailAria': 'Email John Lindström',
-      'footer.phone': 'Phone',
-      'footer.phoneAria': 'Call John Lindström',
-      'footer.copyright': '© 2026 John Lindström. All rights reserved.',
+      'footer.copy': '© 2026 John Lindström',
     },
     fi: {
+      'meta.title': 'John Lindström | Ohjelmistokehittäjä',
       'meta.description':
-        'John Lindströmin portfolio. Valittuja töitä ovat Vesipolku, PNYX ja käytännön web-tuotteet.',
-      'meta.siteName': 'John Lindström',
-      'meta.ogTitle': 'John Lindström - Ohjelmistokehittäjä',
-      'meta.ogDescription':
-        'Ohjelmistokehittäjä, joka rakentaa ja ylläpitää web-tuotteita TypeScriptillä, Reactilla, Node.js:llä ja PostgreSQL:llä.',
-      'meta.twitterTitle': 'John Lindström - Ohjelmistokehittäjä',
-      'meta.twitterDescription':
-        'Enimmäkseen solo full-stack -työtä: backend, frontend, data, julkaisut ja tuotannon ylläpito.',
-      'header.brandAria': 'JRWL etusivu',
-      'header.brandAlt': 'JRWL-logo',
-      'header.navAria': 'Sivun päävalikko',
-      'lang.selectorAria': 'Kielen valinta',
-      'nav.home': 'Etusivu',
-      'nav.projects': 'Projektit',
+        'John Lindström on turkulainen ohjelmistokehittäjä, joka työskentelee TypeScriptin, Reactin, Node.js:n ja PostgreSQL:n parissa.',
+      'meta.summary': 'Ajantasainen tekninen osaaminen, omat projektit ja yhteystiedot.',
+      'a11y.skip': 'Siirry sisältöön',
+      'header.homeAria': 'JRWL-etusivu',
+      'header.navAria': 'Päänavigaatio',
+      'header.languageAria': 'Kieli',
       'nav.skills': 'Osaaminen',
-      'nav.about': 'Minusta',
-      'nav.contact': 'Yhteystiedot',
-      'hero.kicker': 'Ohjelmistokehittäjä | Turku, Suomi',
-      'hero.title': 'Rakennan, julkaisen, ylläpidän.',
-      'hero.lead':
-        'Teen enimmäkseen solo-työtä koko stackissa, tietokantamuutoksista tuotannon korjauksiin.',
-      'hero.stripAria': 'Työn pääalueet',
-      'hero.strip1': 'Backend ja API:t',
-      'hero.strip2': 'Frontend',
-      'hero.strip3': 'Data ja tietomalli',
-      'hero.strip4': 'Julkaisut ja ylläpito',
-      'hero.ctaPrimary': 'Katso projektit',
-      'hero.ctaSecondary': 'Yhteystiedot',
-      'hero.metricsAria': 'Projektien tilamittarit',
-      'hero.metric1Value': 'Solo',
-      'hero.metric1Label': 'Rakennettu ja ylläpidetty itsenäisesti',
-      'hero.metric2Value': '2 live',
-      'hero.metric2Label': 'Sovellusta tuotannossa',
-      'hero.metric3Value': '3 aktiivista',
-      'hero.metric3Label': 'Projektia kehityksessä',
-      'hero.logoAlt': 'JRWL-kokolukituslogo',
-      'projects.title': 'Valitut projektit',
-      'projects.lead': 'Kaksi tuotannossa olevaa sovellusta, kaksi staattista prototyyppiä ja yksi kehityksessä oleva tuote.',
-      'projects.vesipolkuAria': 'Avaa vesipolku.jrwl.io',
-      'projects.vesipolkuTag': 'Vesihuollon taloussuunnittelu',
-      'projects.vesipolkuDesc':
-        'Vesipolku hakee vesihuoltoyhtiön dataa julkisesta API:sta, mallintaa pitkän aikavälin investointiskenaarioita ja laskee nykyisen tariffitason sekä vuosittaiset korotustarpeet.',
-      'projects.pnyxAria': 'PNYX-projekti kehityksessä',
-      'projects.pnyxTag': 'Vastuullisuusalusta',
-      'projects.pnyxDesc':
-        'PNYX seuraa poliittisia lupauksia lähdelinkkien, välitavoitteiden ja tilahistorian avulla.',
-      'projects.proboconsAria': 'Avaa probocons.surge.sh-prototyyppi',
-      'projects.proboconsTag': 'Staattinen yrityssivusto',
-      'projects.proboconsDesc':
-        'Staattinen esittelysivu sukulaisen yritykselle, ProboCons Oy:lle. Sivu kertoo palvelut selkeästi ja tekee yhteydenotosta helppoa.',
-      'projects.yhdessaAria': 'Avaa yhdessa-web.vercel.app-prototyyppi',
-      'projects.yhdessaTag': 'Puheterapian verkkosivu',
-      'projects.yhdessaDesc':
-        'Staattinen puheterapiapalvelun sivustoprototyyppi, jossa on monikieliset sivut ja suora yhteydenottopolku.',
-      'projects.landingAria': 'Palaa ylös',
-      'projects.landingName': 'JRWL-portfoliosivu',
-      'projects.landingTag': 'Portfolio ja yhteystiedot',
-      'projects.landingDesc': 'Tämä on portfoliosivuni: projektien tila, julkaistut linkit ja suorat yhteystiedot.',
-      'status.live': 'Tuotannossa',
-      'status.inDevelopment': 'Kehityksessä',
-      'status.prototype': 'Prototyyppi',
+      'nav.projects': 'Projektit',
+      'nav.about': 'Tausta',
+      'nav.contact': 'Yhteys',
+      'hero.summary':
+        'Olen ohjelmistokehittäjä Turussa. Työskentelen TypeScriptin, Reactin, Node.js:n ja PostgreSQL:n parissa.',
+      'hero.availability': 'Avoin backend- ja full-stack-rooleihin.',
+      'hero.email': 'Lähetä sähköpostia',
+      'hero.stackAria': 'Keskeinen tekninen osaaminen',
       'skills.title': 'Tekninen osaaminen',
-      'skills.core.title': 'Ydinkielet',
-      'skills.coreAria': 'Ydinohjelmointikielet',
-      'skills.core.one': 'TypeScript',
-      'skills.core.two': 'JavaScript',
-      'skills.core.three': 'C#',
-      'skills.frameworks.title': 'Kehykset ja alustat',
-      'skills.frameworksAria': 'Kehykset ja alustat',
-      'skills.frameworks.one': 'React',
-      'skills.frameworks.two': 'Next.js',
-      'skills.frameworks.three': 'NestJS',
-      'skills.frameworks.four': 'Express',
-      'skills.frameworks.five': 'Unity (XR)',
-      'skills.data.title': 'Tietokannat ja data',
-      'skills.dataAria': 'Tietokannat ja datatyökalut',
-      'skills.data.one': 'PostgreSQL + Prisma',
-      'skills.data.two': 'MongoDB + Mongoose',
-      'skills.data.three': 'MySQL',
-      'skills.workflow.title': 'Työnkulku ja toimitus',
-      'skills.workflowAria': 'Työnkulun ja toimituksen työkalut',
-      'skills.workflow.one': 'pnpm-työtilat + Turborepo',
-      'skills.workflow.two': 'Git/GitHub + jäsennellyt commitit',
-      'skills.workflow.three': 'ESLint + Prettier + Husky',
-      'skills.workflow.four': 'Jest + Vitest + Playwright',
-      'skills.workflow.five': 'Vercel, Railway, Surge, oma VPS-tuotantopalvelin',
-      'about.title': 'Työskentelytapani',
-      'about.lead':
-        'Toimitan pienissä iteraatioissa, rajaan laajuuden tiukasti ja rakennan ylläpidettävyyttä alusta asti. Suurin osa työstäni on soolona tehtyä, joten luotettavuus, selkeä dokumentaatio ja siisti luovutus kuuluvat prosessiin alusta lähtien.',
-      'about.point1':
-        'Pilkon ominaisuudet pieniin julkaistaviin osiin ja pidän etenemisen näkyvänä commit-historiassa.',
-      'about.point2':
-        'Pidän frontendin, backendin ja datan rajat selkeinä, jotta muutokset pysyvät ennustettavina ja matalariskisinä.',
-      'about.point3':
-        'Kirjoitan käyttöönotto- ja luovutusdokumentaation niin, että seuraava kehittäjä voi ajaa, julkaista ja ylläpitää projektia ilman hiljaista tietoa.',
-      'contact.title': 'Tausta ja yhteystiedot',
-      'contact.lead':
-        'Ennen ohjelmistokehitystä työskentelin turvallisuuskriittisissä merialan tehtävissä ja suoritin reserviupseerikoulutuksen. Se opetti prosessikuria, vastuunottoa ja päätöksentekoa tilanteissa, joissa virheillä on oikeita seurauksia.',
-      'contact.listAria': 'Suorat yhteystiedot',
+      'skills.application': 'Sovelluskehitys',
+      'skills.delivery': 'Testaus ja julkaisu',
+      'skills.cms': 'Web ja sisällönhallinta',
+      'projects.title': 'Omat projektit',
+      'projects.note': 'Muutama vapaa-ajalla rakentamani projekti.',
+      'projects.vesipolku': 'Vesihuollon suunnittelutyökalu.',
+      'projects.pnyx': 'Poliittisten lupausten seurantatyökalu.',
+      'projects.probocons': 'Yrityksen verkkosivusto.',
+      'projects.yhdessa': 'Monikielinen puheterapiasivusto.',
+      'status.live': 'Tuotannossa',
+      'status.building': 'Kehityksessä',
+      'status.prototype': 'Prototyyppi',
+      'about.title': 'Tausta',
+      'about.copy':
+        'Ennen ohjelmistoalaa työskentelin merellä ja suoritin reserviupseerikoulutuksen. Arvostan yhä selkeitä toimintatapoja ja vastuunjakoa, etenkin tuotannossa.',
+      'contact.title': 'Yhteystiedot',
       'contact.location': 'Turku, Suomi',
-      'contact.openTo': 'Avoin junior backend- tai full-stack-rooleihin.',
-      'footer.linksAria': 'Yhteyslinkit',
-      'footer.github': 'GitHub',
-      'footer.githubAria': 'GitHub-profiili',
-      'footer.email': 'Sähköposti',
-      'footer.emailAria': 'Lähetä sähköpostia John Lindströmille',
-      'footer.phone': 'Puhelin',
-      'footer.phoneAria': 'Soita John Lindströmille',
-      'footer.copyright': '© 2026 John Lindström. Kaikki oikeudet pidätetään.',
+      'footer.copy': '© 2026 John Lindström',
     },
     sv: {
+      'meta.title': 'John Lindström | Mjukvaruutvecklare',
       'meta.description':
-        'Portfolio för John Lindström. Utvalda arbeten inkluderar Vesipolku, PNYX och praktiska webbprodukter.',
-      'meta.siteName': 'John Lindström',
-      'meta.ogTitle': 'John Lindström - Mjukvaruutvecklare',
-      'meta.ogDescription':
-        'Mjukvaruutvecklare som bygger och underhåller webbprodukter med TypeScript, React, Node.js och PostgreSQL.',
-      'meta.twitterTitle': 'John Lindström - Mjukvaruutvecklare',
-      'meta.twitterDescription':
-        'Mestadels solo fullstackarbete: backend, frontend, data, driftsättning och underhåll i produktion.',
-      'header.brandAria': 'JRWL startsida',
-      'header.brandAlt': 'JRWL-logotyp',
-      'header.navAria': 'Primär sektionsnavigering',
-      'lang.selectorAria': 'Språkval',
-      'nav.home': 'Hem',
+        'John Lindström är mjukvaruutvecklare i Åbo och arbetar med TypeScript, React, Node.js och PostgreSQL.',
+      'meta.summary': 'Aktuella tekniska kunskaper, egna projekt och kontaktuppgifter.',
+      'a11y.skip': 'Gå till innehållet',
+      'header.homeAria': 'JRWL startsida',
+      'header.navAria': 'Huvudnavigation',
+      'header.languageAria': 'Språk',
+      'nav.skills': 'Kunskaper',
       'nav.projects': 'Projekt',
-      'nav.skills': 'Kompetens',
-      'nav.about': 'Om mig',
+      'nav.about': 'Bakgrund',
       'nav.contact': 'Kontakt',
-      'hero.kicker': 'Mjukvaruutvecklare | Åbo, Finland',
-      'hero.title': 'Bygger, driftsätter, underhåller.',
-      'hero.lead':
-        'Arbetar oftast solo över hela stacken, från databasändringar till produktionsfixar.',
-      'hero.stripAria': 'Primära arbetsområden',
-      'hero.strip1': 'Backend och API:er',
-      'hero.strip2': 'Frontend',
-      'hero.strip3': 'Data och datamodell',
-      'hero.strip4': 'Driftsättning och underhåll',
-      'hero.ctaPrimary': 'Visa projekt',
-      'hero.ctaSecondary': 'Kontakt',
-      'hero.metricsAria': 'Mätvärden för projektstatus',
-      'hero.metric1Value': 'Solo',
-      'hero.metric1Label': 'Byggd och underhållen självständigt',
-      'hero.metric2Value': '2 live',
-      'hero.metric2Label': 'Appar i produktion',
-      'hero.metric3Value': '3 aktiva',
-      'hero.metric3Label': 'Projekt under utveckling',
-      'hero.logoAlt': 'JRWL full logotyp',
-      'projects.title': 'Utvalda projekt',
-      'projects.lead': 'Två liveappar, två statiska prototyper och en produkt under utveckling.',
-      'projects.vesipolkuAria': 'Öppna vesipolku.jrwl.io',
-      'projects.vesipolkuTag': 'Ekonomiplattform för vattenverk',
-      'projects.vesipolkuDesc':
-        'Vesipolku importerar bolagsdata från ett offentligt API, modellerar långsiktiga investeringsscenarier och räknar ut nuvarande taxenivå samt årliga höjningar.',
-      'projects.pnyxAria': 'PNYX-projekt under utveckling',
-      'projects.pnyxTag': 'Ansvarsplattform',
-      'projects.pnyxDesc':
-        'PNYX följer politiska löften med källänkar, milstolpar och statushistorik.',
-      'projects.proboconsAria': 'Öppna probocons.surge.sh-prototyp',
-      'projects.proboconsTag': 'Statisk företagswebbplats',
-      'projects.proboconsDesc':
-        'Statisk presentationssajt för en släktings företag, ProboCons Oy. Fokus är tydlig serviceinfo och enkel kontakt.',
-      'projects.yhdessaAria': 'Öppna yhdessa-web.vercel.app-prototyp',
-      'projects.yhdessaTag': 'Webbplats för talterapi',
-      'projects.yhdessaDesc':
-        'Statisk prototyp för en talterapitjänst med flerspråkiga sidor och en direkt kontaktväg.',
-      'projects.landingAria': 'Tillbaka till toppen',
-      'projects.landingName': 'JRWL-portfoliosida',
-      'projects.landingTag': 'Portfolio och kontaktnav',
-      'projects.landingDesc': 'Det här är min portfoliosajt: projektstatus, publicerade länkar och direktkontakt.',
-      'status.live': 'I drift',
-      'status.inDevelopment': 'Under utveckling',
+      'hero.summary':
+        'Jag är mjukvaruutvecklare i Åbo och arbetar med TypeScript, React, Node.js och PostgreSQL.',
+      'hero.availability': 'Öppen för backend- och fullstackroller.',
+      'hero.email': 'Skicka e-post',
+      'hero.stackAria': 'Primär teknisk kompetens',
+      'skills.title': 'Tekniska kunskaper',
+      'skills.application': 'Applikationsutveckling',
+      'skills.delivery': 'Testning och leverans',
+      'skills.cms': 'Webb och CMS',
+      'projects.title': 'Egna projekt',
+      'projects.note': 'Några projekt som jag bygger utanför arbetet.',
+      'projects.vesipolku': 'Planeringsverktyg för vattenbolag.',
+      'projects.pnyx': 'Verktyg för att följa politiska löften.',
+      'projects.probocons': 'Företagswebbplats.',
+      'projects.yhdessa': 'Flerspråkig webbplats för talterapi.',
+      'status.live': 'Lanserad',
+      'status.building': 'Under utveckling',
       'status.prototype': 'Prototyp',
-      'skills.title': 'Tekniska färdigheter',
-      'skills.core.title': 'Kärnspråk',
-      'skills.coreAria': 'Kärnprogrammeringsspråk',
-      'skills.core.one': 'TypeScript',
-      'skills.core.two': 'JavaScript',
-      'skills.core.three': 'C#',
-      'skills.frameworks.title': 'Ramverk och plattformar',
-      'skills.frameworksAria': 'Ramverk och plattformar',
-      'skills.frameworks.one': 'React',
-      'skills.frameworks.two': 'Next.js',
-      'skills.frameworks.three': 'NestJS',
-      'skills.frameworks.four': 'Express',
-      'skills.frameworks.five': 'Unity (XR)',
-      'skills.data.title': 'Databaser och data',
-      'skills.dataAria': 'Databaser och dataverktyg',
-      'skills.data.one': 'PostgreSQL + Prisma',
-      'skills.data.two': 'MongoDB + Mongoose',
-      'skills.data.three': 'MySQL',
-      'skills.workflow.title': 'Arbetsflöde och leverans',
-      'skills.workflowAria': 'Arbetsflödes- och leveransstack',
-      'skills.workflow.one': 'pnpm-workspaces + Turborepo',
-      'skills.workflow.two': 'Git/GitHub + strukturerade commits',
-      'skills.workflow.three': 'ESLint + Prettier + Husky',
-      'skills.workflow.four': 'Jest + Vitest + Playwright',
-      'skills.workflow.five': 'Vercel, Railway, Surge, egen VPS-produktionsserver',
-      'about.title': 'Så arbetar jag',
-      'about.lead':
-        'Jag levererar i korta iterationer, håller omfattningen tydlig och bygger för underhållbarhet från start. Det mesta jag gör är soloarbete, så driftsäkerhet, tydlig dokumentation och ren överlämning är en del av processen från dag ett.',
-      'about.point1':
-        'Jag bryter ner funktioner i små delar som går att driftsätta och håller framsteg synliga i commit-historiken.',
-      'about.point2':
-        'Jag håller tydliga gränser mellan frontend, backend och data så att ändringar blir förutsägbara och låg risk.',
-      'about.point3':
-        'Jag skriver setup- och överlämningsdokumentation så att nästa utvecklare kan köra, driftsätta och underhålla projektet utan tyst kunskap.',
-      'contact.title': 'Bakgrund och kontakt',
-      'contact.lead':
-        'Före mjukvaruutveckling arbetade jag i säkerhetskritiska maritima roller och genomförde reservofficersutbildning. Det lärde mig processdisciplin, ansvarstagande och beslutsfattande när misstag får verkliga konsekvenser.',
-      'contact.listAria': 'Direkta kontaktuppgifter',
+      'about.title': 'Bakgrund',
+      'about.copy':
+        'Innan jag började med mjukvara arbetade jag till sjöss och genomförde reservofficersutbildning. Jag värdesätter fortfarande tydliga rutiner och tydligt ansvar, särskilt i produktion.',
+      'contact.title': 'Kontakt',
       'contact.location': 'Åbo, Finland',
-      'contact.openTo': 'Öppen för juniora backend- eller fullstack-roller.',
-      'footer.linksAria': 'Kontaktlänkar',
-      'footer.github': 'GitHub',
-      'footer.githubAria': 'GitHub-profil',
-      'footer.email': 'E-post',
-      'footer.emailAria': 'Skicka e-post till John Lindström',
-      'footer.phone': 'Telefon',
-      'footer.phoneAria': 'Ring John Lindström',
-      'footer.copyright': '© 2026 John Lindström. Alla rättigheter förbehållna.',
+      'footer.copy': '© 2026 John Lindström',
     },
   };
 
-  const translate = (lang, key) => I18N[lang]?.[key] ?? I18N.en[key] ?? key;
-
-  const applyTranslations = (lang) => {
-    document.documentElement.lang = lang;
-
-    document.querySelectorAll('[data-i18n]').forEach((node) => {
-      const key = node.dataset.i18n;
-      if (!key) return;
-      node.textContent = translate(lang, key);
-    });
-
-    const attributeBindings = [
-      ['[data-i18n-aria-label]', 'aria-label', 'i18nAriaLabel'],
-      ['[data-i18n-alt]', 'alt', 'i18nAlt'],
-      ['[data-i18n-content]', 'content', 'i18nContent'],
-    ];
-
-    attributeBindings.forEach(([selector, attr, dataKey]) => {
-      document.querySelectorAll(selector).forEach((node) => {
-        const key = node.dataset[dataKey];
-        if (!key) return;
-        node.setAttribute(attr, translate(lang, key));
-      });
-    });
-
-    document.querySelectorAll('.lang-btn[data-lang]').forEach((button) => {
-      const active = button.dataset.lang === lang;
-      button.classList.toggle('is-active', active);
-      button.setAttribute('aria-pressed', active ? 'true' : 'false');
-    });
-  };
-
-  const getInitialLanguage = () => {
+  function readStoredLanguage() {
     try {
-      const saved = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
-      if (saved && SUPPORTED_LANGUAGES.includes(saved)) {
-        return saved;
-      }
-    } catch (_error) {
-      // Ignore storage errors and fall back to browser language.
+      return localStorage.getItem(STORAGE_KEY);
+    } catch {
+      return null;
     }
-
-    const browser = (navigator.language || 'en').toLowerCase();
-    if (browser.startsWith('fi')) return 'fi';
-    if (browser.startsWith('sv')) return 'sv';
-    return 'en';
-  };
-
-  const initLanguageSelector = () => {
-    const languageButtons = Array.from(document.querySelectorAll('.lang-btn[data-lang]'));
-    if (languageButtons.length === 0) return;
-
-    const setLanguage = (candidate) => {
-      const lang = SUPPORTED_LANGUAGES.includes(candidate) ? candidate : 'en';
-      applyTranslations(lang);
-
-      try {
-        window.localStorage.setItem(LANGUAGE_STORAGE_KEY, lang);
-      } catch (_error) {
-        // Ignore storage errors; translations still work in-session.
-      }
-    };
-
-    languageButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        const candidate = button.dataset.lang || 'en';
-        setLanguage(candidate);
-      });
-    });
-
-    setLanguage(getInitialLanguage());
-  };
-
-  const getDelay = (el) => {
-    const raw = Number(el.dataset.revealDelay);
-    return Number.isNaN(raw) ? 0 : raw;
-  };
-
-  const initReveals = () => {
-    const revealTargets = document.querySelectorAll('.reveal');
-    if (revealTargets.length === 0) return;
-
-    if (!('IntersectionObserver' in window) || prefersReduced.matches) {
-      revealTargets.forEach((el) => el.classList.add('is-visible'));
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-
-          const node = entry.target;
-          node.style.setProperty('--reveal-delay', `${getDelay(node)}ms`);
-          node.classList.add('is-visible');
-          observer.unobserve(node);
-        });
-      },
-      {
-        threshold: 0.08,
-        rootMargin: '0px 0px -8% 0px',
-      },
-    );
-
-    revealTargets.forEach((el) => observer.observe(el));
-  };
-
-  const initTiltCards = () => {
-    if (!(window.PointerEvent && !prefersReduced.matches && finePointer.matches)) {
-      return;
-    }
-
-    const cards = document.querySelectorAll('[data-tilt]');
-    if (cards.length === 0) return;
-
-    const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
-
-    cards.forEach((card) => {
-      const content = card;
-
-      const onPointerMove = (event) => {
-        const bounds = card.getBoundingClientRect();
-        const x = event.clientX - bounds.left;
-        const y = event.clientY - bounds.top;
-
-        const xNorm = (x / bounds.width - 0.5) * 2;
-        const yNorm = (y / bounds.height - 0.5) * 2;
-
-        const rotateX = clamp(yNorm * 3.2, -4, 4);
-        const rotateY = clamp(xNorm * -4, -4, 4);
-        const translateX = clamp(-xNorm * 6, -6, 6);
-        const translateY = clamp(-yNorm * 4, -4, 4);
-
-        content.style.transform =
-          `translate3d(${translateX}px, ${translateY}px, 0) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-      };
-
-      const onPointerLeave = () => {
-        content.style.transition = 'transform 260ms cubic-bezier(0.2, 0.7, 0.3, 1)';
-        content.style.transform = '';
-
-        window.setTimeout(() => {
-          content.style.transition = '';
-        }, 280);
-      };
-
-      card.addEventListener('pointermove', onPointerMove);
-      card.addEventListener('pointerleave', onPointerLeave);
-      card.addEventListener('focusin', () => {
-        card.style.borderColor = 'color-mix(in srgb, var(--accent) 28%, var(--line))';
-      });
-      card.addEventListener('focusout', () => {
-        card.style.borderColor = '';
-      });
-    });
-  };
-
-  const initSubtleParallax = () => {
-    const hero = document.querySelector('[data-parallax]');
-    const badge = hero ? hero.querySelector('.hero-logo, .hero-badge') : null;
-    const map = hero ? hero.querySelector('.hero-map') : null;
-
-    if (!hero || !badge || !map) return;
-    if (!(window.PointerEvent && !prefersReduced.matches && finePointer.matches)) return;
-
-    let raf = null;
-
-    const updateParallax = (event) => {
-      if (raf) {
-        return;
-      }
-
-      raf = window.requestAnimationFrame(() => {
-        const bounds = hero.getBoundingClientRect();
-        const x = (event.clientX - bounds.left) / bounds.width - 0.5;
-        const y = (event.clientY - bounds.top) / bounds.height - 0.5;
-
-        badge.style.transform = `translate(${x * -12}px, ${y * -8}px) scale(1.01)`;
-        map.style.transform = `translate(${x * 22}px, ${y * 10}px) rotate(${x * 4}deg)`;
-        raf = null;
-      });
-    };
-
-    const resetParallax = () => {
-      if (raf) {
-        window.cancelAnimationFrame(raf);
-        raf = null;
-      }
-
-      badge.style.transform = '';
-      map.style.transform = 'rotate(12deg)';
-    };
-
-    hero.addEventListener('pointermove', updateParallax);
-    hero.addEventListener('pointerleave', resetParallax);
-    hero.addEventListener('pointercancel', resetParallax);
-  };
-
-  const initSectionNav = () => {
-    const links = Array.from(document.querySelectorAll('.header-link[data-scroll]'));
-    if (links.length === 0) return;
-
-    const header = document.querySelector('.site-header');
-
-    const sections = links
-      .map((link) => {
-        const id = link.getAttribute('href');
-        if (!id || !id.startsWith('#')) return null;
-        return document.querySelector(id);
-      })
-      .filter((node, idx, arr) => node && arr.indexOf(node) === idx);
-
-    const setActive = (id) => {
-      links.forEach((link) => {
-        link.classList.toggle('is-active', link.getAttribute('href') === `#${id}`);
-      });
-    };
-
-    links.forEach((link) => {
-      link.addEventListener('click', (event) => {
-        const href = link.getAttribute('href');
-        if (!href || !href.startsWith('#')) return;
-
-        const target = document.querySelector(href);
-        if (!target) return;
-
-        event.preventDefault();
-        setActive(target.id);
-
-        const topOffset = (header ? header.getBoundingClientRect().height : 0) + 16;
-        const targetTop = window.scrollY + target.getBoundingClientRect().top - topOffset;
-
-        window.scrollTo({
-          top: targetTop,
-          behavior: prefersReduced.matches ? 'auto' : 'smooth',
-        });
-
-        target.classList.remove('section-flash');
-        void target.offsetWidth;
-        target.classList.add('section-flash');
-
-        window.setTimeout(() => {
-          target.classList.remove('section-flash');
-        }, 900);
-
-        window.history.replaceState(null, '', href);
-      });
-    });
-
-    if ('IntersectionObserver' in window && sections.length > 0) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          const visible = entries
-            .filter((entry) => entry.isIntersecting)
-            .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-
-          if (visible[0]) {
-            setActive(visible[0].target.id);
-          }
-        },
-        {
-          rootMargin: '-35% 0px -55% 0px',
-          threshold: [0.15, 0.35, 0.6],
-        },
-      );
-
-      sections.forEach((section) => observer.observe(section));
-    }
-
-    const initial = window.location.hash?.replace('#', '') || 'hero';
-    setActive(initial);
-  };
-
-  const initInteractions = () => {
-    initLanguageSelector();
-    initSectionNav();
-    initReveals();
-    initTiltCards();
-    initSubtleParallax();
-  };
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initInteractions, { once: true });
-  } else {
-    initInteractions();
   }
+
+  function storeLanguage(language) {
+    try {
+      localStorage.setItem(STORAGE_KEY, language);
+    } catch {
+      // Language switching still works when storage is unavailable.
+    }
+  }
+
+  function applyLanguage(language) {
+    const selected = SUPPORTED_LANGUAGES.includes(language) ? language : 'en';
+    const dictionary = translations[selected];
+
+    document.documentElement.lang = selected;
+    document.title = dictionary['meta.title'];
+
+    document.querySelectorAll('[data-i18n]').forEach((element) => {
+      const value = dictionary[element.dataset.i18n];
+      if (value) element.textContent = value;
+    });
+
+    document.querySelectorAll('[data-i18n-content]').forEach((element) => {
+      const value = dictionary[element.dataset.i18nContent];
+      if (value) element.setAttribute('content', value);
+    });
+
+    document.querySelectorAll('[data-i18n-aria-label]').forEach((element) => {
+      const value = dictionary[element.dataset.i18nAriaLabel];
+      if (value) element.setAttribute('aria-label', value);
+    });
+
+    document.querySelectorAll('[data-lang]').forEach((button) => {
+      button.setAttribute('aria-pressed', String(button.dataset.lang === selected));
+    });
+
+    storeLanguage(selected);
+  }
+
+  document.querySelectorAll('[data-lang]').forEach((button) => {
+    button.addEventListener('click', () => applyLanguage(button.dataset.lang));
+  });
+
+  const storedLanguage = readStoredLanguage();
+  const browserLanguage = navigator.language.slice(0, 2).toLowerCase();
+  applyLanguage(
+    SUPPORTED_LANGUAGES.includes(storedLanguage)
+      ? storedLanguage
+      : SUPPORTED_LANGUAGES.includes(browserLanguage)
+        ? browserLanguage
+        : 'en',
+  );
+
+  const sectionLinks = [...document.querySelectorAll('[data-section-link]')];
+  const trackedSections = ['skills', 'projects', 'about']
+    .map((id) => document.getElementById(id))
+    .filter(Boolean);
+
+  function setActiveSection(sectionId) {
+    sectionLinks.forEach((link) => {
+      if (link.dataset.sectionLink === sectionId) {
+        link.setAttribute('aria-current', 'location');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  function updateActiveSection() {
+    if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 48) {
+      setActiveSection('contact');
+      return;
+    }
+
+    const activationLine = window.innerHeight * 0.3;
+    const active = trackedSections.filter((section) => section.getBoundingClientRect().top <= activationLine).at(-1);
+    setActiveSection(active?.id ?? '');
+  }
+
+  let scrollFrame = 0;
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (scrollFrame) return;
+      scrollFrame = requestAnimationFrame(() => {
+        updateActiveSection();
+        scrollFrame = 0;
+      });
+    },
+    { passive: true },
+  );
+
+  sectionLinks.forEach((link) => {
+    link.addEventListener('click', () => setActiveSection(link.dataset.sectionLink));
+  });
+
+  updateActiveSection();
 })();

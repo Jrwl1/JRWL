@@ -1,3 +1,6 @@
 site-audit-*.png
 .jrwl-http.log
 *.log
+.impeccable/critique/
+.impeccable/live/
+.impeccable/review/

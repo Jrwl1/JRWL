@@ -1,0 +1,349 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-17T11:53:40Z",
+  "title": "Design System: JRWL",
+  "extensions": {
+    "colorMeta": {
+      "cobalt": {
+        "role": "primary",
+        "displayName": "Maintained Cobalt",
+        "canonical": "#2448e8",
+        "tonalRamp": [
+          "oklch(15% 0.242 266.3)",
+          "oklch(27% 0.242 266.3)",
+          "oklch(39% 0.242 266.3)",
+          "oklch(51% 0.242 266.3)",
+          "oklch(63% 0.242 266.3)",
+          "oklch(75% 0.242 266.3)",
+          "oklch(87% 0.242 266.3)",
+          "oklch(95% 0.242 266.3)"
+        ]
+      },
+      "cobalt-deep": {
+        "role": "primary",
+        "displayName": "Deep Cobalt",
+        "canonical": "#1733b8",
+        "tonalRamp": [
+          "oklch(15% 0.208 266.2)",
+          "oklch(27% 0.208 266.2)",
+          "oklch(39% 0.208 266.2)",
+          "oklch(51% 0.208 266.2)",
+          "oklch(63% 0.208 266.2)",
+          "oklch(75% 0.208 266.2)",
+          "oklch(87% 0.208 266.2)",
+          "oklch(95% 0.208 266.2)"
+        ]
+      },
+      "cobalt-soft": {
+        "role": "primary",
+        "displayName": "Soft Cobalt",
+        "canonical": "#e8ecff",
+        "tonalRamp": [
+          "oklch(15% 0.026 276.4)",
+          "oklch(27% 0.026 276.4)",
+          "oklch(39% 0.026 276.4)",
+          "oklch(51% 0.026 276.4)",
+          "oklch(63% 0.026 276.4)",
+          "oklch(75% 0.026 276.4)",
+          "oklch(87% 0.026 276.4)",
+          "oklch(95% 0.026 276.4)"
+        ]
+      },
+      "cobalt-on-surface": {
+        "role": "primary",
+        "displayName": "On-Cobalt Tint",
+        "canonical": "#dfe4ff",
+        "tonalRamp": [
+          "oklch(15% 0.037 277.3)",
+          "oklch(27% 0.037 277.3)",
+          "oklch(39% 0.037 277.3)",
+          "oklch(51% 0.037 277.3)",
+          "oklch(63% 0.037 277.3)",
+          "oklch(75% 0.037 277.3)",
+          "oklch(87% 0.037 277.3)",
+          "oklch(95% 0.037 277.3)"
+        ]
+      },
+      "technical-paper": {
+        "role": "neutral",
+        "displayName": "Technical Paper",
+        "canonical": "#f6f7f5",
+        "tonalRamp": [
+          "oklch(15% 0.003 128.5)",
+          "oklch(27% 0.003 128.5)",
+          "oklch(39% 0.003 128.5)",
+          "oklch(51% 0.003 128.5)",
+          "oklch(63% 0.003 128.5)",
+          "oklch(75% 0.003 128.5)",
+          "oklch(87% 0.003 128.5)",
+          "oklch(95% 0.003 128.5)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(27% 0 0)",
+          "oklch(39% 0 0)",
+          "oklch(51% 0 0)",
+          "oklch(63% 0 0)",
+          "oklch(75% 0 0)",
+          "oklch(87% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "graphite": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "#121419",
+        "tonalRamp": [
+          "oklch(15% 0.011 268.1)",
+          "oklch(27% 0.011 268.1)",
+          "oklch(39% 0.011 268.1)",
+          "oklch(51% 0.011 268.1)",
+          "oklch(63% 0.011 268.1)",
+          "oklch(75% 0.011 268.1)",
+          "oklch(87% 0.011 268.1)",
+          "oklch(95% 0.011 268.1)"
+        ]
+      },
+      "muted-slate": {
+        "role": "neutral",
+        "displayName": "Muted Slate",
+        "canonical": "#5c626d",
+        "tonalRamp": [
+          "oklch(15% 0.019 262.7)",
+          "oklch(27% 0.019 262.7)",
+          "oklch(39% 0.019 262.7)",
+          "oklch(51% 0.019 262.7)",
+          "oklch(63% 0.019 262.7)",
+          "oklch(75% 0.019 262.7)",
+          "oklch(87% 0.019 262.7)",
+          "oklch(95% 0.019 262.7)"
+        ]
+      },
+      "rule-light": {
+        "role": "neutral",
+        "displayName": "Light Rule",
+        "canonical": "#c8ccd2",
+        "tonalRamp": [
+          "oklch(15% 0.009 258.3)",
+          "oklch(27% 0.009 258.3)",
+          "oklch(39% 0.009 258.3)",
+          "oklch(51% 0.009 258.3)",
+          "oklch(63% 0.009 258.3)",
+          "oklch(75% 0.009 258.3)",
+          "oklch(87% 0.009 258.3)",
+          "oklch(95% 0.009 258.3)"
+        ]
+      },
+      "rule-strong": {
+        "role": "neutral",
+        "displayName": "Strong Rule",
+        "canonical": "#7c828d",
+        "tonalRamp": [
+          "oklch(15% 0.018 262.7)",
+          "oklch(27% 0.018 262.7)",
+          "oklch(39% 0.018 262.7)",
+          "oklch(51% 0.018 262.7)",
+          "oklch(63% 0.018 262.7)",
+          "oklch(75% 0.018 262.7)",
+          "oklch(87% 0.018 262.7)",
+          "oklch(95% 0.018 262.7)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The two-line personal name and no other content."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Major section titles and the contact heading."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "The concise role statement beside the personal name."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Project names and technologies in the signature stack band."
+      },
+      "body-large": {
+        "displayName": "Body Large",
+        "purpose": "High-value factual content in skill and background rows."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Descriptions, availability, contact details, and supporting copy."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Navigation, categories, statuses, language controls, and metadata."
+      },
+      "control": {
+        "displayName": "Control",
+        "purpose": "Primary and secondary action labels."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "stack-scan-once",
+        "value": "900ms 180ms cubic-bezier(0.16, 1, 0.3, 1) both",
+        "purpose": "One non-looping left-to-right scan across the current-stack band."
+      },
+      {
+        "name": "direct-state",
+        "value": "160ms ease",
+        "purpose": "Button and project-row color, border, and inset transitions."
+      },
+      {
+        "name": "navigation-indicator",
+        "value": "180ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Left-origin current-section underline transition."
+      },
+      {
+        "name": "reduced-motion-collapse",
+        "value": "0.01ms; one iteration",
+        "purpose": "Effectively removes animation and transitions when reduced motion is requested."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact",
+        "value": "860px"
+      },
+      {
+        "name": "narrow",
+        "value": "520px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Action",
+      "kind": "button",
+      "refersTo": "action-primary",
+      "description": "The main email action: square, cobalt, and visually decisive.",
+      "html": "<a class=\"ds-action ds-action-primary\" href=\"#\">Email me</a>",
+      "css": ".ds-action { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0.75rem 1.1rem; border: 1px solid var(--ink); border-radius: 0; font-family: var(--font-body); font-weight: 600; text-decoration: none; transition: background 160ms ease, color 160ms ease, border-color 160ms ease; } .ds-action-primary { border-color: var(--blue); background: var(--blue); color: var(--white); } .ds-action-primary:hover, .ds-action-primary:focus-visible { border-color: var(--blue-dark); background: var(--blue-dark); } .ds-action-primary:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }"
+    },
+    {
+      "name": "Secondary Action",
+      "kind": "button",
+      "refersTo": "action-secondary",
+      "description": "A transparent graphite action that reverses on interaction.",
+      "html": "<a class=\"ds-action ds-action-secondary\" href=\"#\"><span>GitHub</span><svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M5 11 11 5M6 5h5v5\" /></svg></a>",
+      "css": ".ds-action { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0.75rem 1.1rem; border: 1px solid var(--ink); border-radius: 0; color: var(--ink); font-family: var(--font-body); font-weight: 600; text-decoration: none; transition: background 160ms ease, color 160ms ease; } .ds-action svg { width: 16px; height: 16px; margin-left: 0.65rem; fill: none; stroke: currentColor; stroke-linecap: square; stroke-linejoin: miter; stroke-width: 1.5; } .ds-action-secondary:hover, .ds-action-secondary:focus-visible { background: var(--ink); color: var(--white); } .ds-action-secondary:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }"
+    },
+    {
+      "name": "Primary Navigation",
+      "kind": "nav",
+      "refersTo": "navigation-link",
+      "description": "Centered condensed links with a cobalt current-section rule.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Primary navigation\"><a class=\"ds-nav-link\" href=\"#\" aria-current=\"location\">Skills</a><a class=\"ds-nav-link\" href=\"#\">Projects</a><a class=\"ds-nav-link\" href=\"#\">Background</a><a class=\"ds-nav-link\" href=\"#\">Contact</a></nav>",
+      "css": ".ds-nav { display: flex; justify-content: center; gap: clamp(1rem, 3vw, 2.75rem); } .ds-nav-link { position: relative; display: inline-flex; align-items: center; min-height: 44px; color: var(--muted); font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; text-decoration: none; } .ds-nav-link::after { position: absolute; right: 0; bottom: -16px; left: 0; height: 3px; background: var(--blue); content: \"\"; transform: scaleX(0); transform-origin: left; transition: transform 180ms var(--ease-out); } .ds-nav-link:hover, .ds-nav-link:focus-visible, .ds-nav-link[aria-current=\"location\"] { color: var(--ink); } .ds-nav-link[aria-current=\"location\"]::after { transform: scaleX(1); } .ds-nav-link:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; } @media (max-width: 860px) { .ds-nav { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--line); } .ds-nav-link { justify-content: center; min-height: 48px; border-right: 1px solid var(--line); font-size: 0.82rem; } .ds-nav-link:last-child { border-right: 0; } .ds-nav-link::after { bottom: 0; } }"
+    },
+    {
+      "name": "Language Switch",
+      "kind": "custom",
+      "refersTo": "language-option-active",
+      "description": "A fused EN/FI/SV control with a graphite active cell.",
+      "html": "<div class=\"ds-language-switch\" role=\"group\" aria-label=\"Language\"><button type=\"button\" aria-pressed=\"true\">EN</button><button type=\"button\" aria-pressed=\"false\">FI</button><button type=\"button\" aria-pressed=\"false\">SV</button></div>",
+      "css": ".ds-language-switch { display: flex; width: max-content; border: 1px solid var(--line-dark); } .ds-language-switch button { width: 42px; height: 38px; border: 0; border-right: 1px solid var(--line-dark); border-radius: 0; background: transparent; color: var(--muted); cursor: pointer; font-family: var(--font-display); font-size: 0.78rem; font-weight: 700; } .ds-language-switch button:last-child { border-right: 0; } .ds-language-switch button:hover, .ds-language-switch button:focus-visible { background: var(--blue-soft); color: var(--ink); } .ds-language-switch button[aria-pressed=\"true\"] { background: var(--ink); color: var(--white); } .ds-language-switch button:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; } @media (max-width: 860px) { .ds-language-switch button { width: 44px; height: 44px; } }"
+    },
+    {
+      "name": "Current Stack Band",
+      "kind": "custom",
+      "refersTo": "stack-cell",
+      "description": "The signature four-cell cobalt row with one non-looping scan pass.",
+      "html": "<div class=\"ds-stack-band\" aria-label=\"Primary technical stack\"><span>TypeScript</span><span>React</span><span>Node.js</span><span>PostgreSQL</span></div>",
+      "css": ".ds-stack-band { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); overflow: hidden; background: var(--blue); color: var(--white); } .ds-stack-band::after { position: absolute; top: 0; bottom: 0; left: -15%; width: 8%; background: rgb(255 255 255 / 24%); content: \"\"; animation: ds-scan-once 900ms 180ms var(--ease-out) both; pointer-events: none; } .ds-stack-band span { padding: clamp(1rem, 2vw, 1.5rem); border-right: 1px solid rgb(255 255 255 / 45%); font-family: var(--font-display); font-size: clamp(1.1rem, 2vw, 1.45rem); font-weight: 600; } .ds-stack-band span:last-child { border-right: 0; } @keyframes ds-scan-once { to { transform: translateX(1500%); } } @media (max-width: 860px) { .ds-stack-band { grid-template-columns: repeat(2, minmax(0, 1fr)); } .ds-stack-band span:nth-child(2) { border-right: 0; } .ds-stack-band span:nth-child(-n + 2) { border-bottom: 1px solid rgb(255 255 255 / 45%); } } @media (prefers-reduced-motion: reduce) { .ds-stack-band::after { animation-duration: 0.01ms; animation-iteration-count: 1; } }"
+    },
+    {
+      "name": "Skill Ledger Row",
+      "kind": "custom",
+      "refersTo": "ledger-row",
+      "description": "A full-width ruled label-and-content row for factual skills.",
+      "html": "<dl class=\"ds-skill-ledger\"><div><dt>Application development</dt><dd>TypeScript, React, Node.js, Hono, PostgreSQL, Prisma, Zod</dd></div></dl>",
+      "css": ".ds-skill-ledger { margin: 0; border-bottom: 1px solid var(--line-dark); } .ds-skill-ledger > div { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 1rem; padding-block: 1.75rem; border-top: 1px solid var(--line-dark); } .ds-skill-ledger dt { grid-column: 1 / span 4; color: var(--muted); font-family: var(--font-display); font-size: 1rem; font-weight: 600; } .ds-skill-ledger dd { grid-column: 5 / -1; margin: 0; max-width: 72ch; color: var(--ink); font-family: var(--font-body); font-size: clamp(1.15rem, 2vw, 1.5rem); font-weight: 500; letter-spacing: -0.02em; line-height: 1.45; } @media (max-width: 860px) { .ds-skill-ledger > div { grid-template-columns: 1fr; gap: 0.75rem; } .ds-skill-ledger dt, .ds-skill-ledger dd { grid-column: 1; } }"
+    },
+    {
+      "name": "Interactive Project Row",
+      "kind": "custom",
+      "refersTo": "project-row-hover",
+      "description": "A ruled project record that reverses to cobalt on hover or keyboard focus.",
+      "html": "<a class=\"ds-project-row\" href=\"#\"><span class=\"ds-project-name\">Vesipolku</span><span class=\"ds-project-description\">Planning tool for water utilities.</span><span class=\"ds-project-status\">Live</span><svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M5 11 11 5M6 5h5v5\" /></svg></a>",
+      "css": ".ds-project-row { display: grid; grid-template-columns: minmax(10rem, 2fr) minmax(15rem, 5fr) auto 20px; gap: 1.25rem; align-items: center; min-height: 82px; padding: 1rem 0; border-top: 1px solid var(--line-dark); border-bottom: 1px solid var(--line-dark); color: var(--ink); text-decoration: none; transition: background 160ms ease, color 160ms ease, padding 160ms var(--ease-out); } .ds-project-row:hover, .ds-project-row:focus-visible { padding-inline: 1rem; background: var(--blue); color: var(--white); outline: 3px solid var(--blue); outline-offset: 3px; } .ds-project-name { font-family: var(--font-display); font-size: 1.45rem; font-weight: 700; } .ds-project-description { color: var(--muted); } .ds-project-row:hover .ds-project-description, .ds-project-row:focus-visible .ds-project-description { color: var(--white); } .ds-project-status { font-family: var(--font-display); font-size: 0.9rem; font-weight: 600; white-space: nowrap; } .ds-project-row svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-linecap: square; stroke-linejoin: miter; stroke-width: 1.5; } @media (max-width: 860px) { .ds-project-row { grid-template-columns: minmax(0, 1fr) auto 18px; gap: 0.65rem 1rem; min-height: 96px; } .ds-project-name { grid-column: 1; } .ds-project-description { grid-column: 1 / -1; grid-row: 2; } .ds-project-status { grid-column: 2; grid-row: 1; } .ds-project-row svg { grid-column: 3; grid-row: 1; } }"
+    },
+    {
+      "name": "Contact Plane",
+      "kind": "custom",
+      "refersTo": "contact-plane",
+      "description": "A square cobalt contact field with white links and no elevation.",
+      "html": "<section class=\"ds-contact-plane\"><h2>Contact</h2><p>Turku, Finland</p><a href=\"mailto:jrwl@jrwl.io\">jrwl@jrwl.io</a><a href=\"tel:+358469536590\">+358 46 953 6590</a><a href=\"#\">github.com/jrwl1</a></section>",
+      "css": ".ds-contact-plane { display: flex; flex-direction: column; align-items: flex-start; padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 5rem); border-radius: 0; background: var(--blue); color: var(--white); } .ds-contact-plane h2 { margin: 0; font-family: var(--font-display); font-size: clamp(2.6rem, 5vw, 4.4rem); font-weight: 700; letter-spacing: -0.035em; line-height: 0.95; } .ds-contact-plane p { margin: 2rem 0 1rem; color: #dfe4ff; } .ds-contact-plane a { display: inline-flex; align-items: center; min-height: 44px; margin-top: 0.1rem; color: var(--white); font-family: var(--font-body); font-size: clamp(1rem, 2vw, 1.3rem); font-weight: 500; } .ds-contact-plane a:hover, .ds-contact-plane a:focus-visible { text-decoration-thickness: 2px; } .ds-contact-plane a:focus-visible { outline: 3px solid var(--white); outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Maintained Technical Reference",
+    "overview": "JRWL is a maintained technical reference sheet: precise, current, and optimized for a recruiter’s short scan. Near-white paper, graphite type, and hard rules establish the working surface; cobalt identifies the current stack, decisive actions, and the contact plane.\n\nThe interface stays flat and type-led. Archivo Narrow compresses identity and section structure while Archivo keeps sentences readable; square controls and full-width rows make every transition explicit. Motion is limited to one left-to-right scan across the stack band, then the page becomes still.\n\nThe system must remain factual and multilingual across English, Finnish, and Swedish. It explicitly rejects maritime themes, symbols, logos, charts, technology-badge clouds, portfolio dashboards, and ship-derived visual language.",
+    "keyCharacteristics": [
+      "Near-white paper, graphite text, and cobalt emphasis.",
+      "Archivo Narrow structure paired with Archivo body copy.",
+      "Square controls, hard rules, and full-width information rows.",
+      "Flat depth with one non-looping stack-row scan.",
+      "Responsive layouts that preserve 44-pixel mobile targets and EN/FI/SV wrapping."
+    ],
+    "rules": [
+      {
+        "name": "The Cobalt Allocation Rule",
+        "body": "Cobalt marks the current stack, decisive actions, contact information, or active interaction; it is not decoration.",
+        "section": "colors"
+      },
+      {
+        "name": "The Graphite Skeleton Rule",
+        "body": "Hard graphite and slate rules create structure; do not replace them with cards, shadows, or soft tinted containers.",
+        "section": "colors"
+      },
+      {
+        "name": "The Condensed Structure Rule",
+        "body": "Use Archivo Narrow for identity, section structure, navigation, labels, and status; use Archivo for sentences, descriptions, and data.",
+        "section": "typography"
+      },
+      {
+        "name": "The Full-Width Evidence Rule",
+        "body": "Information rows span their container and separate with rules; avoid floating cards, badges, and tile grids.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat-by-Default Rule",
+        "body": "Surfaces remain flat at rest; hierarchy comes from type, rules, and cobalt planes, never shadows.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Zero-Radius Rule",
+        "body": "Do not introduce pills, rounded cards, soft chips, or curved control shells; the implemented radius is zero.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do reserve cobalt for the current stack, primary action, contact plane, active navigation, selection, focus, and strong row interaction.",
+      "Do build hierarchy with Archivo Narrow, Archivo, hard rules, spacing, and full-width rows.",
+      "Do keep controls square and keyboard focus visible with a 3-pixel outline and 3-pixel offset.",
+      "Do preserve flexible copy widths and 44-pixel targets across English, Finnish, and Swedish.",
+      "Do let the stack scan run once, then leave the page still; honor reduced-motion preferences."
+    ],
+    "donts": [
+      "Don't introduce maritime themes, symbols, logos, charts, or ship-derived visual language.",
+      "Don't turn the profile into a portfolio dashboard, technology-badge cloud, chart, or proof-theatre interface.",
+      "Don't soften the system with pills, rounded cards, gradients, shadows, or floating panels.",
+      "Don't spread cobalt across arbitrary decorative surfaces; its scarcity carries meaning.",
+      "Don't add looping, ambient, parallax, or scroll-bound motion."
+    ]
+  }
+}
