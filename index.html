@@ -20,165 +20,192 @@
       data-i18n-content="meta.summary"
     />
     <meta property="og:url" content="https://jrwl.io" />
-    <meta property="og:image" content="https://jrwl.io/assets/jrwl-badge.svg" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content="https://jrwl.io/assets/orbital-hero.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="John Lindström | Software developer" data-i18n-content="meta.title" />
     <meta
       name="twitter:description"
       content="Current technical skills, personal projects, and contact details."
       data-i18n-content="meta.summary"
     />
-    <meta name="twitter:image" content="https://jrwl.io/assets/jrwl-badge.svg" />
+    <meta name="twitter:image" content="https://jrwl.io/assets/orbital-hero.webp" />
 
-    <link rel="icon" type="image/svg+xml" href="assets/jrwl-badge.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Narrow:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@400;500;600&family=Sora:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="preload" as="image" href="assets/orbital-hero.webp" type="image/webp" />
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
     <!--
-      THESIS: A maintained technical profile, not a portfolio dashboard or a cloud of technology badges.
-      OWN-WORLD: White, graphite, cobalt, sharp sans typography, square controls, and full-width information rows.
-      STORY: A recruiter identifies John, scans his current stack, sees secondary personal work, and reaches him without hunting.
-      FIRST VIEWPORT: John's name owns the left field; a short role statement and contact action sit right; the current stack spans the width below.
-      FORM: Type-led technical reference sheet, grounded direction 5, seed 464f3332.
+      THESIS: A compact technical profile inside one orbital visual system, refusing the giant-name hero and repeated stack inventory.
+      OWN-WORLD: Void black, blue-white, ember orange, photon gold, fine orbit lines, luminous image-led surfaces, and precise rounded controls.
+      STORY: A hiring visitor identifies John, reads his current stack once, scans secondary personal projects and working approach, then contacts him.
+      FIRST VIEWPORT: A modest name, role and actions sit over the dark left field; authored accretion artwork owns the right; the stack begins immediately below.
+      FORM: Orbital Index, challenger direction, seed 487bd0ee; one radial skill map and one non-looping horizon reveal carry the interaction grammar.
       FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
     -->
 
     <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
 
-    <div class="page-shell">
-      <header class="site-header" id="top">
-        <a class="brand" href="#top" aria-label="JRWL home" data-i18n-aria-label="header.homeAria">JRWL</a>
+    <header class="site-header" id="top">
+      <a class="identity" href="#top" aria-label="John Lindström home" data-i18n-aria-label="header.homeAria">
+        John Lindström
+      </a>
 
-        <nav class="site-nav" aria-label="Primary navigation" data-i18n-aria-label="header.navAria">
-          <a href="#skills" data-section-link="skills" data-i18n="nav.skills">Skills</a>
-          <a href="#projects" data-section-link="projects" data-i18n="nav.projects">Projects</a>
-          <a href="#approach" data-section-link="approach" data-i18n="nav.approach">Approach</a>
-          <a href="#contact" data-section-link="contact" data-i18n="nav.contact">Contact</a>
-        </nav>
+      <nav class="site-nav" aria-label="Primary navigation" data-i18n-aria-label="header.navAria">
+        <a href="#skills" data-section-link="skills" data-i18n="nav.skills">Stack</a>
+        <a href="#projects" data-section-link="projects" data-i18n="nav.projects">Projects</a>
+        <a href="#approach" data-section-link="approach" data-i18n="nav.approach">Approach</a>
+        <a href="#contact" data-section-link="contact" data-i18n="nav.contact">Contact</a>
+      </nav>
 
-        <div class="language-switch" role="group" aria-label="Language" data-i18n-aria-label="header.languageAria">
-          <button type="button" data-lang="en" aria-pressed="false">EN</button>
-          <button type="button" data-lang="fi" aria-pressed="false">FI</button>
-          <button type="button" data-lang="sv" aria-pressed="false">SV</button>
+      <div class="language-switch" role="group" aria-label="Language" data-i18n-aria-label="header.languageAria">
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="fi" aria-pressed="false">FI</button>
+        <button type="button" data-lang="sv" aria-pressed="false">SV</button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-art" aria-hidden="true">
+          <img
+            src="assets/orbital-hero.webp"
+            alt=""
+            width="1536"
+            height="1024"
+            fetchpriority="high"
+            decoding="async"
+          />
+          <span class="orbit-line orbit-line-one"></span>
+          <span class="orbit-line orbit-line-two"></span>
         </div>
-      </header>
 
-      <main id="main">
-        <section class="hero" aria-labelledby="hero-title">
-          <h1 id="hero-title">John<br />Lindström</h1>
+        <div class="hero-content">
+          <h1 id="hero-title">John Lindström</h1>
+          <p class="hero-summary" data-i18n="hero.summary">Software developer in Turku. Backend and full-stack.</p>
+          <p class="availability" data-i18n="hero.availability">Open to backend and full-stack roles.</p>
 
-          <div class="hero-copy">
-            <p class="hero-summary" data-i18n="hero.summary">
-              I’m a software developer in Turku working with TypeScript, React, Node.js and PostgreSQL.
-            </p>
-            <p class="availability" data-i18n="hero.availability">Open to backend and full-stack roles.</p>
-
-            <div class="hero-actions">
-              <a class="action action-primary" href="mailto:jrwl@jrwl.io" data-i18n="hero.email">Email me</a>
-              <a class="action action-secondary" href="https://github.com/jrwl1" target="_blank" rel="noreferrer noopener">
-                <span>GitHub</span>
-                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" /></svg>
-              </a>
-            </div>
-          </div>
-
-          <div class="stack-line" aria-label="Primary technical stack" data-i18n-aria-label="hero.stackAria">
-            <span>TypeScript</span>
-            <span>React</span>
-            <span>Node.js</span>
-            <span>PostgreSQL</span>
-          </div>
-        </section>
-
-        <section id="skills" class="content-section skills-section" aria-labelledby="skills-title">
-          <header class="section-heading">
-            <h2 id="skills-title" data-i18n="skills.title">Technical skills</h2>
-          </header>
-
-          <dl class="skill-ledger">
-            <div>
-              <dt data-i18n="skills.application">Application development</dt>
-              <dd>TypeScript, React, Node.js, Hono, TanStack Router / Query / Form, PostgreSQL, Prisma, Zod</dd>
-            </div>
-            <div>
-              <dt data-i18n="skills.delivery">Testing and delivery</dt>
-              <dd>pnpm workspaces, Vitest, Playwright, Docker, Coolify, Git / GitHub</dd>
-            </div>
-            <div>
-              <dt data-i18n="skills.cms">Web and CMS</dt>
-              <dd>HTML, CSS / SCSS, WordPress, WooCommerce, PHP, Timber / Twig, ACF, Polylang</dd>
-            </div>
-          </dl>
-        </section>
-
-        <section id="projects" class="content-section projects-section" aria-labelledby="projects-title">
-          <header class="section-heading section-heading-split">
-            <h2 id="projects-title" data-i18n="projects.title">Personal projects</h2>
-            <p data-i18n="projects.note">A few things I build outside work.</p>
-          </header>
-
-          <div class="project-list">
-            <a class="project-row" href="https://vesipolku.jrwl.io" target="_blank" rel="noreferrer noopener">
-              <span class="project-name">Vesinvest</span>
-              <span class="project-description" data-i18n="projects.vesinvest">Planning tool for water utilities.</span>
-              <span class="project-status" data-i18n="status.live">Live</span>
-              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" /></svg>
-            </a>
-
-            <div class="project-row">
-              <span class="project-name">PNYX</span>
-              <span class="project-description" data-i18n="projects.pnyx">Political promise tracker.</span>
-              <span class="project-status" data-i18n="status.building">In development</span>
-            </div>
-
-            <a class="project-row" href="https://probocons.surge.sh" target="_blank" rel="noreferrer noopener">
-              <span class="project-name">Probocons</span>
-              <span class="project-description" data-i18n="projects.probocons">Company website.</span>
-              <span class="project-status" data-i18n="status.prototype">Prototype</span>
-              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" /></svg>
-            </a>
-
-            <a class="project-row" href="https://yhdessa-web.vercel.app" target="_blank" rel="noreferrer noopener">
-              <span class="project-name">Yhdessä</span>
-              <span class="project-description" data-i18n="projects.yhdessa">Multilingual speech therapy site.</span>
-              <span class="project-status" data-i18n="status.prototype">Prototype</span>
+          <div class="hero-actions">
+            <a class="action action-primary" href="mailto:jrwl@jrwl.io" data-i18n="hero.email">Email me</a>
+            <a class="action action-secondary" href="https://github.com/jrwl1" target="_blank" rel="noreferrer noopener">
+              <span>GitHub</span>
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" /></svg>
             </a>
           </div>
-        </section>
+        </div>
 
-        <section class="closing-section">
-          <article id="approach" class="approach-block" aria-labelledby="approach-title">
-            <h2 id="approach-title" data-i18n="approach.title">How I build</h2>
-            <ul class="approach-list">
-              <li data-i18n="approach.smallest">Start with the smallest complete version.</li>
-              <li data-i18n="approach.ownership">Keep ownership and boundaries clear.</li>
-              <li data-i18n="approach.tests">Test the behavior that can actually break.</li>
-            </ul>
+        <div class="hero-coordinate" aria-hidden="true">
+          <span>60.4518° N</span>
+          <span>22.2666° E</span>
+        </div>
+      </section>
+
+      <section id="skills" class="section skills-section" aria-labelledby="skills-title">
+        <header class="section-intro">
+          <h2 id="skills-title" data-i18n="skills.title">Current stack</h2>
+          <p data-i18n="skills.note">The tools I use most now.</p>
+        </header>
+
+        <div class="skills-orbit">
+          <div class="orbit-center" aria-hidden="true">
+            <span></span>
+            <strong data-i18n="skills.center">Current stack</strong>
+          </div>
+
+          <article class="skill-node skill-node-core">
+            <h3 data-i18n="skills.core">Core</h3>
+            <p>TypeScript · React · Node.js · PostgreSQL</p>
           </article>
 
-          <aside id="contact" class="contact-block" aria-labelledby="contact-title">
-            <h2 id="contact-title" data-i18n="contact.title">Contact</h2>
-            <p data-i18n="contact.location">Turku, Finland</p>
-            <a href="mailto:jrwl@jrwl.io">jrwl@jrwl.io</a>
-            <a href="tel:+358469536590">+358 46 953 6590</a>
-            <a href="https://github.com/jrwl1" target="_blank" rel="noreferrer noopener">github.com/jrwl1</a>
-          </aside>
-        </section>
-      </main>
+          <article class="skill-node skill-node-application">
+            <h3 data-i18n="skills.application">Application</h3>
+            <p>Hono · TanStack Router / Query / Form · Prisma · Zod</p>
+          </article>
 
-      <footer class="site-footer">
-        <span>JRWL</span>
-        <span data-i18n="footer.copy">© 2026 John Lindström</span>
-      </footer>
-    </div>
+          <article class="skill-node skill-node-delivery">
+            <h3 data-i18n="skills.delivery">Testing and delivery</h3>
+            <p>pnpm · Vitest · Playwright · Docker · Coolify · Git / GitHub</p>
+          </article>
+
+          <article class="skill-node skill-node-cms">
+            <h3 data-i18n="skills.cms">Web and CMS</h3>
+            <p>HTML · CSS / SCSS · WordPress · WooCommerce · PHP · Timber / Twig · ACF · Polylang</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="section projects-section" aria-labelledby="projects-title">
+        <header class="section-intro section-intro-split">
+          <h2 id="projects-title" data-i18n="projects.title">Personal projects</h2>
+          <p data-i18n="projects.note">A few things I build outside work.</p>
+        </header>
+
+        <div class="project-grid">
+          <a class="project-card project-card-featured" href="https://vesipolku.jrwl.io" target="_blank" rel="noreferrer noopener">
+            <span class="project-status" data-i18n="status.live">Live</span>
+            <h3>Vesinvest</h3>
+            <p data-i18n="projects.vesinvest">Planning tool for water utilities.</p>
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" /></svg>
+          </a>
+
+          <div class="project-card">
+            <span class="project-status" data-i18n="status.building">In development</span>
+            <h3>PNYX</h3>
+            <p data-i18n="projects.pnyx">Political promise tracker.</p>
+          </div>
+
+          <a class="project-card" href="https://probocons.surge.sh" target="_blank" rel="noreferrer noopener">
+            <span class="project-status" data-i18n="status.prototype">Prototype</span>
+            <h3>Probocons</h3>
+            <p data-i18n="projects.probocons">Company website.</p>
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" /></svg>
+          </a>
+
+          <a class="project-card" href="https://yhdessa-web.vercel.app" target="_blank" rel="noreferrer noopener">
+            <span class="project-status" data-i18n="status.prototype">Prototype</span>
+            <h3>Yhdessä</h3>
+            <p data-i18n="projects.yhdessa">Multilingual speech therapy site.</p>
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" /></svg>
+          </a>
+        </div>
+      </section>
+
+      <section id="approach" class="section approach-section" aria-labelledby="approach-title">
+        <header class="section-intro">
+          <h2 id="approach-title" data-i18n="approach.title">How I build</h2>
+        </header>
+
+        <ol class="approach-list">
+          <li><span></span><p data-i18n="approach.smallest">Start with the smallest complete version.</p></li>
+          <li><span></span><p data-i18n="approach.ownership">Keep ownership and boundaries clear.</p></li>
+          <li><span></span><p data-i18n="approach.tests">Test the behavior that can actually break.</p></li>
+        </ol>
+      </section>
+
+      <section id="contact" class="contact-section" aria-labelledby="contact-title">
+        <div>
+          <h2 id="contact-title" data-i18n="contact.title">Contact</h2>
+          <p data-i18n="contact.location">Turku, Finland</p>
+        </div>
+
+        <div class="contact-links">
+          <a href="mailto:jrwl@jrwl.io">jrwl@jrwl.io</a>
+          <a href="tel:+358469536590">+358 46 953 6590</a>
+          <a href="https://github.com/jrwl1" target="_blank" rel="noreferrer noopener">github.com/jrwl1</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>John Lindström</span>
+      <span data-i18n="footer.copy">© 2026</span>
+    </footer>
 
     <script src="script.js"></script>
   </body>

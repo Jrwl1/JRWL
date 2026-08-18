@@ -34,7 +34,10 @@ Visitors scan the page during candidate research on desktop or mobile. They may 
 
 - Keep the JRWL name and John Lindström's identity.
 - Use short, plain copy that sounds written by a person.
-- The visual theme and supporting assets may change.
+- Use a dark, image-led orbital visual system without turning the site into a space-themed costume.
+- Keep the hero compact enough that the current stack remains close to the first viewport.
+- Present the technical stack once; do not repeat it as badges, highlights, or a separate table.
+- Do not use a visible logo, cursor tracking, or mouse-following decoration.
 - Do not use maritime themes, symbols, logos, charts, or other ship-derived visual language.
 
 ## Evidence on Hand

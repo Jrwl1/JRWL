@@ -19,11 +19,11 @@ The primary action is email. GitHub is secondary. Technical skills lead; persona
 
 ## Direction
 
-Type-led technical reference sheet. White, graphite, cobalt, sharp sans typography, square controls, and full-width information rows. No portfolio dashboard, technology badges, decorative logo, visual metaphor, or maritime theme.
+Code-led Orbital Index, challenger direction, seed `487bd0ee`. A void-black field, authored accretion artwork, blue-white illumination, ember-orange and photon-gold signals, fine orbit lines, Sora copy, IBM Plex Sans Condensed headings, IBM Plex Mono metadata, and precise rounded controls. Keep the identity compact over the dark left field, let the artwork own the brighter right side, and present the current stack once in the radial map. No portfolio dashboard, repeated technology inventory, visible logo, cursor-following decoration, or maritime theme.
 
 ## Memorable moment
 
-John's name and role resolve into one cobalt row containing the four technologies that define his current stack.
+The accretion horizon reveals once behind the compact identity; the radial skill map below carries the same orbital grammar without looping.
 
 ## Unresolved decisions
 

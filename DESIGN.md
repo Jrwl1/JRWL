@@ -1,296 +1,290 @@
 ---
 name: "JRWL"
-description: "A maintained, type-led technical reference sheet for John Lindström."
+description: "A compact, image-led technical profile organized as a luminous Orbital Index."
 colors:
-  cobalt: "#2448e8"
-  cobalt-deep: "#1733b8"
-  cobalt-soft: "#e8ecff"
-  cobalt-on-surface: "#dfe4ff"
-  technical-paper: "#f6f7f5"
-  white: "#ffffff"
-  graphite: "#121419"
-  muted-slate: "#5c626d"
-  rule-light: "#c8ccd2"
-  rule-strong: "#7c828d"
+  ember: "#ff6138"
+  gold: "#ffc857"
+  disk-blue: "#73aaff"
+  blue-white: "#dcecff"
+  void: "#05070b"
+  surface: "#0b0e15"
+  line: "#252c39"
+  line-bright: "#465469"
+  text: "#eef4ff"
+  muted: "#99a5b6"
 typography:
   display:
-    fontFamily: '"Archivo Narrow", "Arial Narrow", sans-serif'
-    fontSize: "clamp(4.5rem, 9vw, 6rem)"
-    fontWeight: 700
-    lineHeight: 0.82
+    fontFamily: '"IBM Plex Sans Condensed", "Arial Narrow", sans-serif'
+    fontSize: "clamp(2.8rem, 4.5vw, 4.35rem)"
+    fontWeight: 500
+    lineHeight: 1
     letterSpacing: "-0.035em"
   headline:
-    fontFamily: '"Archivo Narrow", "Arial Narrow", sans-serif'
-    fontSize: "clamp(2.6rem, 5vw, 4.4rem)"
-    fontWeight: 700
-    lineHeight: 0.95
-    letterSpacing: "-0.035em"
-  lead:
-    fontFamily: '"Archivo", "Helvetica Neue", sans-serif'
-    fontSize: "clamp(1.35rem, 2.1vw, 1.85rem)"
-    fontWeight: 500
-    lineHeight: 1.25
-    letterSpacing: "-0.025em"
+    fontFamily: '"IBM Plex Sans Condensed", "Arial Narrow", sans-serif'
+    fontSize: "clamp(2.2rem, 4.2vw, 4rem)"
+    fontWeight: 400
+    lineHeight: 1
+    letterSpacing: "-0.03em"
   title:
-    fontFamily: '"Archivo Narrow", "Arial Narrow", sans-serif'
-    fontSize: "1.45rem"
-    fontWeight: 700
-    lineHeight: 1.55
-  body-large:
-    fontFamily: '"Archivo", "Helvetica Neue", sans-serif'
-    fontSize: "clamp(1.15rem, 2vw, 1.5rem)"
+    fontFamily: '"IBM Plex Sans Condensed", "Arial Narrow", sans-serif'
+    fontSize: "clamp(1.45rem, 2vw, 2rem)"
     fontWeight: 500
+    lineHeight: 1
+    letterSpacing: "-0.025em"
+  lead:
+    fontFamily: '"Sora", sans-serif'
+    fontSize: "clamp(1.1rem, 2vw, 1.45rem)"
+    fontWeight: 400
     lineHeight: 1.45
-    letterSpacing: "-0.02em"
   body:
-    fontFamily: '"Archivo", "Helvetica Neue", sans-serif'
+    fontFamily: '"Sora", sans-serif'
     fontSize: "1rem"
     fontWeight: 400
-    lineHeight: 1.55
+    lineHeight: 1.6
   label:
-    fontFamily: '"Archivo Narrow", "Arial Narrow", sans-serif'
-    fontSize: "0.95rem"
-    fontWeight: 600
-    lineHeight: 1.55
+    fontFamily: '"Sora", sans-serif'
+    fontSize: "0.84rem"
+    fontWeight: 500
+    lineHeight: 1.6
   control:
-    fontFamily: '"Archivo", "Helvetica Neue", sans-serif'
-    fontSize: "1rem"
+    fontFamily: '"Sora", sans-serif'
+    fontSize: "0.88rem"
     fontWeight: 600
-    lineHeight: 1.55
+    lineHeight: 1.6
+  metadata:
+    fontFamily: '"IBM Plex Mono", monospace'
+    fontSize: "0.68rem"
+    fontWeight: 400
+    lineHeight: 1.4
+    letterSpacing: "0.1em"
 rounded:
-  square: "0"
+  panel: "18px"
+  pill: "999px"
+  circle: "50%"
 spacing:
-  xs: "0.75rem"
-  sm: "1rem"
-  md: "1.5rem"
-  lg: "2rem"
-  xl: "3rem"
-  section-heading: "clamp(2.5rem, 5vw, 4rem)"
-  section: "clamp(5rem, 10vw, 8rem)"
+  section-space: "clamp(88px, 10vw, 148px)"
 components:
   action-primary:
-    backgroundColor: "{colors.cobalt}"
-    textColor: "{colors.white}"
+    backgroundColor: "{colors.ember}"
+    textColor: "{colors.void}"
     typography: "{typography.control}"
-    rounded: "{rounded.square}"
-    padding: "0.75rem 1.1rem"
-    height: "48px"
-  action-primary-hover:
-    backgroundColor: "{colors.cobalt-deep}"
-    textColor: "{colors.white}"
-    typography: "{typography.control}"
-    rounded: "{rounded.square}"
-    padding: "0.75rem 1.1rem"
+    rounded: "{rounded.pill}"
+    padding: "0 22px"
     height: "48px"
   action-secondary:
-    backgroundColor: "transparent"
-    textColor: "{colors.graphite}"
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.text}"
     typography: "{typography.control}"
-    rounded: "{rounded.square}"
-    padding: "0.75rem 1.1rem"
-    height: "48px"
-  action-secondary-hover:
-    backgroundColor: "{colors.graphite}"
-    textColor: "{colors.white}"
-    typography: "{typography.control}"
-    rounded: "{rounded.square}"
-    padding: "0.75rem 1.1rem"
+    rounded: "{rounded.pill}"
+    padding: "0 22px"
     height: "48px"
   navigation-link:
     backgroundColor: "transparent"
-    textColor: "{colors.muted-slate}"
+    textColor: "{colors.muted}"
     typography: "{typography.label}"
-    rounded: "{rounded.square}"
+    rounded: "{rounded.pill}"
     height: "44px"
   language-option:
     backgroundColor: "transparent"
-    textColor: "{colors.muted-slate}"
-    typography: "{typography.label}"
-    rounded: "{rounded.square}"
-    height: "38px"
-    width: "42px"
+    textColor: "{colors.muted}"
+    typography: "{typography.metadata}"
+    rounded: "{rounded.pill}"
+    height: "44px"
+    width: "44px"
   language-option-active:
-    backgroundColor: "{colors.graphite}"
-    textColor: "{colors.white}"
-    typography: "{typography.label}"
-    rounded: "{rounded.square}"
-    height: "38px"
-    width: "42px"
-  stack-cell:
-    backgroundColor: "{colors.cobalt}"
-    textColor: "{colors.white}"
-    typography: "{typography.title}"
-    rounded: "{rounded.square}"
-    padding: "clamp(1rem, 2vw, 1.5rem)"
-  ledger-row:
-    backgroundColor: "transparent"
-    textColor: "{colors.graphite}"
-    rounded: "{rounded.square}"
-    padding: "1.75rem 0"
+    backgroundColor: "{colors.text}"
+    textColor: "{colors.void}"
+    typography: "{typography.metadata}"
+    rounded: "{rounded.pill}"
+    height: "44px"
+    width: "44px"
+  orbital-map:
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.blue-white}"
+    rounded: "{rounded.panel}"
+    padding: "clamp(52px, 7vw, 92px)"
   project-row:
     backgroundColor: "transparent"
-    textColor: "{colors.graphite}"
-    rounded: "{rounded.square}"
-    padding: "1rem 0"
-    height: "82px"
-  project-row-hover:
-    backgroundColor: "{colors.cobalt}"
-    textColor: "{colors.white}"
-    rounded: "{rounded.square}"
-    padding: "1rem"
-    height: "82px"
-  contact-plane:
-    backgroundColor: "{colors.cobalt}"
-    textColor: "{colors.white}"
-    rounded: "{rounded.square}"
-    padding: "clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 5rem)"
+    textColor: "{colors.text}"
+    typography: "{typography.body}"
+    padding: "20px 4px"
+    height: "92px"
+  contact-panel:
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.text}"
+    rounded: "{rounded.panel}"
+    padding: "clamp(40px, 7vw, 88px)"
 ---
 
 # Design System: JRWL
 
 ## Overview
 
-**Creative North Star: "The Maintained Technical Reference"**
+**Creative North Star: "Orbital Index"**
 
-JRWL is a maintained technical reference sheet: precise, current, and optimized for a recruiter’s short scan. Near-white paper, graphite type, and hard rules establish the working surface; cobalt identifies the current stack, decisive actions, and the contact plane.
+JRWL is a compact technical profile arranged as an Orbital Index: factual content sits inside a dark field of authored accretion light, fine trajectories, and sparse instrument-like metadata. The visual system feels precise and cinematic without becoming a space-themed costume; the artwork supplies atmosphere while the interface stays legible and direct.
 
-The interface stays flat and type-led. Archivo Narrow compresses identity and section structure while Archivo keeps sentences readable; square controls and full-width rows make every transition explicit. Motion is limited to one left-to-right scan across the stack band, then the page becomes still.
+Void black and layered navy establish the field. Blue-white and disk blue describe cold illumination, while ember orange and photon gold mark energy, focus, and decisive interaction. Condensed headings keep identity modest, Sora carries readable copy, and IBM Plex Mono handles short status and coordinate data.
 
-The system must remain factual and multilingual across English, Finnish, and Swedish. It explicitly rejects maritime themes, symbols, logos, charts, technology-badge clouds, portfolio dashboards, and ship-derived visual language.
+The system remains multilingual across English, Finnish, and Swedish. It preserves semantic structure, visible keyboard focus, reduced-motion behavior, and 44-pixel interactive targets while rejecting the discarded white-paper/cobalt world, visible logos, maritime imagery, and repeated technology inventories.
 
 **Key Characteristics:**
 
-- Near-white paper, graphite text, and cobalt emphasis.
-- Archivo Narrow structure paired with Archivo body copy.
-- Square controls, hard rules, and full-width information rows.
-- Flat depth with one non-looping stack-row scan.
-- Responsive layouts that preserve 44-pixel mobile targets and EN/FI/SV wrapping.
+- Void-led, luminous surfaces anchored by authored accretion imagery.
+- Cold blue illumination balanced by sparse ember-to-gold signals.
+- IBM Plex Sans Condensed structure, Sora prose, and IBM Plex Mono metadata.
+- Fine orbit lines, 18-pixel panels, pill controls, and flat information rows.
+- One radial skill map and one non-looping horizon reveal.
 
 ## Colors
 
-The palette is a restrained technical neutral field with one high-confidence cobalt signal.
+The palette reads as cold orbital light on near-black surfaces, with a narrow warm spectrum reserved for energy and interaction.
 
 ### Primary
 
-- **Maintained Cobalt:** The signature accent for the current-stack band, primary action, contact plane, selection, scrollbar, active navigation indicator, and strong interactive rows.
-- **Deep Cobalt:** The darker response state for the primary action.
-- **Soft Cobalt:** A quiet interaction wash for language controls.
-- **On-Cobalt Tint:** Secondary copy on solid cobalt surfaces; primary copy remains white.
+- **Ember Orange:** Starts the primary-action gradient, marks project status, colors warm orbit traces, and anchors selected text.
+- **Photon Gold:** Completes the warm gradient, carries visible keyboard focus, marks small orbital beacons, and signals hover emphasis.
+
+### Secondary
+
+- **Disk Blue:** Supplies the radial-map atmosphere, cool halo geometry, and blue light reflected from the hero artwork.
+- **Blue-White:** Keeps lead copy, skill content, and fine orbital details luminous without using pure white everywhere.
 
 ### Neutral
 
-- **Technical Paper:** The page and transparent-control ground; warmer and softer than pure white without reading as cream.
-- **White:** Inverse text and high-contrast content on cobalt or graphite.
-- **Graphite:** Primary type, heavy rules, the active language state, and the secondary-action hover fill.
-- **Muted Slate:** Secondary copy, inactive navigation, and footer text.
-- **Light Rule:** Internal separators in compact navigation.
-- **Strong Rule:** Ledger rows, project rows, language-control borders, and major section divisions.
+- **Void:** The page ground, hero shadow field, and inverse text color on warm actions.
+- **Orbital Surface:** The shared ground for the radial map, contact panel, and language-switch shell.
+- **Text Light:** Primary text and the active language fill.
+- **Muted Steel:** Supporting copy, navigation, metadata, and inactive controls.
+- **Orbit Line:** Quiet section, panel, and control boundaries.
+- **Bright Orbit Line:** Stronger row anchors, secondary-action borders, and prominent circular geometry.
 
 ### Named Rules
 
-**The Cobalt Allocation Rule.** Cobalt marks the current stack, decisive actions, contact information, or active interaction; it is not decoration.
+**The Warm Signal Rule.** Ember and gold appear as a compact gradient, a hairline, a dot, or an interaction signal; they do not become broad decorative planes.
 
-**The Graphite Skeleton Rule.** Hard graphite and slate rules create structure; do not replace them with cards, shadows, or soft tinted containers.
+**The Cold Light Rule.** Blue-white and disk blue describe illumination and technical depth, not a generic blue call-to-action palette.
 
 ## Typography
 
-**Display Font:** Archivo Narrow with Arial Narrow and sans-serif fallbacks
+**Display Font:** IBM Plex Sans Condensed with Arial Narrow and sans-serif fallbacks
 
-**Body Font:** Archivo with Helvetica Neue and sans-serif fallbacks
+**Body Font:** Sora with a sans-serif fallback
 
-**Character:** The pairing is compact, direct, and technical without becoming monospaced or terminal-like. Condensed display type gives names, headings, labels, and statuses authority; the wider body face keeps factual copy readable in three languages.
+**Label/Mono Font:** IBM Plex Mono with a monospace fallback
+
+**Character:** The three voices separate identity, reading, and instrumentation. Condensed type is calm and space-efficient, Sora is plain and contemporary, and mono is restricted to compact operational metadata.
 
 ### Hierarchy
 
-- **Display:** The two-line personal name; very tight leading creates one graphic identity block.
-- **Headline:** Major section titles and the contact heading; condensed and tightly tracked for fast vertical landmarks.
-- **Lead:** The role statement; larger than body copy but still sentence-led.
-- **Title:** Project names and the four current-stack technologies.
-- **Body Large:** Skills, working-principle rows, and other high-value factual content.
-- **Body:** Descriptions, availability, contact details, and supporting copy.
-- **Label:** Navigation, skill categories, statuses, language controls, brand text, and footer metadata.
-- **Control:** Primary and secondary action labels.
+- **Display** (500, clamp(2.8rem, 4.5vw, 4.35rem), 1): The compact personal name in the hero; it remains subordinate to the artwork.
+- **Headline** (400, clamp(2.2rem, 4.2vw, 4rem), 1): Section and contact titles that create clear scan landmarks.
+- **Title** (500, clamp(1.45rem, 2vw, 2rem), 1): Personal-project names.
+- **Lead** (400, clamp(1.1rem, 2vw, 1.45rem), 1.45): The concise role statement in blue-white.
+- **Body** (400, 1rem, 1.6): Descriptions, supporting notes, and contact content.
+- **Label** (500, 0.84rem, 1.6): Navigation and compact interface labels.
+- **Control** (600, 0.88rem, 1.6): Primary and secondary action labels.
+- **Metadata** (400, approximately 0.68rem, 0.1em tracking): Language options, project statuses, approach indices, and terse coordinate data.
 
 ### Named Rules
 
-**The Condensed Structure Rule.** Use Archivo Narrow for identity, section structure, navigation, labels, and status; use Archivo for sentences, descriptions, and data.
+**The Three-Voice Rule.** Use IBM Plex Sans Condensed for names and headings, Sora for reading and controls, and IBM Plex Mono only for short status or instrument-like data.
 
 ## Layout
 
-The desktop system uses a centered shell capped at 1240 pixels with 1.5rem outer gutters and a recurring 12-column grid. The header is a 74-pixel sticky rule with brand, centered navigation, and language controls. The hero fills the remaining viewport height: the name occupies seven columns, the role and actions begin at column nine, and the cobalt stack band spans all twelve columns.
+The primary shell is capped at 1440 pixels with 24-pixel desktop gutters. A three-part sticky header centers navigation between identity and the language switch; the hero then spans the viewport, holding compact content in the left field while the authored accretion artwork owns the brighter right side. The hero stays between 600 and 760 pixels tall on wide screens so the stack follows close behind.
 
-Sections use generous fluid vertical spacing and full-width information rows. Skill labels occupy four columns and their content occupies eight; project rows align name, description, status, and optional external-link mark without becoming cards. The closing area divides into a seven-part working-principles field and a five-part cobalt contact field.
+Sections use a fluid vertical interval from 88 to 148 pixels. The radial skill map is a two-by-two field around a central core rather than a generic card grid. Personal projects remain secondary as full-width ruled rows; the working approach uses a three-stop horizon track; contact closes in a two-column luminous panel.
 
-At 860 pixels and below, the header becomes static and two-row, the navigation becomes four equal cells, the hero and section headings become single-column, the stack band becomes a two-by-two grid, and skills and the closing area stack. At 520 pixels and below, actions become full width; the stack and contact planes bleed to the viewport gutter; project statuses wrap; and the footer stacks. Layout must tolerate English, Finnish, and Swedish copy without fixed text heights, ellipsis, or clipped controls.
+At 900 pixels and below, the shell narrows to a 720-pixel maximum with 16-pixel gutters, the header becomes two rows, the skill orbit tightens, and contact becomes one column. At 620 pixels and below, gutters reduce to 12 pixels, the hero content moves lower over a stronger image scrim, section intros stack, the skill orbit preserves its two-by-two radial relationship, project rows become two-line records, and the approach track becomes vertical. Copy and targets must expand for English, Finnish, and Swedish without clipping or fixed text heights.
 
-**The Full-Width Evidence Rule.** Information rows span their container and separate with rules; avoid floating cards, badges, and tile grids.
+**The Orbital Evidence Rule.** Present the current stack once in the radial map; supporting sections use rows and tracks instead of repeating technology badges or summary tiles.
 
 ## Elevation & Depth
 
-The system has no shadows. All surfaces remain on one plane; hierarchy comes from type scale, spacing, hard rules, and the contrast between technical paper and solid cobalt fields. Interaction changes fill, text color, underline weight, or inline padding rather than lifting elements.
+Depth comes from the accretion artwork, transparent dark layers, radial gradients, fine orbit lines, and two small photon-gold glows. Conventional drop shadows are absent. Panels stay on the page plane; the secondary action and sticky header use translucent surfaces, while hover states adjust color, border, or position by only two pixels.
 
-**The Flat-by-Default Rule.** Surfaces remain flat at rest; hierarchy comes from type, rules, and cobalt planes, never shadows.
+### Shadow Vocabulary
+
+- **Gold Beacon:** A compact 14-to-18-pixel photon-gold glow used only on the availability and orbital-center dots.
+
+### Named Rules
+
+**The Light Source Rule.** Glow belongs to tiny luminous sources; panels, rows, controls, and typography never cast drop shadows.
 
 ## Shapes
 
-Every control and surface uses square corners. Borders are functional: 1-pixel rules divide information, 2-pixel graphite rules anchor major boundaries, and 3-pixel cobalt or white outlines show keyboard focus with a 3-pixel offset. External-link marks use square stroke caps and mitered joins so their geometry matches the rest of the system.
+The form language uses three recurring geometries: 18-pixel rounded panels for the skill map and contact surface, fully rounded pills for actions and language controls, and true circles for orbital lines, map cores, and status beacons. One-pixel hairlines define structure. Project and approach rows stay flat and uncontained so rounded panels remain rare.
 
-**The Zero-Radius Rule.** Do not introduce pills, rounded cards, soft chips, or curved control shells; the implemented radius is zero.
+**The Three-Radius Rule.** Use 18-pixel panels, pill controls, and circular orbital geometry deliberately; do not introduce intermediate card radii.
 
 ## Components
 
+### Hero Artwork
+
+- **Structure:** A full-bleed 1536 by 1024 WebP sits behind content, cropped toward the right-side event horizon and protected by responsive void scrims.
+- **Overlay:** Compact identity, role, availability, and two actions occupy the darker left field; fine orbit ellipses and faint horizontal calibration lines extend the image language.
+- **Motion:** The image reveals from right to left over 1500 milliseconds with an ease-out curve, runs once, and collapses under reduced-motion preferences.
+
 ### Actions
 
-- **Shape:** Square, outlined controls with a 48-pixel minimum height and compact horizontal padding.
-- **Primary:** Cobalt fill, white label, and cobalt border; hover and focus deepen the cobalt.
-- **Secondary:** Transparent fill with graphite text and border; hover and focus reverse to graphite with white text.
-- **Focus:** A 3-pixel cobalt outline with 3-pixel offset; use white when the control sits on cobalt.
-- **Responsive:** At 520 pixels and below, actions stack and fill the available width.
+- **Shape:** Fully rounded controls with a 48-pixel minimum height, 22-pixel inline padding, and a one-pixel border.
+- **Primary:** Ember-to-gold gradient with void text.
+- **Secondary:** Translucent orbital surface with light text and a bright orbit-line border.
+- **Hover / Focus:** Both lift by two pixels on hover; the secondary surface brightens. Keyboard focus uses a two-pixel photon-gold outline with a four-pixel offset.
 
 ### Navigation
 
-- **Desktop:** Centered Archivo Narrow links in muted slate; hover and focus shift to graphite, while the current section adds a 3-pixel cobalt underline that resolves from left to right.
-- **Compact:** At 860 pixels and below, links become four equal, rule-separated cells beneath the brand and language controls.
-- **Targets:** Preserve at least a 44-pixel interactive height.
+- **Desktop:** A 72-pixel sticky translucent-void header with centered muted links; the active section turns light and gains a one-pixel ember-to-gold underline.
+- **Compact:** At 900 pixels, navigation occupies a second full-width row and each link shares the available width.
+- **Targets:** Links preserve at least 44 pixels of interactive height.
 
 ### Language Switch
 
-- **Structure:** Three fused square cells inside one strong 1-pixel outline.
-- **Default / Hover:** Transparent with muted text; hover and focus use soft cobalt with graphite text.
-- **Active:** Graphite with white text and `aria-pressed="true"`.
-- **Responsive:** Cells grow from 42 by 38 pixels to 44 by 44 pixels at the compact breakpoint.
+- **Structure:** Three 44-pixel minimum targets sit inside one orbital-surface pill.
+- **Default:** Muted IBM Plex Mono labels on a transparent ground.
+- **Active:** Light fill with void text and an inner pill.
+- **State:** The selected language is exposed with aria-pressed; keyboard focus keeps the global photon-gold outline.
 
-### Stack Band
+### Orbital Skill Map
 
-- **Structure:** Four equal cobalt cells with white Archivo Narrow titles and translucent white internal rules; collapse to a two-by-two grid at the compact breakpoint.
-- **Motion:** One translucent scan strip crosses left to right over 900 milliseconds after a 180-millisecond delay. It does not loop, and reduced-motion preferences collapse it to an effectively instant pass.
+- **Structure:** Four factual nodes sit around a circular center inside an 18-pixel surface panel, with two large orbit traces tying them into one system.
+- **Content:** Gold uppercase category labels lead blue-white stack text. The central core repeats only the section identity, not the technology list.
+- **Responsive:** The two-by-two orbit survives on narrow screens; typography and padding contract around the center instead of flattening into badges.
 
-### Information Rows
+### Project Rows
 
-- **Skill Ledger:** Full-width ruled rows with a muted condensed category and larger graphite content.
-- **Project Row:** Name, description, status, and optional external-link mark align on one row; compact layouts move the description to a second line.
-- **Interactive Project:** Hover and focus add one rem of horizontal inset and reverse the row to cobalt with white text.
+- **Structure:** Each project is a 92-pixel ruled record aligning title, description, mono status, and an optional external-link mark.
+- **Interaction:** Linked rows gain a small inline inset and photon-gold border/text emphasis on hover; focus remains visibly outlined.
+- **Responsive:** Below 620 pixels, title and status share the first row while description and optional link occupy the second.
 
-### Contact Plane
+### Approach Track
 
-- **Structure:** A square, shadowless cobalt field paired directly with the working-principles field.
-- **Content:** White heading and links with the on-cobalt tint reserved for location copy.
-- **Focus:** Links keep their underline and use a white focus outline.
+- **Structure:** Three numbered statements share a bright horizontal hairline with small gold-outlined nodes.
+- **Responsive:** The track becomes a vertical list below 620 pixels while keeping the same ordered progression.
+
+### Contact Panel
+
+- **Structure:** An 18-pixel orbital-surface panel pairs title/location with a vertical contact-link list.
+- **Depth:** Restrained ember and disk-blue radial light enters from opposite edges; there is no drop shadow.
+- **Interaction:** Links preserve 44-pixel targets and gain a photon-gold underline on hover.
 
 ## Do's and Don'ts
 
 ### Do:
 
-- **Do** reserve cobalt for the current stack, primary action, contact plane, active navigation, selection, focus, and strong row interaction.
-- **Do** build hierarchy with Archivo Narrow, Archivo, hard rules, spacing, and full-width rows.
-- **Do** keep controls square and keyboard focus visible with a 3-pixel outline and 3-pixel offset.
-- **Do** preserve flexible copy widths and 44-pixel targets across English, Finnish, and Swedish.
-- **Do** let the stack scan run once, then leave the page still; honor reduced-motion preferences.
+- **Do** keep authored orbital imagery and dark negative space in a balanced image-led composition.
+- **Do** use ember and gold as compact luminous signals against void, surface, and blue-white light.
+- **Do** keep IBM Plex Sans Condensed, Sora, and IBM Plex Mono in their distinct structural, reading, and metadata roles.
+- **Do** preserve two-pixel photon-gold focus outlines with four-pixel offsets and at least 44-pixel targets.
+- **Do** run the horizon reveal once, then leave the page still; collapse motion when reduced motion is requested.
+- **Do** preserve flexible English, Finnish, and Swedish copy without clipping or fixed text heights.
 
 ### Don't:
 
-- **Don't** introduce maritime themes, symbols, logos, charts, or ship-derived visual language.
-- **Don't** turn the profile into a portfolio dashboard, technology-badge cloud, chart, or proof-theatre interface.
-- **Don't** soften the system with pills, rounded cards, gradients, shadows, or floating panels.
-- **Don't** spread cobalt across arbitrary decorative surfaces; its scarcity carries meaning.
-- **Don't** add looping, ambient, parallax, or scroll-bound motion.
+- **Don't** return to the discarded white-paper/cobalt technical-sheet treatment.
+- **Don't** turn the orbital language into logos, spacecraft, dashboards, charts, or generic sci-fi decoration.
+- **Don't** use broad warm fills, purple cyberpunk neon, or repeated blue boxes; light should feel sourced and restrained.
+- **Don't** add floating drop-shadow cards or intermediate corner radii.
+- **Don't** repeat the current stack as badges, highlights, or a second inventory.
+- **Don't** add looping, parallax, cursor-following, or ambient motion.

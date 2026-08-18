@@ -4,3 +4,5 @@ site-audit-*.png
 .impeccable/critique/
 .impeccable/live/
 .impeccable/review/
+.impeccable/mocks/
+.impeccable/references/

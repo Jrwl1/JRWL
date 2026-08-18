@@ -1,210 +1,216 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-17T11:53:40Z",
+  "generatedAt": "2026-08-18T06:20:11Z",
   "title": "Design System: JRWL",
   "extensions": {
     "colorMeta": {
-      "cobalt": {
+      "ember": {
         "role": "primary",
-        "displayName": "Maintained Cobalt",
-        "canonical": "#2448e8",
+        "displayName": "Ember Orange",
+        "canonical": "#ff6138",
         "tonalRamp": [
-          "oklch(15% 0.242 266.3)",
-          "oklch(27% 0.242 266.3)",
-          "oklch(39% 0.242 266.3)",
-          "oklch(51% 0.242 266.3)",
-          "oklch(63% 0.242 266.3)",
-          "oklch(75% 0.242 266.3)",
-          "oklch(87% 0.242 266.3)",
-          "oklch(95% 0.242 266.3)"
+          "oklch(15% 0.2 35.4)",
+          "oklch(27% 0.2 35.4)",
+          "oklch(39% 0.2 35.4)",
+          "oklch(51% 0.2 35.4)",
+          "oklch(63% 0.2 35.4)",
+          "oklch(75% 0.2 35.4)",
+          "oklch(87% 0.2 35.4)",
+          "oklch(95% 0.2 35.4)"
         ]
       },
-      "cobalt-deep": {
+      "gold": {
         "role": "primary",
-        "displayName": "Deep Cobalt",
-        "canonical": "#1733b8",
+        "displayName": "Photon Gold",
+        "canonical": "#ffc857",
         "tonalRamp": [
-          "oklch(15% 0.208 266.2)",
-          "oklch(27% 0.208 266.2)",
-          "oklch(39% 0.208 266.2)",
-          "oklch(51% 0.208 266.2)",
-          "oklch(63% 0.208 266.2)",
-          "oklch(75% 0.208 266.2)",
-          "oklch(87% 0.208 266.2)",
-          "oklch(95% 0.208 266.2)"
+          "oklch(15% 0.142 82.7)",
+          "oklch(27% 0.142 82.7)",
+          "oklch(39% 0.142 82.7)",
+          "oklch(51% 0.142 82.7)",
+          "oklch(63% 0.142 82.7)",
+          "oklch(75% 0.142 82.7)",
+          "oklch(87% 0.142 82.7)",
+          "oklch(95% 0.142 82.7)"
         ]
       },
-      "cobalt-soft": {
-        "role": "primary",
-        "displayName": "Soft Cobalt",
-        "canonical": "#e8ecff",
+      "disk-blue": {
+        "role": "secondary",
+        "displayName": "Disk Blue",
+        "canonical": "#73aaff",
         "tonalRamp": [
-          "oklch(15% 0.026 276.4)",
-          "oklch(27% 0.026 276.4)",
-          "oklch(39% 0.026 276.4)",
-          "oklch(51% 0.026 276.4)",
-          "oklch(63% 0.026 276.4)",
-          "oklch(75% 0.026 276.4)",
-          "oklch(87% 0.026 276.4)",
-          "oklch(95% 0.026 276.4)"
+          "oklch(15% 0.137 258.8)",
+          "oklch(27% 0.137 258.8)",
+          "oklch(39% 0.137 258.8)",
+          "oklch(51% 0.137 258.8)",
+          "oklch(63% 0.137 258.8)",
+          "oklch(75% 0.137 258.8)",
+          "oklch(87% 0.137 258.8)",
+          "oklch(95% 0.137 258.8)"
         ]
       },
-      "cobalt-on-surface": {
-        "role": "primary",
-        "displayName": "On-Cobalt Tint",
-        "canonical": "#dfe4ff",
+      "blue-white": {
+        "role": "secondary",
+        "displayName": "Blue-White",
+        "canonical": "#dcecff",
         "tonalRamp": [
-          "oklch(15% 0.037 277.3)",
-          "oklch(27% 0.037 277.3)",
-          "oklch(39% 0.037 277.3)",
-          "oklch(51% 0.037 277.3)",
-          "oklch(63% 0.037 277.3)",
-          "oklch(75% 0.037 277.3)",
-          "oklch(87% 0.037 277.3)",
-          "oklch(95% 0.037 277.3)"
+          "oklch(15% 0.031 252.7)",
+          "oklch(27% 0.031 252.7)",
+          "oklch(39% 0.031 252.7)",
+          "oklch(51% 0.031 252.7)",
+          "oklch(63% 0.031 252.7)",
+          "oklch(75% 0.031 252.7)",
+          "oklch(87% 0.031 252.7)",
+          "oklch(95% 0.031 252.7)"
         ]
       },
-      "technical-paper": {
+      "void": {
         "role": "neutral",
-        "displayName": "Technical Paper",
-        "canonical": "#f6f7f5",
+        "displayName": "Void",
+        "canonical": "#05070b",
         "tonalRamp": [
-          "oklch(15% 0.003 128.5)",
-          "oklch(27% 0.003 128.5)",
-          "oklch(39% 0.003 128.5)",
-          "oklch(51% 0.003 128.5)",
-          "oklch(63% 0.003 128.5)",
-          "oklch(75% 0.003 128.5)",
-          "oklch(87% 0.003 128.5)",
-          "oklch(95% 0.003 128.5)"
+          "oklch(15% 0.011 259.6)",
+          "oklch(27% 0.011 259.6)",
+          "oklch(39% 0.011 259.6)",
+          "oklch(51% 0.011 259.6)",
+          "oklch(63% 0.011 259.6)",
+          "oklch(75% 0.011 259.6)",
+          "oklch(87% 0.011 259.6)",
+          "oklch(95% 0.011 259.6)"
         ]
       },
-      "white": {
+      "surface": {
         "role": "neutral",
-        "displayName": "White",
-        "canonical": "#ffffff",
+        "displayName": "Orbital Surface",
+        "canonical": "#0b0e15",
         "tonalRamp": [
-          "oklch(15% 0 0)",
-          "oklch(27% 0 0)",
-          "oklch(39% 0 0)",
-          "oklch(51% 0 0)",
-          "oklch(63% 0 0)",
-          "oklch(75% 0 0)",
-          "oklch(87% 0 0)",
-          "oklch(95% 0 0)"
+          "oklch(15% 0.016 266.6)",
+          "oklch(27% 0.016 266.6)",
+          "oklch(39% 0.016 266.6)",
+          "oklch(51% 0.016 266.6)",
+          "oklch(63% 0.016 266.6)",
+          "oklch(75% 0.016 266.6)",
+          "oklch(87% 0.016 266.6)",
+          "oklch(95% 0.016 266.6)"
         ]
       },
-      "graphite": {
+      "line": {
         "role": "neutral",
-        "displayName": "Graphite",
-        "canonical": "#121419",
+        "displayName": "Orbit Line",
+        "canonical": "#252c39",
         "tonalRamp": [
-          "oklch(15% 0.011 268.1)",
-          "oklch(27% 0.011 268.1)",
-          "oklch(39% 0.011 268.1)",
-          "oklch(51% 0.011 268.1)",
-          "oklch(63% 0.011 268.1)",
-          "oklch(75% 0.011 268.1)",
-          "oklch(87% 0.011 268.1)",
-          "oklch(95% 0.011 268.1)"
+          "oklch(15% 0.026 262.7)",
+          "oklch(27% 0.026 262.7)",
+          "oklch(39% 0.026 262.7)",
+          "oklch(51% 0.026 262.7)",
+          "oklch(63% 0.026 262.7)",
+          "oklch(75% 0.026 262.7)",
+          "oklch(87% 0.026 262.7)",
+          "oklch(95% 0.026 262.7)"
         ]
       },
-      "muted-slate": {
+      "line-bright": {
         "role": "neutral",
-        "displayName": "Muted Slate",
-        "canonical": "#5c626d",
+        "displayName": "Bright Orbit Line",
+        "canonical": "#465469",
         "tonalRamp": [
-          "oklch(15% 0.019 262.7)",
-          "oklch(27% 0.019 262.7)",
-          "oklch(39% 0.019 262.7)",
-          "oklch(51% 0.019 262.7)",
-          "oklch(63% 0.019 262.7)",
-          "oklch(75% 0.019 262.7)",
-          "oklch(87% 0.019 262.7)",
-          "oklch(95% 0.019 262.7)"
+          "oklch(15% 0.039 258.3)",
+          "oklch(27% 0.039 258.3)",
+          "oklch(39% 0.039 258.3)",
+          "oklch(51% 0.039 258.3)",
+          "oklch(63% 0.039 258.3)",
+          "oklch(75% 0.039 258.3)",
+          "oklch(87% 0.039 258.3)",
+          "oklch(95% 0.039 258.3)"
         ]
       },
-      "rule-light": {
+      "text": {
         "role": "neutral",
-        "displayName": "Light Rule",
-        "canonical": "#c8ccd2",
+        "displayName": "Text Light",
+        "canonical": "#eef4ff",
         "tonalRamp": [
-          "oklch(15% 0.009 258.3)",
-          "oklch(27% 0.009 258.3)",
-          "oklch(39% 0.009 258.3)",
-          "oklch(51% 0.009 258.3)",
-          "oklch(63% 0.009 258.3)",
-          "oklch(75% 0.009 258.3)",
-          "oklch(87% 0.009 258.3)",
-          "oklch(95% 0.009 258.3)"
+          "oklch(15% 0.016 262.8)",
+          "oklch(27% 0.016 262.8)",
+          "oklch(39% 0.016 262.8)",
+          "oklch(51% 0.016 262.8)",
+          "oklch(63% 0.016 262.8)",
+          "oklch(75% 0.016 262.8)",
+          "oklch(87% 0.016 262.8)",
+          "oklch(95% 0.016 262.8)"
         ]
       },
-      "rule-strong": {
+      "muted": {
         "role": "neutral",
-        "displayName": "Strong Rule",
-        "canonical": "#7c828d",
+        "displayName": "Muted Steel",
+        "canonical": "#99a5b6",
         "tonalRamp": [
-          "oklch(15% 0.018 262.7)",
-          "oklch(27% 0.018 262.7)",
-          "oklch(39% 0.018 262.7)",
-          "oklch(51% 0.018 262.7)",
-          "oklch(63% 0.018 262.7)",
-          "oklch(75% 0.018 262.7)",
-          "oklch(87% 0.018 262.7)",
-          "oklch(95% 0.018 262.7)"
+          "oklch(15% 0.028 257)",
+          "oklch(27% 0.028 257)",
+          "oklch(39% 0.028 257)",
+          "oklch(51% 0.028 257)",
+          "oklch(63% 0.028 257)",
+          "oklch(75% 0.028 257)",
+          "oklch(87% 0.028 257)",
+          "oklch(95% 0.028 257)"
         ]
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "The two-line personal name and no other content."
+        "purpose": "The compact personal name over the dark hero field."
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Major section titles and the contact heading."
-      },
-      "lead": {
-        "displayName": "Lead",
-        "purpose": "The concise role statement beside the personal name."
+        "purpose": "Section and contact titles."
       },
       "title": {
         "displayName": "Title",
-        "purpose": "Project names and technologies in the signature stack band."
+        "purpose": "Personal-project names."
       },
-      "body-large": {
-        "displayName": "Body Large",
-        "purpose": "High-value factual content in skill and working-principle rows."
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "The concise role statement in the hero."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Descriptions, availability, contact details, and supporting copy."
+        "purpose": "Descriptions, supporting notes, and contact content."
       },
       "label": {
         "displayName": "Label",
-        "purpose": "Navigation, categories, statuses, language controls, and metadata."
+        "purpose": "Navigation and compact interface labels."
       },
       "control": {
         "displayName": "Control",
         "purpose": "Primary and secondary action labels."
+      },
+      "metadata": {
+        "displayName": "Metadata",
+        "purpose": "Language options, statuses, approach indices, and terse coordinate data."
       }
     },
-    "shadows": [],
+    "shadows": [
+      {
+        "name": "gold-beacon-small",
+        "value": "0 0 14px rgb(255 200 87 / 70%)",
+        "purpose": "Compact photon glow on the availability indicator."
+      },
+      {
+        "name": "gold-beacon-orbit",
+        "value": "0 0 18px rgb(255 200 87 / 70%)",
+        "purpose": "Slightly wider photon glow on the orbital-map center."
+      }
+    ],
     "motion": [
       {
-        "name": "stack-scan-once",
-        "value": "900ms 180ms cubic-bezier(0.16, 1, 0.3, 1) both",
-        "purpose": "One non-looping left-to-right scan across the current-stack band."
+        "name": "horizon-reveal",
+        "value": "1500ms cubic-bezier(0.16, 1, 0.3, 1) both",
+        "purpose": "One non-looping right-to-left reveal of the hero artwork."
       },
       {
         "name": "direct-state",
-        "value": "160ms ease",
-        "purpose": "Button and project-row color, border, and inset transitions."
-      },
-      {
-        "name": "navigation-indicator",
-        "value": "180ms cubic-bezier(0.16, 1, 0.3, 1)",
-        "purpose": "Left-origin current-section underline transition."
+        "value": "180ms ease",
+        "purpose": "Color, border, underline, padding, and two-pixel hover transitions."
       },
       {
         "name": "reduced-motion-collapse",
@@ -215,11 +221,11 @@
     "breakpoints": [
       {
         "name": "compact",
-        "value": "860px"
+        "value": "900px"
       },
       {
         "name": "narrow",
-        "value": "520px"
+        "value": "620px"
       }
     ]
   },
@@ -228,122 +234,123 @@
       "name": "Primary Action",
       "kind": "button",
       "refersTo": "action-primary",
-      "description": "The main email action: square, cobalt, and visually decisive.",
+      "description": "The warm gradient email action over the dark hero field.",
       "html": "<a class=\"ds-action ds-action-primary\" href=\"#\">Email me</a>",
-      "css": ".ds-action { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0.75rem 1.1rem; border: 1px solid var(--ink); border-radius: 0; font-family: var(--font-body); font-weight: 600; text-decoration: none; transition: background 160ms ease, color 160ms ease, border-color 160ms ease; } .ds-action-primary { border-color: var(--blue); background: var(--blue); color: var(--white); } .ds-action-primary:hover, .ds-action-primary:focus-visible { border-color: var(--blue-dark); background: var(--blue-dark); } .ds-action-primary:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }"
+      "css": ".ds-action { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; padding: 0 22px; border: 1px solid var(--line-bright); border-radius: 999px; color: var(--text); font-family: 'Sora', sans-serif; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: border-color 180ms ease, background-color 180ms ease, color 180ms ease, transform 180ms ease; } .ds-action-primary { border-color: var(--ember); background: linear-gradient(115deg, var(--ember), var(--gold)); color: var(--void); } .ds-action:hover { transform: translateY(-2px); } .ds-action:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }"
     },
     {
       "name": "Secondary Action",
       "kind": "button",
       "refersTo": "action-secondary",
-      "description": "A transparent graphite action that reverses on interaction.",
+      "description": "A translucent orbital-surface action for GitHub.",
       "html": "<a class=\"ds-action ds-action-secondary\" href=\"#\"><span>GitHub</span><svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M5 11 11 5M6 5h5v5\" /></svg></a>",
-      "css": ".ds-action { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0.75rem 1.1rem; border: 1px solid var(--ink); border-radius: 0; color: var(--ink); font-family: var(--font-body); font-weight: 600; text-decoration: none; transition: background 160ms ease, color 160ms ease; } .ds-action svg { width: 16px; height: 16px; margin-left: 0.65rem; fill: none; stroke: currentColor; stroke-linecap: square; stroke-linejoin: miter; stroke-width: 1.5; } .ds-action-secondary:hover, .ds-action-secondary:focus-visible { background: var(--ink); color: var(--white); } .ds-action-secondary:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }"
+      "css": ".ds-action { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 9px; padding: 0 22px; border: 1px solid var(--line-bright); border-radius: 999px; color: var(--text); font-family: 'Sora', sans-serif; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: border-color 180ms ease, background-color 180ms ease, color 180ms ease, transform 180ms ease; } .ds-action svg { width: 16px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; } .ds-action-secondary { background: rgb(11 14 21 / 78%); } .ds-action:hover { transform: translateY(-2px); } .ds-action-secondary:hover { border-color: var(--blue-white); background: var(--surface-raised); } .ds-action:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }"
     },
     {
       "name": "Primary Navigation",
       "kind": "nav",
       "refersTo": "navigation-link",
-      "description": "Centered condensed links with a cobalt current-section rule.",
-      "html": "<nav class=\"ds-nav\" aria-label=\"Primary navigation\"><a class=\"ds-nav-link\" href=\"#\" aria-current=\"location\">Skills</a><a class=\"ds-nav-link\" href=\"#\">Projects</a><a class=\"ds-nav-link\" href=\"#\">Background</a><a class=\"ds-nav-link\" href=\"#\">Contact</a></nav>",
-      "css": ".ds-nav { display: flex; justify-content: center; gap: clamp(1rem, 3vw, 2.75rem); } .ds-nav-link { position: relative; display: inline-flex; align-items: center; min-height: 44px; color: var(--muted); font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; text-decoration: none; } .ds-nav-link::after { position: absolute; right: 0; bottom: -16px; left: 0; height: 3px; background: var(--blue); content: \"\"; transform: scaleX(0); transform-origin: left; transition: transform 180ms var(--ease-out); } .ds-nav-link:hover, .ds-nav-link:focus-visible, .ds-nav-link[aria-current=\"location\"] { color: var(--ink); } .ds-nav-link[aria-current=\"location\"]::after { transform: scaleX(1); } .ds-nav-link:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; } @media (max-width: 860px) { .ds-nav { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--line); } .ds-nav-link { justify-content: center; min-height: 48px; border-right: 1px solid var(--line); font-size: 0.82rem; } .ds-nav-link:last-child { border-right: 0; } .ds-nav-link::after { bottom: 0; } }"
+      "description": "Muted centered links with a warm current-section trace.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Primary navigation\"><a href=\"#\" aria-current=\"location\">Stack</a><a href=\"#\">Projects</a><a href=\"#\">Approach</a><a href=\"#\">Contact</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 4px; } .ds-nav a { position: relative; display: inline-flex; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; padding: 0 13px; color: var(--muted); font-family: 'Sora', sans-serif; font-size: 0.84rem; font-weight: 500; text-decoration: none; transition: color 180ms ease; } .ds-nav a::after { position: absolute; right: 13px; bottom: 7px; left: 13px; height: 1px; content: \"\"; transform: scaleX(0); transform-origin: left; background: linear-gradient(90deg, var(--ember), var(--gold)); transition: transform 180ms ease; } .ds-nav a:hover, .ds-nav a[aria-current=\"location\"] { color: var(--text); } .ds-nav a[aria-current=\"location\"]::after { transform: scaleX(1); } .ds-nav a:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; } @media (max-width: 900px) { .ds-nav { width: 100%; } .ds-nav a { flex: 1; padding: 0 6px; text-align: center; } .ds-nav a::after { right: 22%; left: 22%; } }"
     },
     {
       "name": "Language Switch",
       "kind": "custom",
       "refersTo": "language-option-active",
-      "description": "A fused EN/FI/SV control with a graphite active cell.",
+      "description": "A pill shell with three mono language targets and an inverse active state.",
       "html": "<div class=\"ds-language-switch\" role=\"group\" aria-label=\"Language\"><button type=\"button\" aria-pressed=\"true\">EN</button><button type=\"button\" aria-pressed=\"false\">FI</button><button type=\"button\" aria-pressed=\"false\">SV</button></div>",
-      "css": ".ds-language-switch { display: flex; width: max-content; border: 1px solid var(--line-dark); } .ds-language-switch button { width: 42px; height: 38px; border: 0; border-right: 1px solid var(--line-dark); border-radius: 0; background: transparent; color: var(--muted); cursor: pointer; font-family: var(--font-display); font-size: 0.78rem; font-weight: 700; } .ds-language-switch button:last-child { border-right: 0; } .ds-language-switch button:hover, .ds-language-switch button:focus-visible { background: var(--blue-soft); color: var(--ink); } .ds-language-switch button[aria-pressed=\"true\"] { background: var(--ink); color: var(--white); } .ds-language-switch button:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; } @media (max-width: 860px) { .ds-language-switch button { width: 44px; height: 44px; } }"
+      "css": ".ds-language-switch { display: flex; width: max-content; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); } .ds-language-switch button { display: inline-flex; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; padding: 0 10px; border: 0; border-radius: 999px; background: transparent; color: var(--muted); cursor: pointer; font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; letter-spacing: 0.06em; } .ds-language-switch button[aria-pressed=\"true\"] { background: var(--text); color: var(--void); } .ds-language-switch button:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }"
     },
     {
-      "name": "Current Stack Band",
+      "name": "Orbital Skill Map",
       "kind": "custom",
-      "refersTo": "stack-cell",
-      "description": "The signature four-cell cobalt row with one non-looping scan pass.",
-      "html": "<div class=\"ds-stack-band\" aria-label=\"Primary technical stack\"><span>TypeScript</span><span>React</span><span>Node.js</span><span>PostgreSQL</span></div>",
-      "css": ".ds-stack-band { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); overflow: hidden; background: var(--blue); color: var(--white); } .ds-stack-band::after { position: absolute; top: 0; bottom: 0; left: -15%; width: 8%; background: rgb(255 255 255 / 24%); content: \"\"; animation: ds-scan-once 900ms 180ms var(--ease-out) both; pointer-events: none; } .ds-stack-band span { padding: clamp(1rem, 2vw, 1.5rem); border-right: 1px solid rgb(255 255 255 / 45%); font-family: var(--font-display); font-size: clamp(1.1rem, 2vw, 1.45rem); font-weight: 600; } .ds-stack-band span:last-child { border-right: 0; } @keyframes ds-scan-once { to { transform: translateX(1500%); } } @media (max-width: 860px) { .ds-stack-band { grid-template-columns: repeat(2, minmax(0, 1fr)); } .ds-stack-band span:nth-child(2) { border-right: 0; } .ds-stack-band span:nth-child(-n + 2) { border-bottom: 1px solid rgb(255 255 255 / 45%); } } @media (prefers-reduced-motion: reduce) { .ds-stack-band::after { animation-duration: 0.01ms; animation-iteration-count: 1; } }"
+      "refersTo": "orbital-map",
+      "description": "The signature two-by-two stack map arranged around one luminous core.",
+      "html": "<section class=\"ds-orbit\"><div class=\"ds-orbit-center\"><span></span><strong>Current stack</strong></div><article class=\"ds-node\"><h3>Core</h3><p>TypeScript · React · Node.js · PostgreSQL</p></article><article class=\"ds-node ds-node-right\"><h3>Application</h3><p>Hono · TanStack · Prisma · Zod</p></article><article class=\"ds-node ds-node-bottom\"><h3>Testing and delivery</h3><p>Vitest · Playwright · Docker · Coolify</p></article><article class=\"ds-node ds-node-right ds-node-bottom\"><h3>Web and CMS</h3><p>HTML · CSS · WordPress · PHP</p></article></section>",
+      "css": ".ds-orbit { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(170px, 20vw, 290px) clamp(90px, 14vw, 200px); min-height: 620px; padding: clamp(52px, 7vw, 92px); overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: radial-gradient(circle at center, rgb(115 170 255 / 11%) 0 2%, transparent 24%), var(--surface); color: var(--text); font-family: 'Sora', sans-serif; } .ds-orbit::before, .ds-orbit::after { position: absolute; top: 50%; left: 50%; aspect-ratio: 1; border: 1px solid rgb(115 170 255 / 18%); border-radius: 50%; content: \"\"; transform: translate(-50%, -50%) rotate(-12deg); } .ds-orbit::before { width: min(63%, 640px); } .ds-orbit::after { width: min(94%, 980px); border-color: rgb(255 97 56 / 13%); } .ds-orbit-center { position: absolute; z-index: 2; top: 50%; left: 50%; display: grid; width: 150px; aspect-ratio: 1; place-items: center; border: 1px solid var(--line-bright); border-radius: 50%; transform: translate(-50%, -50%); background: radial-gradient(circle at 38% 34%, #29374b, var(--surface) 62%); text-align: center; } .ds-orbit-center span { position: absolute; top: 26px; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 18px rgb(255 200 87 / 70%); } .ds-orbit-center strong { max-width: 90px; font-size: 0.72rem; font-weight: 500; line-height: 1.35; } .ds-node { position: relative; z-index: 3; max-width: 470px; padding: 18px 24px; background: rgb(5 7 11 / 28%); } .ds-node-right { justify-self: end; text-align: right; } .ds-node-bottom { align-self: end; } .ds-node h3 { margin: 0 0 14px; color: var(--gold); font-size: 0.76rem; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; } .ds-node p { margin: 0; color: var(--blue-white); font-size: clamp(0.92rem, 1.4vw, 1.06rem); line-height: 1.65; } @media (max-width: 620px) { .ds-orbit { min-height: 620px; gap: 190px 12px; padding: 52px 20px; } .ds-orbit-center { width: 96px; } .ds-node { width: 100%; padding: 14px 6px; background: transparent; } .ds-node p { font-size: 0.76rem; line-height: 1.6; } }"
     },
     {
-      "name": "Skill Ledger Row",
-      "kind": "custom",
-      "refersTo": "ledger-row",
-      "description": "A full-width ruled label-and-content row for factual skills.",
-      "html": "<dl class=\"ds-skill-ledger\"><div><dt>Application development</dt><dd>TypeScript, React, Node.js, Hono, PostgreSQL, Prisma, Zod</dd></div></dl>",
-      "css": ".ds-skill-ledger { margin: 0; border-bottom: 1px solid var(--line-dark); } .ds-skill-ledger > div { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 1rem; padding-block: 1.75rem; border-top: 1px solid var(--line-dark); } .ds-skill-ledger dt { grid-column: 1 / span 4; color: var(--muted); font-family: var(--font-display); font-size: 1rem; font-weight: 600; } .ds-skill-ledger dd { grid-column: 5 / -1; margin: 0; max-width: 72ch; color: var(--ink); font-family: var(--font-body); font-size: clamp(1.15rem, 2vw, 1.5rem); font-weight: 500; letter-spacing: -0.02em; line-height: 1.45; } @media (max-width: 860px) { .ds-skill-ledger > div { grid-template-columns: 1fr; gap: 0.75rem; } .ds-skill-ledger dt, .ds-skill-ledger dd { grid-column: 1; } }"
+      "name": "Project Row",
+      "kind": "card",
+      "refersTo": "project-row",
+      "description": "A secondary project record presented as a flat ruled row.",
+      "html": "<a class=\"ds-project-row\" href=\"#\"><h3>Vesinvest</h3><p>Planning tool for water utilities.</p><span>Live</span><svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M5 11 11 5M6 5h5v5\" /></svg></a>",
+      "css": ".ds-project-row { display: grid; grid-template-columns: minmax(160px, 1.2fr) minmax(260px, 2fr) minmax(130px, 0.7fr) 24px; min-height: 92px; align-items: center; gap: 28px; padding: 20px 4px; border-top: 1px solid var(--line-bright); border-bottom: 1px solid var(--line); color: var(--text); font-family: 'Sora', sans-serif; text-decoration: none; transition: color 180ms ease, padding 180ms ease, border-color 180ms ease; } .ds-project-row:hover { padding-right: 12px; padding-left: 12px; border-color: var(--gold); color: var(--gold); } .ds-project-row h3 { margin: 0; font-family: 'IBM Plex Sans Condensed', sans-serif; font-size: clamp(1.45rem, 2vw, 2rem); font-weight: 500; letter-spacing: -0.025em; line-height: 1; } .ds-project-row p { margin: 0; color: var(--muted); } .ds-project-row span { color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; } .ds-project-row svg { width: 16px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; } .ds-project-row:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; } @media (max-width: 620px) { .ds-project-row { grid-template-columns: 1fr auto; grid-template-rows: auto auto; min-height: 0; gap: 10px 18px; padding: 22px 4px; } .ds-project-row h3 { grid-column: 1; grid-row: 1; } .ds-project-row span { grid-column: 2; grid-row: 1; } .ds-project-row p { grid-column: 1; grid-row: 2; } .ds-project-row svg { grid-column: 2; grid-row: 2; } }"
     },
     {
-      "name": "Interactive Project Row",
+      "name": "Approach Track",
       "kind": "custom",
-      "refersTo": "project-row-hover",
-      "description": "A ruled project record that reverses to cobalt on hover or keyboard focus.",
-      "html": "<a class=\"ds-project-row\" href=\"#\"><span class=\"ds-project-name\">Vesinvest</span><span class=\"ds-project-description\">Planning tool for water utilities.</span><span class=\"ds-project-status\">Live</span><svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M5 11 11 5M6 5h5v5\" /></svg></a>",
-      "css": ".ds-project-row { display: grid; grid-template-columns: minmax(10rem, 2fr) minmax(15rem, 5fr) auto 20px; gap: 1.25rem; align-items: center; min-height: 82px; padding: 1rem 0; border-top: 1px solid var(--line-dark); border-bottom: 1px solid var(--line-dark); color: var(--ink); text-decoration: none; transition: background 160ms ease, color 160ms ease, padding 160ms var(--ease-out); } .ds-project-row:hover, .ds-project-row:focus-visible { padding-inline: 1rem; background: var(--blue); color: var(--white); outline: 3px solid var(--blue); outline-offset: 3px; } .ds-project-name { font-family: var(--font-display); font-size: 1.45rem; font-weight: 700; } .ds-project-description { color: var(--muted); } .ds-project-row:hover .ds-project-description, .ds-project-row:focus-visible .ds-project-description { color: var(--white); } .ds-project-status { font-family: var(--font-display); font-size: 0.9rem; font-weight: 600; white-space: nowrap; } .ds-project-row svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-linecap: square; stroke-linejoin: miter; stroke-width: 1.5; } @media (max-width: 860px) { .ds-project-row { grid-template-columns: minmax(0, 1fr) auto 18px; gap: 0.65rem 1rem; min-height: 96px; } .ds-project-name { grid-column: 1; } .ds-project-description { grid-column: 1 / -1; grid-row: 2; } .ds-project-status { grid-column: 2; grid-row: 1; } .ds-project-row svg { grid-column: 3; grid-row: 1; } }"
+      "description": "Three working principles connected by one fine horizon line.",
+      "html": "<ol class=\"ds-approach\"><li><span></span><p>Start with the smallest complete version.</p></li><li><span></span><p>Keep ownership and boundaries clear.</p></li><li><span></span><p>Test the behavior that can actually break.</p></li></ol>",
+      "css": ".ds-approach { display: grid; grid-template-columns: repeat(3, 1fr); margin: 0; padding: 0; color: var(--text); font-family: 'Sora', sans-serif; list-style: none; counter-reset: approach; } .ds-approach li { position: relative; min-height: 180px; padding: 76px 38px 0 0; border-top: 1px solid var(--line-bright); counter-increment: approach; } .ds-approach li::before { position: absolute; top: 18px; left: 0; color: var(--muted); content: \"0\" counter(approach); font-family: 'IBM Plex Mono', monospace; font-size: 0.66rem; letter-spacing: 0.1em; } .ds-approach li > span { position: absolute; top: -5px; left: 0; width: 9px; height: 9px; border: 1px solid var(--gold); border-radius: 50%; background: var(--void); } .ds-approach p { max-width: 300px; margin: 0; font-size: clamp(1.05rem, 1.8vw, 1.35rem); line-height: 1.5; } @media (max-width: 620px) { .ds-approach { grid-template-columns: 1fr; } .ds-approach li { min-height: 132px; padding: 54px 0 28px; } }"
     },
     {
-      "name": "Contact Plane",
+      "name": "Contact Panel",
       "kind": "custom",
-      "refersTo": "contact-plane",
-      "description": "A square cobalt contact field with white links and no elevation.",
-      "html": "<section class=\"ds-contact-plane\"><h2>Contact</h2><p>Turku, Finland</p><a href=\"mailto:jrwl@jrwl.io\">jrwl@jrwl.io</a><a href=\"tel:+358469536590\">+358 46 953 6590</a><a href=\"#\">github.com/jrwl1</a></section>",
-      "css": ".ds-contact-plane { display: flex; flex-direction: column; align-items: flex-start; padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 5rem); border-radius: 0; background: var(--blue); color: var(--white); } .ds-contact-plane h2 { margin: 0; font-family: var(--font-display); font-size: clamp(2.6rem, 5vw, 4.4rem); font-weight: 700; letter-spacing: -0.035em; line-height: 0.95; } .ds-contact-plane p { margin: 2rem 0 1rem; color: #dfe4ff; } .ds-contact-plane a { display: inline-flex; align-items: center; min-height: 44px; margin-top: 0.1rem; color: var(--white); font-family: var(--font-body); font-size: clamp(1rem, 2vw, 1.3rem); font-weight: 500; } .ds-contact-plane a:hover, .ds-contact-plane a:focus-visible { text-decoration-thickness: 2px; } .ds-contact-plane a:focus-visible { outline: 3px solid var(--white); outline-offset: 3px; }"
+      "refersTo": "contact-panel",
+      "description": "A rounded dark surface lit by restrained warm and cold radial fields.",
+      "html": "<section class=\"ds-contact\"><div><h2>Contact</h2><p>Turku, Finland</p></div><div class=\"ds-contact-links\"><a href=\"mailto:jrwl@jrwl.io\">jrwl@jrwl.io</a><a href=\"tel:+358469536590\">+358 46 953 6590</a><a href=\"#\">github.com/jrwl1</a></div></section>",
+      "css": ".ds-contact { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: clamp(40px, 7vw, 88px); overflow: hidden; border: 1px solid rgb(255 97 56 / 54%); border-radius: 18px; background: radial-gradient(circle at 90% 10%, rgb(255 97 56 / 16%), transparent 34%), radial-gradient(circle at 70% 110%, rgb(115 170 255 / 12%), transparent 38%), var(--surface); color: var(--text); font-family: 'Sora', sans-serif; } .ds-contact h2 { margin: 0; font-family: 'IBM Plex Sans Condensed', sans-serif; font-size: clamp(2.2rem, 4.2vw, 4rem); font-weight: 400; letter-spacing: -0.03em; line-height: 1; } .ds-contact p { margin: 18px 0 0; color: var(--muted); } .ds-contact-links { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 8px; } .ds-contact-links a { display: inline-flex; min-height: 44px; align-items: center; border-bottom: 1px solid transparent; color: var(--text); font-size: clamp(1rem, 1.8vw, 1.24rem); text-decoration: none; } .ds-contact-links a:hover { border-color: var(--gold); } .ds-contact-links a:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; } @media (max-width: 900px) { .ds-contact { grid-template-columns: 1fr; gap: 48px; } }"
     }
   ],
   "narrative": {
-    "northStar": "The Maintained Technical Reference",
-    "overview": "JRWL is a maintained technical reference sheet: precise, current, and optimized for a recruiter’s short scan. Near-white paper, graphite type, and hard rules establish the working surface; cobalt identifies the current stack, decisive actions, and the contact plane.\n\nThe interface stays flat and type-led. Archivo Narrow compresses identity and section structure while Archivo keeps sentences readable; square controls and full-width rows make every transition explicit. Motion is limited to one left-to-right scan across the stack band, then the page becomes still.\n\nThe system must remain factual and multilingual across English, Finnish, and Swedish. It explicitly rejects maritime themes, symbols, logos, charts, technology-badge clouds, portfolio dashboards, and ship-derived visual language.",
+    "northStar": "Orbital Index",
+    "overview": "JRWL is a compact technical profile arranged as an Orbital Index: factual content sits inside a dark field of authored accretion light, fine trajectories, and sparse instrument-like metadata. The visual system feels precise and cinematic without becoming a space-themed costume; the artwork supplies atmosphere while the interface stays legible and direct.\n\nVoid black and layered navy establish the field. Blue-white and disk blue describe cold illumination, while ember orange and photon gold mark energy, focus, and decisive interaction. Condensed headings keep identity modest, Sora carries readable copy, and IBM Plex Mono handles short status and coordinate data.\n\nThe system remains multilingual across English, Finnish, and Swedish. It preserves semantic structure, visible keyboard focus, reduced-motion behavior, and 44-pixel interactive targets while rejecting the discarded white-paper/cobalt world, visible logos, maritime imagery, and repeated technology inventories.",
     "keyCharacteristics": [
-      "Near-white paper, graphite text, and cobalt emphasis.",
-      "Archivo Narrow structure paired with Archivo body copy.",
-      "Square controls, hard rules, and full-width information rows.",
-      "Flat depth with one non-looping stack-row scan.",
-      "Responsive layouts that preserve 44-pixel mobile targets and EN/FI/SV wrapping."
+      "Void-led, luminous surfaces anchored by authored accretion imagery.",
+      "Cold blue illumination balanced by sparse ember-to-gold signals.",
+      "IBM Plex Sans Condensed structure, Sora prose, and IBM Plex Mono metadata.",
+      "Fine orbit lines, 18-pixel panels, pill controls, and flat information rows.",
+      "One radial skill map and one non-looping horizon reveal."
     ],
     "rules": [
       {
-        "name": "The Cobalt Allocation Rule",
-        "body": "Cobalt marks the current stack, decisive actions, contact information, or active interaction; it is not decoration.",
+        "name": "The Warm Signal Rule",
+        "body": "Ember and gold appear as a compact gradient, a hairline, a dot, or an interaction signal; they do not become broad decorative planes.",
         "section": "colors"
       },
       {
-        "name": "The Graphite Skeleton Rule",
-        "body": "Hard graphite and slate rules create structure; do not replace them with cards, shadows, or soft tinted containers.",
+        "name": "The Cold Light Rule",
+        "body": "Blue-white and disk blue describe illumination and technical depth, not a generic blue call-to-action palette.",
         "section": "colors"
       },
       {
-        "name": "The Condensed Structure Rule",
-        "body": "Use Archivo Narrow for identity, section structure, navigation, labels, and status; use Archivo for sentences, descriptions, and data.",
+        "name": "The Three-Voice Rule",
+        "body": "Use IBM Plex Sans Condensed for names and headings, Sora for reading and controls, and IBM Plex Mono only for short status or instrument-like data.",
         "section": "typography"
       },
       {
-        "name": "The Full-Width Evidence Rule",
-        "body": "Information rows span their container and separate with rules; avoid floating cards, badges, and tile grids.",
+        "name": "The Orbital Evidence Rule",
+        "body": "Present the current stack once in the radial map; supporting sections use rows and tracks instead of repeating technology badges or summary tiles.",
         "section": "layout"
       },
       {
-        "name": "The Flat-by-Default Rule",
-        "body": "Surfaces remain flat at rest; hierarchy comes from type, rules, and cobalt planes, never shadows.",
+        "name": "The Light Source Rule",
+        "body": "Glow belongs to tiny luminous sources; panels, rows, controls, and typography never cast drop shadows.",
         "section": "elevation"
       },
       {
-        "name": "The Zero-Radius Rule",
-        "body": "Do not introduce pills, rounded cards, soft chips, or curved control shells; the implemented radius is zero.",
+        "name": "The Three-Radius Rule",
+        "body": "Use 18-pixel panels, pill controls, and circular orbital geometry deliberately; do not introduce intermediate card radii.",
         "section": "shapes"
       }
     ],
     "dos": [
-      "Do reserve cobalt for the current stack, primary action, contact plane, active navigation, selection, focus, and strong row interaction.",
-      "Do build hierarchy with Archivo Narrow, Archivo, hard rules, spacing, and full-width rows.",
-      "Do keep controls square and keyboard focus visible with a 3-pixel outline and 3-pixel offset.",
-      "Do preserve flexible copy widths and 44-pixel targets across English, Finnish, and Swedish.",
-      "Do let the stack scan run once, then leave the page still; honor reduced-motion preferences."
+      "Do keep authored orbital imagery and dark negative space in a balanced image-led composition.",
+      "Do use ember and gold as compact luminous signals against void, surface, and blue-white light.",
+      "Do keep IBM Plex Sans Condensed, Sora, and IBM Plex Mono in their distinct structural, reading, and metadata roles.",
+      "Do preserve two-pixel photon-gold focus outlines with four-pixel offsets and at least 44-pixel targets.",
+      "Do run the horizon reveal once, then leave the page still; collapse motion when reduced motion is requested.",
+      "Do preserve flexible English, Finnish, and Swedish copy without clipping or fixed text heights."
     ],
     "donts": [
-      "Don't introduce maritime themes, symbols, logos, charts, or ship-derived visual language.",
-      "Don't turn the profile into a portfolio dashboard, technology-badge cloud, chart, or proof-theatre interface.",
-      "Don't soften the system with pills, rounded cards, gradients, shadows, or floating panels.",
-      "Don't spread cobalt across arbitrary decorative surfaces; its scarcity carries meaning.",
-      "Don't add looping, ambient, parallax, or scroll-bound motion."
+      "Don't return to the discarded white-paper/cobalt technical-sheet treatment.",
+      "Don't turn the orbital language into logos, spacecraft, dashboards, charts, or generic sci-fi decoration.",
+      "Don't use broad warm fills, purple cyberpunk neon, or repeated blue boxes; light should feel sourced and restrained.",
+      "Don't add floating drop-shadow cards or intermediate corner radii.",
+      "Don't repeat the current stack as badges, highlights, or a second inventory.",
+      "Don't add looping, parallax, cursor-following, or ambient motion."
     ]
   }
 }
