@@ -84,6 +84,11 @@ components:
     typography: "{typography.label}"
     rounded: "{rounded.pill}"
     height: "44px"
+  identity-wordmark:
+    backgroundColor: "transparent"
+    textColor: "{colors.text}"
+    height: "44px"
+    width: "104px"
   language-option:
     backgroundColor: "transparent"
     textColor: "{colors.muted}"
@@ -109,6 +114,12 @@ components:
     typography: "{typography.body}"
     padding: "20px 4px"
     height: "92px"
+  best-fit-field:
+    backgroundColor: "transparent"
+    textColor: "{colors.text}"
+    typography: "{typography.headline}"
+    padding: "clamp(44px, 7vw, 90px) clamp(12px, 4vw, 64px)"
+    height: "390px"
   contact-panel:
     backgroundColor: "{colors.surface}"
     textColor: "{colors.text}"
@@ -124,9 +135,9 @@ components:
 
 JRWL is a compact technical profile arranged as an Orbital Index: factual content sits inside a dark field of authored accretion light, fine trajectories, and sparse instrument-like metadata. The visual system feels precise and cinematic without becoming a space-themed costume; the artwork supplies atmosphere while the interface stays legible and direct.
 
-Void black and layered navy establish the field. Blue-white and disk blue describe cold illumination, while ember orange and photon gold mark energy, focus, and decisive interaction. Condensed headings keep identity modest, Sora carries readable copy, and IBM Plex Mono handles short status and coordinate data.
+Void black and layered navy establish the field. Blue-white and disk blue describe cold illumination, while ember orange and photon gold mark energy, focus, and decisive interaction. Condensed headings keep identity modest, Sora carries readable copy, and IBM Plex Mono handles short status and coordinate data. All three families are self-hosted under the SIL Open Font License 1.1.
 
-The system remains multilingual across English, Finnish, and Swedish. It preserves semantic structure, visible keyboard focus, reduced-motion behavior, and 44-pixel interactive targets while rejecting the discarded white-paper/cobalt world, visible logos, maritime imagery, and repeated technology inventories.
+The system remains multilingual across English, Finnish, and Swedish. It preserves semantic structure, visible keyboard focus, reduced-motion behavior, and 44-pixel interactive targets. A compact authored JRWL orbital wordmark provides visible identity; the system still rejects the discarded white-paper/cobalt world, maritime imagery, cursor tracking, and repeated technology inventories.
 
 **Key Characteristics:**
 
@@ -134,7 +145,7 @@ The system remains multilingual across English, Finnish, and Swedish. It preserv
 - Cold blue illumination balanced by sparse ember-to-gold signals.
 - IBM Plex Sans Condensed structure, Sora prose, and IBM Plex Mono metadata.
 - Fine orbit lines, 18-pixel panels, pill controls, and flat information rows.
-- One radial skill map and one non-looping horizon reveal.
+- One radial skill map and one bounded, non-looping horizon-plus-lensing reveal.
 
 ## Colors
 
@@ -173,7 +184,7 @@ The palette reads as cold orbital light on near-black surfaces, with a narrow wa
 
 **Label/Mono Font:** IBM Plex Mono with a monospace fallback
 
-**Character:** The three voices separate identity, reading, and instrumentation. Condensed type is calm and space-efficient, Sora is plain and contemporary, and mono is restricted to compact operational metadata.
+**Character:** The three voices separate identity, reading, and instrumentation. Condensed type is calm and space-efficient, Sora is plain and contemporary, and mono is restricted to compact operational metadata. All families are self-hosted from `assets/fonts`: Sora at 400, 500, and 600; IBM Plex Sans Condensed at 400 and 500; and IBM Plex Mono at 400. Each family ships with its SIL Open Font License 1.1 text.
 
 ### Hierarchy
 
@@ -184,7 +195,7 @@ The palette reads as cold orbital light on near-black surfaces, with a narrow wa
 - **Body** (400, 1rem, 1.6): Descriptions, supporting notes, and contact content.
 - **Label** (500, 0.84rem, 1.6): Navigation and compact interface labels.
 - **Control** (600, 0.88rem, 1.6): Primary and secondary action labels.
-- **Metadata** (400, approximately 0.68rem, 0.1em tracking): Language options, project statuses, approach indices, and terse coordinate data.
+- **Metadata** (400, approximately 0.68rem, 0.1em tracking): Language options, project statuses, and terse Turku coordinate data.
 
 ### Named Rules
 
@@ -192,29 +203,31 @@ The palette reads as cold orbital light on near-black surfaces, with a narrow wa
 
 ## Layout
 
-The primary shell is capped at 1440 pixels with 24-pixel desktop gutters. A three-part sticky header centers navigation between identity and the language switch; the hero then spans the viewport, holding compact content in the left field while the authored accretion artwork owns the brighter right side. The hero stays between 600 and 760 pixels tall on wide screens so the stack follows close behind.
+The primary shell is capped at 1440 pixels with 24-pixel desktop gutters. A three-part sticky header centers navigation between the compact JRWL orbital wordmark and the language switch; the hero then spans the viewport, holding compact content in the left field while the authored accretion artwork owns the brighter right side. The hero stays between 600 and 760 pixels tall on wide screens so the stack follows close behind.
 
-Sections use a fluid vertical interval from 88 to 148 pixels. The radial skill map is a two-by-two field around a central core rather than a generic card grid. Personal projects remain secondary as full-width ruled rows; the working approach uses a three-stop horizon track; contact closes in a two-column luminous panel.
+Sections use a fluid vertical interval from 88 to 148 pixels. The radial skill map is a two-by-two field around a central core rather than a generic card grid. Personal projects remain secondary as full-width ruled rows; Best Fit is one open typography field with three recruiter-fit signals; contact closes in a two-column luminous panel. The footer contains only a right-aligned © 2026.
 
-At 900 pixels and below, the shell narrows to a 720-pixel maximum with 16-pixel gutters, the header becomes two rows, the skill orbit tightens, and contact becomes one column. At 620 pixels and below, gutters reduce to 12 pixels, the hero content moves lower over a stronger image scrim, section intros stack, the skill orbit preserves its two-by-two radial relationship, project rows become two-line records, and the approach track becomes vertical. Copy and targets must expand for English, Finnish, and Swedish without clipping or fixed text heights.
+At 900 pixels and below, the shell narrows to a 720-pixel maximum with 16-pixel gutters, the header becomes two rows, the skill orbit tightens, and contact becomes one column. At 620 pixels and below, gutters reduce to 12 pixels, the wordmark contracts from 104 to 92 pixels, hero content moves lower over a stronger image scrim, section intros stack, the skill orbit preserves its two-by-two radial relationship, project rows become two-line records, and the Best Fit signals resolve into a stepped left alignment. Copy and targets must expand for English, Finnish, and Swedish without clipping or fixed text heights.
 
-**The Orbital Evidence Rule.** Present the current stack once in the radial map; supporting sections use rows and tracks instead of repeating technology badges or summary tiles.
+**The Orbital Evidence Rule.** Present the current stack once in the radial map; supporting sections use rows or a typography field instead of repeating technology badges or summary tiles.
 
 ## Elevation & Depth
 
-Depth comes from the accretion artwork, transparent dark layers, radial gradients, fine orbit lines, and two small photon-gold glows. Conventional drop shadows are absent. Panels stay on the page plane; the secondary action and sticky header use translucent surfaces, while hover states adjust color, border, or position by only two pixels.
+Depth comes from the accretion artwork, transparent dark layers, radial gradients, fine orbit lines, compact beacon glows, and a bounded gravity-lens, photon-ring, and flare overlay. Conventional drop shadows are absent. Panels stay on the page plane; the secondary action and sticky header use translucent surfaces, while hover states adjust color, border, lens intensity, or position without tracking the pointer.
 
 ### Shadow Vocabulary
 
 - **Gold Beacon:** A compact 14-to-18-pixel photon-gold glow used only on the availability and orbital-center dots.
+- **Photon Ring:** A 24-pixel disk-blue outer glow with an 18-pixel inset gold glow; hover intensifies them to 28 and 24 pixels.
+- **Accretion Flare:** A two-pixel spectral line with 14-pixel blue-white and 34-pixel ember glows during its one-shot pass.
 
 ### Named Rules
 
-**The Light Source Rule.** Glow belongs to tiny luminous sources; panels, rows, controls, and typography never cast drop shadows.
+**The Light Source Rule.** Glow belongs to tiny luminous sources or the bounded hero lensing overlay; panels, rows, controls, and typography never cast drop shadows.
 
 ## Shapes
 
-The form language uses three recurring geometries: 18-pixel rounded panels for the skill map and contact surface, fully rounded pills for actions and language controls, and true circles for orbital lines, map cores, and status beacons. One-pixel hairlines define structure. Project and approach rows stay flat and uncontained so rounded panels remain rare.
+The form language uses three recurring geometries: 18-pixel rounded panels for the skill map and contact surface, fully rounded pills for actions and language controls, and true circles for orbital lines, the gravity lens, map cores, and status beacons. One-pixel hairlines define structure. Project rows and the Best Fit field stay flat and uncontained so rounded panels remain rare.
 
 **The Three-Radius Rule.** Use 18-pixel panels, pill controls, and circular orbital geometry deliberately; do not introduce intermediate card radii.
 
@@ -223,8 +236,8 @@ The form language uses three recurring geometries: 18-pixel rounded panels for t
 ### Hero Artwork
 
 - **Structure:** A full-bleed 1536 by 1024 WebP sits behind content, cropped toward the right-side event horizon and protected by responsive void scrims.
-- **Overlay:** Compact identity, role, availability, and two actions occupy the darker left field; fine orbit ellipses and faint horizontal calibration lines extend the image language.
-- **Motion:** The image reveals from right to left over 1500 milliseconds with an ease-out curve, runs once, and collapses under reduced-motion preferences.
+- **Overlay:** The compact name and `Software developer in Turku.` lead a translated current-work line, translated availability, and two actions in the darker left field. The retained Turku coordinates sit at the lower edge; fine orbit ellipses and faint horizontal calibration lines extend the image language.
+- **Motion:** The 1500-millisecond horizon reveal is layered with a 2600-millisecond gravity wake after 500 milliseconds, a 2300-millisecond photon-ring wake after 650 milliseconds, and a 2200-millisecond flare pass after 900 milliseconds. All run once. Hover can intensify the lens and ring, but nothing follows the cursor; reduced-motion preferences collapse every animation and transition.
 
 ### Actions
 
@@ -235,6 +248,7 @@ The form language uses three recurring geometries: 18-pixel rounded panels for t
 
 ### Navigation
 
+- **Brand:** A compact authored JRWL SVG wordmark uses light square-cut letter strokes crossed by an ember-to-gold orbit. It renders at 104 pixels wide on larger screens and 92 pixels below 620 pixels, with a 44-pixel home target and `JRWL` alternative text.
 - **Desktop:** A 72-pixel sticky translucent-void header with centered muted links; the active section turns light and gains a one-pixel ember-to-gold underline.
 - **Compact:** At 900 pixels, navigation occupies a second full-width row and each link shares the available width.
 - **Targets:** Links preserve at least 44 pixels of interactive height.
@@ -258,10 +272,11 @@ The form language uses three recurring geometries: 18-pixel rounded panels for t
 - **Interaction:** Linked rows gain a small inline inset and photon-gold border/text emphasis on hover; focus remains visibly outlined.
 - **Responsive:** Below 620 pixels, title and status share the first row while description and optional link occupy the second.
 
-### Approach Track
+### Best Fit Field
 
-- **Structure:** Three numbered statements share a bright horizontal hairline with small gold-outlined nodes.
-- **Responsive:** The track becomes a vertical list below 620 pixels while keeping the same ordered progression.
+- **Structure:** Three recruiter-fit signals occupy one open 390-pixel typography field over a flattened disk-blue orbit and a restrained ember-to-gold line.
+- **Typography:** IBM Plex Sans Condensed scales from 1.9 to 4rem with tight leading; the second signal centers in blue-white and the third aligns right in photon gold.
+- **Responsive:** Below 620 pixels, the field becomes 360 pixels tall and the signals step inward from the left by 0, 6, and 12 percent.
 
 ### Contact Panel
 
@@ -269,21 +284,26 @@ The form language uses three recurring geometries: 18-pixel rounded panels for t
 - **Depth:** Restrained ember and disk-blue radial light enters from opposite edges; there is no drop shadow.
 - **Interaction:** Links preserve 44-pixel targets and gain a photon-gold underline on hover.
 
+### Footer
+
+- **Structure:** A single right-aligned © 2026 sits above the final page edge; no repeated identity or secondary metadata is present.
+
 ## Do's and Don'ts
 
 ### Do:
 
 - **Do** keep authored orbital imagery and dark negative space in a balanced image-led composition.
+- **Do** use the compact JRWL orbital wordmark as the persistent header identity.
 - **Do** use ember and gold as compact luminous signals against void, surface, and blue-white light.
 - **Do** keep IBM Plex Sans Condensed, Sora, and IBM Plex Mono in their distinct structural, reading, and metadata roles.
 - **Do** preserve two-pixel photon-gold focus outlines with four-pixel offsets and at least 44-pixel targets.
-- **Do** run the horizon reveal once, then leave the page still; collapse motion when reduced motion is requested.
+- **Do** run the horizon, gravity-lens, photon-ring, and flare reveal once, then leave the page still; collapse the full suite when reduced motion is requested.
 - **Do** preserve flexible English, Finnish, and Swedish copy without clipping or fixed text heights.
 
 ### Don't:
 
 - **Don't** return to the discarded white-paper/cobalt technical-sheet treatment.
-- **Don't** turn the orbital language into logos, spacecraft, dashboards, charts, or generic sci-fi decoration.
+- **Don't** turn the orbital language into spacecraft, unrelated symbols, dashboards, charts, or generic sci-fi decoration.
 - **Don't** use broad warm fills, purple cyberpunk neon, or repeated blue boxes; light should feel sourced and restrained.
 - **Don't** add floating drop-shadow cards or intermediate corner radii.
 - **Don't** repeat the current stack as badges, highlights, or a second inventory.

@@ -1,3 +1,51 @@
+@font-face {
+  font-family: "Sora";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/sora-400.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sora";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/sora-500.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sora";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/sora-600.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "IBM Plex Sans Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/ibm-plex-sans-condensed-400.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "IBM Plex Sans Condensed";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/ibm-plex-sans-condensed-500.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/ibm-plex-mono-400.ttf") format("truetype");
+}
+
 :root {
   color-scheme: dark;
   --void: #05070b;
@@ -113,8 +161,12 @@ button {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
-  font-weight: 600;
-  letter-spacing: -0.03em;
+}
+
+.identity img {
+  display: block;
+  width: 104px;
+  height: auto;
 }
 
 .site-nav {
@@ -238,6 +290,70 @@ button {
   mask-image: linear-gradient(90deg, black, transparent 68%);
 }
 
+.gravity-lens {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  left: 71%;
+  width: min(32vw, 470px);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: gravity-wake 2600ms 500ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.gravity-lens::before {
+  position: absolute;
+  inset: -10%;
+  border-radius: 50%;
+  content: "";
+  opacity: 0.72;
+  backdrop-filter: contrast(1.32) saturate(1.35) brightness(1.08);
+  mask-image: radial-gradient(circle, transparent 0 38%, black 44% 53%, transparent 62%);
+  transition: opacity 500ms ease, transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.photon-ring {
+  position: absolute;
+  inset: 9%;
+  border: 1px solid rgb(220 236 255 / 48%);
+  border-radius: 50%;
+  transform: rotate(-14deg) scaleY(0.56);
+  box-shadow:
+    0 0 24px rgb(115 170 255 / 30%),
+    inset 0 0 18px rgb(255 200 87 / 18%);
+  animation: photon-wake 2300ms 650ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.accretion-flare {
+  position: absolute;
+  top: 50%;
+  left: -44%;
+  width: 188%;
+  height: 2px;
+  transform: rotate(-14deg);
+  background: linear-gradient(90deg, transparent 0%, var(--disk-blue) 34%, var(--blue-white) 49%, var(--gold) 58%, transparent 100%);
+  box-shadow:
+    0 0 14px rgb(220 236 255 / 80%),
+    0 0 34px rgb(255 97 56 / 52%);
+  opacity: 0;
+  mask-image: linear-gradient(90deg, transparent, black 24% 76%, transparent);
+  animation: flare-pass 2200ms 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero:hover .gravity-lens::before {
+  opacity: 0.95;
+  transform: scale(1.035);
+}
+
+.hero:hover .photon-ring {
+  border-color: rgb(255 200 87 / 70%);
+  box-shadow:
+    0 0 28px rgb(115 170 255 / 42%),
+    inset 0 0 24px rgb(255 200 87 / 28%);
+}
+
 .hero-content {
   align-self: center;
   width: var(--page);
@@ -263,11 +379,18 @@ button {
   line-height: 1.45;
 }
 
+.current-work {
+  max-width: 470px;
+  margin: 18px 0 0;
+  color: var(--text);
+  font-size: 0.94rem;
+}
+
 .availability {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 18px 0 0;
+  margin: 8px 0 0;
   color: var(--muted);
   font-size: 0.9rem;
 }
@@ -595,50 +718,64 @@ a.project-card:hover {
   justify-self: end;
 }
 
-.approach-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  counter-reset: approach;
-}
-
-.approach-list li {
+.fit-field {
   position: relative;
-  min-height: 180px;
-  padding: 76px 38px 0 0;
+  display: grid;
+  min-height: 390px;
+  align-content: center;
+  gap: 10px;
+  overflow: hidden;
+  padding: clamp(44px, 7vw, 90px) clamp(12px, 4vw, 64px);
   border-top: 1px solid var(--line-bright);
-  counter-increment: approach;
+  border-bottom: 1px solid var(--line);
+  isolation: isolate;
 }
 
-.approach-list li::before {
+.fit-field::before {
   position: absolute;
-  top: 18px;
-  left: 0;
-  color: var(--muted);
-  content: "0" counter(approach);
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.66rem;
-  letter-spacing: 0.1em;
-}
-
-.approach-list li > span {
-  position: absolute;
-  top: -5px;
-  left: 0;
-  width: 9px;
-  height: 9px;
-  border: 1px solid var(--gold);
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  width: min(54vw, 680px);
+  aspect-ratio: 1;
+  border: 1px solid rgb(115 170 255 / 16%);
   border-radius: 50%;
-  background: var(--void);
+  background: radial-gradient(circle, rgb(115 170 255 / 12%), transparent 58%);
+  content: "";
+  transform: translate(-50%, -50%) scaleY(0.36) rotate(-8deg);
 }
 
-.approach-list p {
-  max-width: 300px;
+.fit-field::after {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: -5%;
+  width: 110%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--ember), var(--gold), transparent);
+  content: "";
+  opacity: 0.45;
+  transform: rotate(-6deg);
+}
+
+.fit-field p {
+  position: relative;
   margin: 0;
-  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
-  line-height: 1.5;
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-size: clamp(1.9rem, 4.1vw, 4rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.06;
+}
+
+.fit-field p:nth-child(2) {
+  justify-self: center;
+  color: var(--blue-white);
+}
+
+.fit-field p:nth-child(3) {
+  justify-self: end;
+  color: var(--gold);
 }
 
 .contact-section {
@@ -686,7 +823,7 @@ a.project-card:hover {
   width: var(--page);
   min-height: 88px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 0.78rem;
@@ -701,6 +838,51 @@ a.project-card:hover {
   to {
     clip-path: inset(0 0 0 0);
     filter: brightness(1) saturate(1);
+  }
+}
+
+@keyframes gravity-wake {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.72);
+  }
+
+  55% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.035);
+  }
+
+  100% {
+    opacity: 0.82;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes photon-wake {
+  from {
+    opacity: 0;
+    transform: rotate(-28deg) scaleY(0.2) scaleX(0.72);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotate(-14deg) scaleY(0.56) scaleX(1);
+  }
+}
+
+@keyframes flare-pass {
+  0% {
+    opacity: 0;
+    transform: rotate(-14deg) scaleX(0.08);
+  }
+
+  38% {
+    opacity: 0.95;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(-14deg) scaleX(1);
   }
 }
 
@@ -748,6 +930,11 @@ a.project-card:hover {
       linear-gradient(0deg, var(--void), transparent 55%);
   }
 
+  .gravity-lens {
+    left: 69%;
+    width: min(48vw, 410px);
+  }
+
   .hero-content {
     padding-top: 100px;
   }
@@ -783,7 +970,11 @@ a.project-card:hover {
   }
 
   .identity {
-    font-size: 0.9rem;
+    min-width: 96px;
+  }
+
+  .identity img {
+    width: 92px;
   }
 
   .language-switch button {
@@ -806,6 +997,12 @@ a.project-card:hover {
     background:
       linear-gradient(0deg, var(--void) 0%, rgb(5 7 11 / 50%) 58%, rgb(5 7 11 / 20%) 100%),
       linear-gradient(90deg, rgb(5 7 11 / 94%) 0%, rgb(5 7 11 / 48%) 75%, transparent);
+  }
+
+  .gravity-lens {
+    top: 41%;
+    left: 76%;
+    width: 56vw;
   }
 
   .hero-content {
@@ -940,13 +1137,26 @@ a.project-card:hover {
     grid-row: 2;
   }
 
-  .approach-list {
-    grid-template-columns: 1fr;
+  .fit-field {
+    min-height: 360px;
+    align-content: center;
+    gap: 18px;
+    padding: 42px 18px;
   }
 
-  .approach-list li {
-    min-height: 132px;
-    padding: 54px 0 28px;
+  .fit-field p {
+    max-width: 92%;
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .fit-field p:nth-child(2) {
+    justify-self: start;
+    margin-left: 6%;
+  }
+
+  .fit-field p:nth-child(3) {
+    justify-self: start;
+    margin-left: 12%;
   }
 
   .contact-section {

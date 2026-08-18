@@ -30,12 +30,6 @@
     />
     <meta name="twitter:image" content="https://jrwl.io/assets/orbital-hero.webp" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@400;500;600&family=Sora:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
     <link rel="preload" as="image" href="assets/orbital-hero.webp" type="image/webp" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -44,23 +38,23 @@
     <!--
       THESIS: A compact technical profile inside one orbital visual system, refusing the giant-name hero and repeated stack inventory.
       OWN-WORLD: Void black, blue-white, ember orange, photon gold, fine orbit lines, luminous image-led surfaces, and precise rounded controls.
-      STORY: A hiring visitor identifies John, reads his current stack once, scans secondary personal projects and working approach, then contacts him.
+      STORY: A hiring visitor identifies John, reads his current stack once, scans secondary personal projects and best-fit signals, then contacts him.
       FIRST VIEWPORT: A modest name, role and actions sit over the dark left field; authored accretion artwork owns the right; the stack begins immediately below.
-      FORM: Orbital Index, challenger direction, seed 487bd0ee; one radial skill map and one non-looping horizon reveal carry the interaction grammar.
+      FORM: Orbital Index, challenger direction, seed 487bd0ee; one radial skill map and one non-looping horizon-plus-lensing reveal carry the interaction grammar.
       FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
     -->
 
     <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
 
     <header class="site-header" id="top">
-      <a class="identity" href="#top" aria-label="John Lindström home" data-i18n-aria-label="header.homeAria">
-        John Lindström
+      <a class="identity" href="#top" aria-label="JRWL home" data-i18n-aria-label="header.homeAria">
+        <img src="assets/jrwl-orbit-wordmark.svg" alt="JRWL" width="132" height="40" />
       </a>
 
       <nav class="site-nav" aria-label="Primary navigation" data-i18n-aria-label="header.navAria">
         <a href="#skills" data-section-link="skills" data-i18n="nav.skills">Stack</a>
         <a href="#projects" data-section-link="projects" data-i18n="nav.projects">Projects</a>
-        <a href="#approach" data-section-link="approach" data-i18n="nav.approach">Approach</a>
+        <a href="#fit" data-section-link="fit" data-i18n="nav.fit">Fit</a>
         <a href="#contact" data-section-link="contact" data-i18n="nav.contact">Contact</a>
       </nav>
 
@@ -84,11 +78,16 @@
           />
           <span class="orbit-line orbit-line-one"></span>
           <span class="orbit-line orbit-line-two"></span>
+          <span class="gravity-lens">
+            <span class="photon-ring"></span>
+            <span class="accretion-flare"></span>
+          </span>
         </div>
 
         <div class="hero-content">
           <h1 id="hero-title">John Lindström</h1>
-          <p class="hero-summary" data-i18n="hero.summary">Software developer in Turku. Backend and full-stack.</p>
+          <p class="hero-summary" data-i18n="hero.summary">Software developer in Turku.</p>
+          <p class="current-work" data-i18n="hero.currentWork">Currently building greenfield B2B web products.</p>
           <p class="availability" data-i18n="hero.availability">Open to backend and full-stack roles.</p>
 
           <div class="hero-actions">
@@ -109,7 +108,6 @@
       <section id="skills" class="section skills-section" aria-labelledby="skills-title">
         <header class="section-intro">
           <h2 id="skills-title" data-i18n="skills.title">Current stack</h2>
-          <p data-i18n="skills.note">The tools I use most now.</p>
         </header>
 
         <div class="skills-orbit">
@@ -176,16 +174,16 @@
         </div>
       </section>
 
-      <section id="approach" class="section approach-section" aria-labelledby="approach-title">
+      <section id="fit" class="section fit-section" aria-labelledby="fit-title">
         <header class="section-intro">
-          <h2 id="approach-title" data-i18n="approach.title">How I build</h2>
+          <h2 id="fit-title" data-i18n="fit.title">Best fit</h2>
         </header>
 
-        <ol class="approach-list">
-          <li><span></span><p data-i18n="approach.smallest">Start with the smallest complete version.</p></li>
-          <li><span></span><p data-i18n="approach.ownership">Keep ownership and boundaries clear.</p></li>
-          <li><span></span><p data-i18n="approach.tests">Test the behavior that can actually break.</p></li>
-        </ol>
+        <div class="fit-field">
+          <p data-i18n="fit.products">B2B products with real users.</p>
+          <p data-i18n="fit.work">Backend-heavy full-stack work.</p>
+          <p data-i18n="fit.teams">Small teams with clear ownership.</p>
+        </div>
       </section>
 
       <section id="contact" class="contact-section" aria-labelledby="contact-title">
@@ -203,7 +201,6 @@
     </main>
 
     <footer class="site-footer">
-      <span>John Lindström</span>
       <span data-i18n="footer.copy">© 2026</span>
     </footer>
 

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-18T06:20:11Z",
+  "generatedAt": "2026-08-18T08:03:52Z",
   "title": "Design System: JRWL",
   "extensions": {
     "colorMeta": {
@@ -186,7 +186,7 @@
       },
       "metadata": {
         "displayName": "Metadata",
-        "purpose": "Language options, statuses, approach indices, and terse coordinate data."
+        "purpose": "Language options, project statuses, and terse Turku coordinate data."
       }
     },
     "shadows": [
@@ -199,6 +199,16 @@
         "name": "gold-beacon-orbit",
         "value": "0 0 18px rgb(255 200 87 / 70%)",
         "purpose": "Slightly wider photon glow on the orbital-map center."
+      },
+      {
+        "name": "photon-ring",
+        "value": "0 0 24px rgb(115 170 255 / 30%), inset 0 0 18px rgb(255 200 87 / 18%)",
+        "purpose": "Cold outer and warm inner light around the bounded hero lens; hover intensifies both glows."
+      },
+      {
+        "name": "accretion-flare",
+        "value": "0 0 14px rgb(220 236 255 / 80%), 0 0 34px rgb(255 97 56 / 52%)",
+        "purpose": "Blue-white and ember light on the one-shot spectral flare."
       }
     ],
     "motion": [
@@ -206,6 +216,21 @@
         "name": "horizon-reveal",
         "value": "1500ms cubic-bezier(0.16, 1, 0.3, 1) both",
         "purpose": "One non-looping right-to-left reveal of the hero artwork."
+      },
+      {
+        "name": "gravity-wake",
+        "value": "2600ms 500ms cubic-bezier(0.16, 1, 0.3, 1) both",
+        "purpose": "One bounded scale-and-opacity arrival for the gravity lens."
+      },
+      {
+        "name": "photon-wake",
+        "value": "2300ms 650ms cubic-bezier(0.16, 1, 0.3, 1) both",
+        "purpose": "One rotation and compression reveal for the photon ring."
+      },
+      {
+        "name": "flare-pass",
+        "value": "2200ms 900ms cubic-bezier(0.16, 1, 0.3, 1) both",
+        "purpose": "One spectral line expansion that returns to transparent."
       },
       {
         "name": "direct-state",
@@ -231,6 +256,14 @@
   },
   "components": [
     {
+      "name": "JRWL Orbital Wordmark",
+      "kind": "custom",
+      "refersTo": "identity-wordmark",
+      "description": "The compact visible identity in the sticky header.",
+      "html": "<a class=\"ds-wordmark\" href=\"#\" aria-label=\"JRWL home\"><svg viewBox=\"0 0 132 40\" role=\"img\" aria-label=\"JRWL\"><defs><linearGradient id=\"ds-wordmark-orbit\" x1=\"0\" y1=\"1\" x2=\"1\" y2=\"0\"><stop offset=\"0\" stop-color=\"var(--ember)\"/><stop offset=\"1\" stop-color=\"var(--gold)\"/></linearGradient></defs><g fill=\"none\" stroke=\"var(--text)\" stroke-width=\"4\" stroke-linecap=\"square\" stroke-linejoin=\"miter\"><path d=\"M4 6h20v19c0 7-4 10-10 10S4 32 4 26\"/><path d=\"M35 35V6h12c7 0 11 3 11 8s-4 8-11 8H35m13 0 12 13\"/><path d=\"M65 6l6 29 8-19 8 19 6-29\"/><path d=\"M104 6v29h22\"/></g><path d=\"M1 32C38 26 79 18 130 5\" fill=\"none\" stroke=\"url(#ds-wordmark-orbit)\" stroke-width=\"2\" stroke-linecap=\"round\"/><circle cx=\"130\" cy=\"5\" r=\"2.5\" fill=\"var(--gold)\"/></svg></a>",
+      "css": ".ds-wordmark { display: inline-flex; min-height: 44px; align-items: center; } .ds-wordmark svg { display: block; width: 104px; height: auto; } .ds-wordmark:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; } @media (max-width: 620px) { .ds-wordmark svg { width: 92px; } }"
+    },
+    {
       "name": "Primary Action",
       "kind": "button",
       "refersTo": "action-primary",
@@ -251,7 +284,7 @@
       "kind": "nav",
       "refersTo": "navigation-link",
       "description": "Muted centered links with a warm current-section trace.",
-      "html": "<nav class=\"ds-nav\" aria-label=\"Primary navigation\"><a href=\"#\" aria-current=\"location\">Stack</a><a href=\"#\">Projects</a><a href=\"#\">Approach</a><a href=\"#\">Contact</a></nav>",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Primary navigation\"><a href=\"#\" aria-current=\"location\">Stack</a><a href=\"#\">Projects</a><a href=\"#\">Fit</a><a href=\"#\">Contact</a></nav>",
       "css": ".ds-nav { display: flex; align-items: center; gap: 4px; } .ds-nav a { position: relative; display: inline-flex; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; padding: 0 13px; color: var(--muted); font-family: 'Sora', sans-serif; font-size: 0.84rem; font-weight: 500; text-decoration: none; transition: color 180ms ease; } .ds-nav a::after { position: absolute; right: 13px; bottom: 7px; left: 13px; height: 1px; content: \"\"; transform: scaleX(0); transform-origin: left; background: linear-gradient(90deg, var(--ember), var(--gold)); transition: transform 180ms ease; } .ds-nav a:hover, .ds-nav a[aria-current=\"location\"] { color: var(--text); } .ds-nav a[aria-current=\"location\"]::after { transform: scaleX(1); } .ds-nav a:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; } @media (max-width: 900px) { .ds-nav { width: 100%; } .ds-nav a { flex: 1; padding: 0 6px; text-align: center; } .ds-nav a::after { right: 22%; left: 22%; } }"
     },
     {
@@ -279,11 +312,12 @@
       "css": ".ds-project-row { display: grid; grid-template-columns: minmax(160px, 1.2fr) minmax(260px, 2fr) minmax(130px, 0.7fr) 24px; min-height: 92px; align-items: center; gap: 28px; padding: 20px 4px; border-top: 1px solid var(--line-bright); border-bottom: 1px solid var(--line); color: var(--text); font-family: 'Sora', sans-serif; text-decoration: none; transition: color 180ms ease, padding 180ms ease, border-color 180ms ease; } .ds-project-row:hover { padding-right: 12px; padding-left: 12px; border-color: var(--gold); color: var(--gold); } .ds-project-row h3 { margin: 0; font-family: 'IBM Plex Sans Condensed', sans-serif; font-size: clamp(1.45rem, 2vw, 2rem); font-weight: 500; letter-spacing: -0.025em; line-height: 1; } .ds-project-row p { margin: 0; color: var(--muted); } .ds-project-row span { color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; } .ds-project-row svg { width: 16px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; } .ds-project-row:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; } @media (max-width: 620px) { .ds-project-row { grid-template-columns: 1fr auto; grid-template-rows: auto auto; min-height: 0; gap: 10px 18px; padding: 22px 4px; } .ds-project-row h3 { grid-column: 1; grid-row: 1; } .ds-project-row span { grid-column: 2; grid-row: 1; } .ds-project-row p { grid-column: 1; grid-row: 2; } .ds-project-row svg { grid-column: 2; grid-row: 2; } }"
     },
     {
-      "name": "Approach Track",
+      "name": "Best Fit Field",
       "kind": "custom",
-      "description": "Three working principles connected by one fine horizon line.",
-      "html": "<ol class=\"ds-approach\"><li><span></span><p>Start with the smallest complete version.</p></li><li><span></span><p>Keep ownership and boundaries clear.</p></li><li><span></span><p>Test the behavior that can actually break.</p></li></ol>",
-      "css": ".ds-approach { display: grid; grid-template-columns: repeat(3, 1fr); margin: 0; padding: 0; color: var(--text); font-family: 'Sora', sans-serif; list-style: none; counter-reset: approach; } .ds-approach li { position: relative; min-height: 180px; padding: 76px 38px 0 0; border-top: 1px solid var(--line-bright); counter-increment: approach; } .ds-approach li::before { position: absolute; top: 18px; left: 0; color: var(--muted); content: \"0\" counter(approach); font-family: 'IBM Plex Mono', monospace; font-size: 0.66rem; letter-spacing: 0.1em; } .ds-approach li > span { position: absolute; top: -5px; left: 0; width: 9px; height: 9px; border: 1px solid var(--gold); border-radius: 50%; background: var(--void); } .ds-approach p { max-width: 300px; margin: 0; font-size: clamp(1.05rem, 1.8vw, 1.35rem); line-height: 1.5; } @media (max-width: 620px) { .ds-approach { grid-template-columns: 1fr; } .ds-approach li { min-height: 132px; padding: 54px 0 28px; } }"
+      "refersTo": "best-fit-field",
+      "description": "Three recruiter-fit signals arranged as one open orbital typography field.",
+      "html": "<section class=\"ds-fit\"><p>B2B products with real users.</p><p>Backend-heavy full-stack work.</p><p>Small teams with clear ownership.</p></section>",
+      "css": ".ds-fit { position: relative; display: grid; min-height: 390px; align-content: center; gap: 10px; overflow: hidden; padding: clamp(44px, 7vw, 90px) clamp(12px, 4vw, 64px); border-top: 1px solid var(--line-bright); border-bottom: 1px solid var(--line); color: var(--text); isolation: isolate; } .ds-fit::before { position: absolute; z-index: -1; top: 50%; left: 50%; width: min(54vw, 680px); aspect-ratio: 1; border: 1px solid rgb(115 170 255 / 16%); border-radius: 50%; background: radial-gradient(circle, rgb(115 170 255 / 12%), transparent 58%); content: \"\"; transform: translate(-50%, -50%) scaleY(0.36) rotate(-8deg); } .ds-fit::after { position: absolute; z-index: -1; top: 50%; left: -5%; width: 110%; height: 1px; background: linear-gradient(90deg, transparent, var(--ember), var(--gold), transparent); content: \"\"; opacity: 0.45; transform: rotate(-6deg); } .ds-fit p { position: relative; margin: 0; font-family: 'IBM Plex Sans Condensed', sans-serif; font-size: clamp(1.9rem, 4.1vw, 4rem); font-weight: 400; letter-spacing: -0.025em; line-height: 1.06; } .ds-fit p:nth-child(2) { justify-self: center; color: var(--blue-white); } .ds-fit p:nth-child(3) { justify-self: end; color: var(--gold); } @media (max-width: 620px) { .ds-fit { min-height: 360px; gap: 18px; padding: 42px 18px; } .ds-fit p { max-width: 92%; font-size: clamp(2rem, 10vw, 3rem); } .ds-fit p:nth-child(2) { justify-self: start; margin-left: 6%; } .ds-fit p:nth-child(3) { justify-self: start; margin-left: 12%; } }"
     },
     {
       "name": "Contact Panel",
@@ -296,13 +330,13 @@
   ],
   "narrative": {
     "northStar": "Orbital Index",
-    "overview": "JRWL is a compact technical profile arranged as an Orbital Index: factual content sits inside a dark field of authored accretion light, fine trajectories, and sparse instrument-like metadata. The visual system feels precise and cinematic without becoming a space-themed costume; the artwork supplies atmosphere while the interface stays legible and direct.\n\nVoid black and layered navy establish the field. Blue-white and disk blue describe cold illumination, while ember orange and photon gold mark energy, focus, and decisive interaction. Condensed headings keep identity modest, Sora carries readable copy, and IBM Plex Mono handles short status and coordinate data.\n\nThe system remains multilingual across English, Finnish, and Swedish. It preserves semantic structure, visible keyboard focus, reduced-motion behavior, and 44-pixel interactive targets while rejecting the discarded white-paper/cobalt world, visible logos, maritime imagery, and repeated technology inventories.",
+    "overview": "JRWL is a compact technical profile arranged as an Orbital Index: factual content sits inside a dark field of authored accretion light, fine trajectories, and sparse instrument-like metadata. The visual system feels precise and cinematic without becoming a space-themed costume; the artwork supplies atmosphere while the interface stays legible and direct.\n\nVoid black and layered navy establish the field. Blue-white and disk blue describe cold illumination, while ember orange and photon gold mark energy, focus, and decisive interaction. Condensed headings keep identity modest, Sora carries readable copy, and IBM Plex Mono handles short status and coordinate data. All three families are self-hosted under the SIL Open Font License 1.1.\n\nThe system remains multilingual across English, Finnish, and Swedish. It preserves semantic structure, visible keyboard focus, reduced-motion behavior, and 44-pixel interactive targets. A compact authored JRWL orbital wordmark provides visible identity; the system still rejects the discarded white-paper/cobalt world, maritime imagery, cursor tracking, and repeated technology inventories.",
     "keyCharacteristics": [
       "Void-led, luminous surfaces anchored by authored accretion imagery.",
       "Cold blue illumination balanced by sparse ember-to-gold signals.",
       "IBM Plex Sans Condensed structure, Sora prose, and IBM Plex Mono metadata.",
       "Fine orbit lines, 18-pixel panels, pill controls, and flat information rows.",
-      "One radial skill map and one non-looping horizon reveal."
+      "One radial skill map and one bounded, non-looping horizon-plus-lensing reveal."
     ],
     "rules": [
       {
@@ -322,12 +356,12 @@
       },
       {
         "name": "The Orbital Evidence Rule",
-        "body": "Present the current stack once in the radial map; supporting sections use rows and tracks instead of repeating technology badges or summary tiles.",
+        "body": "Present the current stack once in the radial map; supporting sections use rows or a typography field instead of repeating technology badges or summary tiles.",
         "section": "layout"
       },
       {
         "name": "The Light Source Rule",
-        "body": "Glow belongs to tiny luminous sources; panels, rows, controls, and typography never cast drop shadows.",
+        "body": "Glow belongs to tiny luminous sources or the bounded hero lensing overlay; panels, rows, controls, and typography never cast drop shadows.",
         "section": "elevation"
       },
       {
@@ -338,15 +372,16 @@
     ],
     "dos": [
       "Do keep authored orbital imagery and dark negative space in a balanced image-led composition.",
+      "Do use the compact JRWL orbital wordmark as the persistent header identity.",
       "Do use ember and gold as compact luminous signals against void, surface, and blue-white light.",
       "Do keep IBM Plex Sans Condensed, Sora, and IBM Plex Mono in their distinct structural, reading, and metadata roles.",
       "Do preserve two-pixel photon-gold focus outlines with four-pixel offsets and at least 44-pixel targets.",
-      "Do run the horizon reveal once, then leave the page still; collapse motion when reduced motion is requested.",
+      "Do run the horizon, gravity-lens, photon-ring, and flare reveal once, then leave the page still; collapse the full suite when reduced motion is requested.",
       "Do preserve flexible English, Finnish, and Swedish copy without clipping or fixed text heights."
     ],
     "donts": [
       "Don't return to the discarded white-paper/cobalt technical-sheet treatment.",
-      "Don't turn the orbital language into logos, spacecraft, dashboards, charts, or generic sci-fi decoration.",
+      "Don't turn the orbital language into spacecraft, unrelated symbols, dashboards, charts, or generic sci-fi decoration.",
       "Don't use broad warm fills, purple cyberpunk neon, or repeated blue boxes; light should feel sourced and restrained.",
       "Don't add floating drop-shadow cards or intermediate corner radii.",
       "Don't repeat the current stack as badges, highlights, or a second inventory.",
