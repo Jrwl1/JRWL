@@ -270,9 +270,9 @@ button {
   height: 100%;
   object-fit: cover;
   object-position: 68% 50%;
-  transform: scale(1.02) rotate(-0.12deg);
+  transform: scale(1.035) rotate(-0.35deg) translate3d(-0.35%, 0.12%, 0);
   transform-origin: 71% 50%;
-  animation: accretion-drift 80s ease-in-out infinite alternate;
+  animation: accretion-drift 64s ease-in-out infinite;
   animation-play-state: paused;
 }
 
@@ -469,90 +469,65 @@ button {
 
 .skills-orbit {
   position: relative;
+  isolation: isolate;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(170px, 20vw, 290px) clamp(90px, 14vw, 200px);
-  min-height: 620px;
-  padding: clamp(52px, 7vw, 92px);
+  gap: clamp(112px, 13vw, 176px) clamp(72px, 11vw, 156px);
+  min-height: 540px;
+  padding: clamp(62px, 7vw, 94px);
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 18px;
   background:
-    radial-gradient(circle at center, rgb(115 170 255 / 11%) 0 2%, transparent 24%),
-    var(--surface);
-}
-
-.skills-orbit::before,
-.skills-orbit::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  aspect-ratio: 1;
-  border: 1px solid rgb(115 170 255 / 18%);
-  border-radius: 50%;
-  content: "";
-  pointer-events: none;
-  transform: translate(-50%, -50%) rotate(-12deg);
+    radial-gradient(ellipse at 4% 4%, rgb(115 170 255 / 9%), transparent 34%),
+    radial-gradient(ellipse at 96% 96%, rgb(255 97 56 / 7%), transparent 32%),
+    linear-gradient(118deg, #0b0e15 0%, #080b11 48%, #0d1017 100%);
 }
 
 .skills-orbit::before {
-  width: min(63%, 640px);
+  position: absolute;
+  z-index: -1;
+  inset: 7% -18%;
+  background: linear-gradient(
+    102deg,
+    transparent 13%,
+    rgb(115 170 255 / 2%) 27%,
+    rgb(115 170 255 / 18%) 40%,
+    rgb(220 236 255 / 22%) 49%,
+    rgb(255 200 87 / 13%) 57%,
+    rgb(255 97 56 / 3%) 68%,
+    transparent 82%
+  );
+  content: "";
+  filter: blur(22px);
+  pointer-events: none;
+  transform: rotate(-8deg) skewX(-8deg);
 }
 
 .skills-orbit::after {
-  width: min(94%, 980px);
-  border-color: rgb(255 97 56 / 13%);
-}
-
-.orbit-center {
   position: absolute;
-  z-index: 2;
-  top: 50%;
-  left: 50%;
-  display: grid;
-  width: 150px;
-  aspect-ratio: 1;
-  place-items: center;
-  border: 1px solid var(--line-bright);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(circle at 38% 34%, #29374b, #0b0e15 62%);
-}
-
-.orbit-center::before {
-  position: absolute;
-  inset: 13px;
-  border: 1px solid rgb(220 236 255 / 15%);
-  border-radius: inherit;
+  z-index: 0;
+  inset: 0;
+  background: linear-gradient(
+    170deg,
+    transparent 49.82%,
+    rgb(115 170 255 / 24%) 49.93%,
+    rgb(220 236 255 / 28%) 50%,
+    rgb(255 200 87 / 22%) 50.08%,
+    transparent 50.2%
+  );
   content: "";
-}
-
-.orbit-center span {
-  position: absolute;
-  top: 26px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--gold);
-  box-shadow: 0 0 18px rgb(255 200 87 / 70%);
-}
-
-.orbit-center strong {
-  max-width: 90px;
-  text-align: center;
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  line-height: 1.35;
+  mask-image: linear-gradient(90deg, transparent 2%, black 20% 80%, transparent 98%);
+  pointer-events: none;
 }
 
 .skill-node {
   position: relative;
-  z-index: 3;
+  z-index: 1;
   align-self: start;
   max-width: 470px;
   padding: 18px 24px;
-  background: rgb(5 7 11 / 28%);
+  background: transparent;
 }
 
 .skill-node-delivery,
@@ -573,12 +548,6 @@ button {
   height: 1px;
   background: linear-gradient(90deg, var(--ember), var(--gold));
   content: "";
-}
-
-.skill-node-application::before,
-.skill-node-cms::before {
-  right: 24px;
-  left: auto;
 }
 
 .skill-node h3 {
@@ -777,12 +746,17 @@ a.project-card:hover {
 }
 
 @keyframes accretion-drift {
-  from {
-    transform: scale(1.02) rotate(-0.12deg) translate3d(-0.12%, 0.06%, 0);
+  0%,
+  100% {
+    transform: scale(1.035) rotate(-0.35deg) translate3d(-0.35%, 0.12%, 0);
   }
 
-  to {
-    transform: scale(1.03) rotate(0.18deg) translate3d(0.18%, -0.1%, 0);
+  33% {
+    transform: scale(1.046) rotate(0.08deg) translate3d(0.04%, -0.24%, 0);
+  }
+
+  66% {
+    transform: scale(1.052) rotate(0.58deg) translate3d(0.46%, -0.04%, 0);
   }
 }
 
@@ -840,13 +814,9 @@ a.project-card:hover {
   }
 
   .skills-orbit {
-    gap: 110px 36px;
-    min-height: 700px;
+    gap: 100px 36px;
+    min-height: 580px;
     padding: 48px 34px;
-  }
-
-  .orbit-center {
-    width: 126px;
   }
 
   .contact-section {
@@ -950,27 +920,9 @@ a.project-card:hover {
   .skills-orbit {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 620px;
-    gap: 190px 12px;
-    padding: 52px 20px;
-  }
-
-  .skills-orbit::before {
-    width: 104%;
-  }
-
-  .skills-orbit::after {
-    width: 164%;
-  }
-
-  .orbit-center {
-    display: grid;
-    width: 96px;
-  }
-
-  .orbit-center strong {
-    max-width: 64px;
-    font-size: 0.58rem;
+    min-height: 540px;
+    gap: 92px 12px;
+    padding: 42px 20px;
   }
 
   .skill-node {

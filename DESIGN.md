@@ -103,11 +103,11 @@ components:
     rounded: "{rounded.pill}"
     height: "44px"
     width: "44px"
-  orbital-map:
+  spectral-stack-field:
     backgroundColor: "{colors.surface}"
     textColor: "{colors.blue-white}"
     rounded: "{rounded.panel}"
-    padding: "clamp(52px, 7vw, 92px)"
+    padding: "clamp(62px, 7vw, 94px)"
   project-row:
     backgroundColor: "transparent"
     textColor: "{colors.text}"
@@ -145,7 +145,7 @@ The system remains multilingual across English, Finnish, and Swedish. It preserv
 - Cold blue illumination balanced by sparse ember-to-gold signals.
 - IBM Plex Sans Condensed structure, Sora prose, and IBM Plex Mono metadata.
 - Fine orbit lines, 18-pixel panels, pill controls, and flat information rows.
-- One radial skill map and one extremely slow, image-native accretion drift.
+- One spectral stack field and one slow, image-native accretion drift.
 
 ## Colors
 
@@ -158,13 +158,13 @@ The palette reads as cold orbital light on near-black surfaces, with a narrow wa
 
 ### Secondary
 
-- **Disk Blue:** Supplies the radial-map atmosphere, cool halo geometry, and blue light reflected from the hero artwork.
+- **Disk Blue:** Supplies the stack field's cold light and the blue illumination reflected from the hero artwork.
 - **Blue-White:** Keeps lead copy, skill content, and fine orbital details luminous without using pure white everywhere.
 
 ### Neutral
 
 - **Void:** The page ground, hero shadow field, and inverse text color on warm actions.
-- **Orbital Surface:** The shared ground for the radial map, contact panel, and language-switch shell.
+- **Orbital Surface:** The shared ground for the spectral stack field, contact panel, and language-switch shell.
 - **Text Light:** Primary text and the active language fill.
 - **Muted Steel:** Supporting copy, navigation, metadata, and inactive controls.
 - **Orbit Line:** Quiet section, panel, and control boundaries.
@@ -205,11 +205,11 @@ The palette reads as cold orbital light on near-black surfaces, with a narrow wa
 
 The primary shell is capped at 1440 pixels with 24-pixel desktop gutters. A three-part sticky header centers navigation between the compact JRWL orbital wordmark and the language switch; the hero then spans the viewport, holding compact content in the left field while the authored accretion artwork owns the brighter right side. The hero stays between 600 and 760 pixels tall on wide screens so the stack follows close behind.
 
-Sections use a fluid vertical interval from 88 to 148 pixels. The radial skill map is a two-by-two field around a central core rather than a generic card grid. Personal projects remain secondary as full-width ruled rows; Best Fit is one open typography field with three recruiter-fit signals; contact closes in a two-column luminous panel. The footer contains only a right-aligned © 2026.
+Sections use a fluid vertical interval from 88 to 148 pixels. The technical stack is a two-by-two field over one asymmetric cold-to-warm spectral wake rather than a card grid or literal orbit diagram. Personal projects remain secondary as full-width ruled rows; Best Fit is one open typography field with three recruiter-fit signals; contact closes in a two-column luminous panel. The footer contains only a right-aligned © 2026.
 
-At 900 pixels and below, the shell narrows to a 720-pixel maximum with 16-pixel gutters, the header becomes two rows, the skill orbit tightens, and contact becomes one column. At 620 pixels and below, gutters reduce to 12 pixels, the wordmark contracts from 104 to 92 pixels, hero content moves lower over a stronger image scrim, section intros stack, the skill orbit preserves its two-by-two radial relationship, project rows become two-line records, and the Best Fit signals resolve into a stepped left alignment. Copy and targets must expand for English, Finnish, and Swedish without clipping or fixed text heights.
+At 900 pixels and below, the shell narrows to a 720-pixel maximum with 16-pixel gutters, the header becomes two rows, the stack field tightens, and contact becomes one column. At 620 pixels and below, gutters reduce to 12 pixels, the wordmark contracts from 104 to 92 pixels, hero content moves lower over a stronger image scrim, section intros stack, the stack field preserves its two-by-two scan pattern, project rows become two-line records, and the Best Fit signals resolve into a stepped left alignment. Copy and targets must expand for English, Finnish, and Swedish without clipping or fixed text heights.
 
-**The Orbital Evidence Rule.** Present the current stack once in the radial map; supporting sections use rows or a typography field instead of repeating technology badges or summary tiles.
+**The Orbital Evidence Rule.** Present the current stack once in the spectral field; supporting sections use rows or a typography field instead of repeating technology badges or summary tiles.
 
 ## Elevation & Depth
 
@@ -217,7 +217,7 @@ Depth comes from the accretion artwork, transparent dark layers, radial gradient
 
 ### Shadow Vocabulary
 
-- **Gold Beacon:** A compact 14-to-18-pixel photon-gold glow used only on the availability and orbital-center dots.
+- **Gold Beacon:** A compact 14-pixel photon-gold glow used only on the availability dot.
 
 ### Named Rules
 
@@ -225,7 +225,7 @@ Depth comes from the accretion artwork, transparent dark layers, radial gradient
 
 ## Shapes
 
-The form language uses three recurring geometries: 18-pixel rounded panels for the skill map and contact surface, fully rounded pills for actions and language controls, and true circles for orbital lines, map cores, and status beacons. One-pixel hairlines define structure. Project rows and the Best Fit field stay flat and uncontained so rounded panels remain rare.
+The form language uses three recurring geometries: 18-pixel rounded panels for the stack field and contact surface, fully rounded pills for actions and language controls, and true circles for hero orbit lines and status beacons. One-pixel hairlines define structure. Project rows and the Best Fit field stay flat and uncontained so rounded panels remain rare.
 
 **The Three-Radius Rule.** Use 18-pixel panels, pill controls, and circular orbital geometry deliberately; do not introduce intermediate card radii.
 
@@ -235,7 +235,7 @@ The form language uses three recurring geometries: 18-pixel rounded panels for t
 
 - **Structure:** A full-bleed 1536 by 1024 WebP sits behind content, cropped toward the right-side event horizon and protected by responsive void scrims.
 - **Overlay:** The compact name and `Software developer in Turku.` lead a translated current-work line, translated availability, and two actions in the darker left field. The retained Turku coordinates sit at the lower edge; fine orbit ellipses and faint horizontal calibration lines extend the image language.
-- **Motion:** The artwork drifts between two nearly identical transforms over 80 seconds, alternating around an origin aligned with the black hole. The difference is deliberately small enough to read as moving matter rather than a moving panel. It runs only while the hero is visible and the tab is active; reduced-motion preferences remove it completely.
+- **Motion:** The artwork follows a seamless three-point drift over 64 seconds around an origin aligned with the black hole. The travel is visible after a few seconds but remains slow enough to read as moving matter rather than a moving panel. It runs only while the hero is visible and the tab is active; reduced-motion preferences remove it completely.
 
 ### Actions
 
@@ -258,11 +258,11 @@ The form language uses three recurring geometries: 18-pixel rounded panels for t
 - **Active:** Light fill with void text and an inner pill.
 - **State:** The selected language is exposed with aria-pressed; keyboard focus keeps the global photon-gold outline.
 
-### Orbital Skill Map
+### Spectral Stack Field
 
-- **Structure:** Four factual nodes sit around a circular center inside an 18-pixel surface panel, with two large orbit traces tying them into one system.
-- **Content:** Gold uppercase category labels lead blue-white stack text. The central core repeats only the section identity, not the technology list.
-- **Responsive:** The two-by-two orbit survives on narrow screens; typography and padding contract around the center instead of flattening into badges.
+- **Structure:** Four factual groups sit in a two-by-two matrix inside an 18-pixel surface panel. An asymmetric blurred wake and one fine cold-to-warm seam supply depth without a literal orbit diagram.
+- **Content:** Gold uppercase category labels lead blue-white stack text. The groups stay unboxed and the section title is not repeated inside the field.
+- **Responsive:** The two-by-two scan pattern survives on narrow screens; typography, spacing, and padding contract without flattening into badges.
 
 ### Project Rows
 
@@ -295,7 +295,7 @@ The form language uses three recurring geometries: 18-pixel rounded panels for t
 - **Do** use ember and gold as compact luminous signals against void, surface, and blue-white light.
 - **Do** keep IBM Plex Sans Condensed, Sora, and IBM Plex Mono in their distinct structural, reading, and metadata roles.
 - **Do** preserve two-pixel photon-gold focus outlines with four-pixel offsets and at least 44-pixel targets.
-- **Do** keep the hero drift extremely slow, pause it offscreen or in background tabs, and remove it for reduced motion.
+- **Do** keep the hero drift slow, pause it offscreen or in background tabs, and remove it for reduced motion.
 - **Do** preserve flexible English, Finnish, and Swedish copy without clipping or fixed text heights.
 
 ### Don't:

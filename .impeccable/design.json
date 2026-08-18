@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-18T11:00:00Z",
+  "generatedAt": "2026-08-18T11:30:00Z",
   "title": "Design System: JRWL",
   "extensions": {
     "colorMeta": {
@@ -194,18 +194,13 @@
         "name": "gold-beacon-small",
         "value": "0 0 14px rgb(255 200 87 / 70%)",
         "purpose": "Compact photon glow on the availability indicator."
-      },
-      {
-        "name": "gold-beacon-orbit",
-        "value": "0 0 18px rgb(255 200 87 / 70%)",
-        "purpose": "Slightly wider photon glow on the orbital-map center."
       }
     ],
     "motion": [
       {
         "name": "accretion-drift",
-        "value": "80s ease-in-out infinite alternate",
-        "purpose": "Extremely slow transform of the hero artwork around the black-hole origin; paused offscreen and in background tabs."
+        "value": "64s ease-in-out infinite",
+        "purpose": "Slow seamless three-point transform of the hero artwork around the black-hole origin; paused offscreen and in background tabs."
       },
       {
         "name": "direct-state",
@@ -271,12 +266,12 @@
       "css": ".ds-language-switch { display: flex; width: max-content; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); } .ds-language-switch button { display: inline-flex; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; padding: 0 10px; border: 0; border-radius: 999px; background: transparent; color: var(--muted); cursor: pointer; font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; letter-spacing: 0.06em; } .ds-language-switch button[aria-pressed=\"true\"] { background: var(--text); color: var(--void); } .ds-language-switch button:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }"
     },
     {
-      "name": "Orbital Skill Map",
+      "name": "Spectral Stack Field",
       "kind": "custom",
-      "refersTo": "orbital-map",
-      "description": "The signature two-by-two stack map arranged around one luminous core.",
-      "html": "<section class=\"ds-orbit\"><div class=\"ds-orbit-center\"><span></span><strong>Current stack</strong></div><article class=\"ds-node\"><h3>Core</h3><p>TypeScript · React · Node.js · PostgreSQL</p></article><article class=\"ds-node ds-node-right\"><h3>Application</h3><p>Hono · TanStack · Prisma · Zod</p></article><article class=\"ds-node ds-node-bottom\"><h3>Testing and delivery</h3><p>Vitest · Playwright · Docker · Coolify</p></article><article class=\"ds-node ds-node-right ds-node-bottom\"><h3>Web and CMS</h3><p>HTML · CSS · WordPress · PHP</p></article></section>",
-      "css": ".ds-orbit { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(170px, 20vw, 290px) clamp(90px, 14vw, 200px); min-height: 620px; padding: clamp(52px, 7vw, 92px); overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: radial-gradient(circle at center, rgb(115 170 255 / 11%) 0 2%, transparent 24%), var(--surface); color: var(--text); font-family: 'Sora', sans-serif; } .ds-orbit::before, .ds-orbit::after { position: absolute; top: 50%; left: 50%; aspect-ratio: 1; border: 1px solid rgb(115 170 255 / 18%); border-radius: 50%; content: \"\"; transform: translate(-50%, -50%) rotate(-12deg); } .ds-orbit::before { width: min(63%, 640px); } .ds-orbit::after { width: min(94%, 980px); border-color: rgb(255 97 56 / 13%); } .ds-orbit-center { position: absolute; z-index: 2; top: 50%; left: 50%; display: grid; width: 150px; aspect-ratio: 1; place-items: center; border: 1px solid var(--line-bright); border-radius: 50%; transform: translate(-50%, -50%); background: radial-gradient(circle at 38% 34%, #29374b, var(--surface) 62%); text-align: center; } .ds-orbit-center span { position: absolute; top: 26px; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 18px rgb(255 200 87 / 70%); } .ds-orbit-center strong { max-width: 90px; font-size: 0.72rem; font-weight: 500; line-height: 1.35; } .ds-node { position: relative; z-index: 3; max-width: 470px; padding: 18px 24px; background: rgb(5 7 11 / 28%); } .ds-node-right { justify-self: end; text-align: right; } .ds-node-bottom { align-self: end; } .ds-node h3 { margin: 0 0 14px; color: var(--gold); font-size: 0.76rem; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; } .ds-node p { margin: 0; color: var(--blue-white); font-size: clamp(0.92rem, 1.4vw, 1.06rem); line-height: 1.65; } @media (max-width: 620px) { .ds-orbit { min-height: 620px; gap: 190px 12px; padding: 52px 20px; } .ds-orbit-center { width: 96px; } .ds-node { width: 100%; padding: 14px 6px; background: transparent; } .ds-node p { font-size: 0.76rem; line-height: 1.6; } }"
+      "refersTo": "spectral-stack-field",
+      "description": "The signature two-by-two stack field over one asymmetric cold-to-warm spectral wake.",
+      "html": "<section class=\"ds-stack-field\"><article class=\"ds-node\"><h3>Core</h3><p>TypeScript · React · Node.js · PostgreSQL</p></article><article class=\"ds-node ds-node-right\"><h3>Application</h3><p>Hono · TanStack · Prisma · Zod</p></article><article class=\"ds-node ds-node-bottom\"><h3>Testing and delivery</h3><p>Vitest · Playwright · Docker · Coolify</p></article><article class=\"ds-node ds-node-right ds-node-bottom\"><h3>Web and CMS</h3><p>HTML · CSS · WordPress · PHP</p></article></section>",
+      "css": ".ds-stack-field { position: relative; isolation: isolate; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(112px, 13vw, 176px) clamp(72px, 11vw, 156px); min-height: 540px; padding: clamp(62px, 7vw, 94px); overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: radial-gradient(ellipse at 4% 4%, rgb(115 170 255 / 9%), transparent 34%), radial-gradient(ellipse at 96% 96%, rgb(255 97 56 / 7%), transparent 32%), linear-gradient(118deg, #0b0e15 0%, #080b11 48%, #0d1017 100%); color: var(--text); font-family: 'Sora', sans-serif; } .ds-stack-field::before { position: absolute; z-index: -1; inset: 7% -18%; background: linear-gradient(102deg, transparent 13%, rgb(115 170 255 / 2%) 27%, rgb(115 170 255 / 18%) 40%, rgb(220 236 255 / 22%) 49%, rgb(255 200 87 / 13%) 57%, rgb(255 97 56 / 3%) 68%, transparent 82%); content: \"\"; filter: blur(22px); transform: rotate(-8deg) skewX(-8deg); } .ds-stack-field::after { position: absolute; inset: 0; background: linear-gradient(170deg, transparent 49.82%, rgb(115 170 255 / 24%) 49.93%, rgb(220 236 255 / 28%) 50%, rgb(255 200 87 / 22%) 50.08%, transparent 50.2%); content: \"\"; mask-image: linear-gradient(90deg, transparent 2%, black 20% 80%, transparent 98%); } .ds-node { position: relative; z-index: 1; max-width: 470px; padding: 18px 24px; } .ds-node-right { justify-self: end; } .ds-node-bottom { align-self: end; } .ds-node h3 { margin: 0 0 14px; color: var(--gold); font-size: 0.76rem; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; } .ds-node p { margin: 0; color: var(--blue-white); font-size: clamp(0.92rem, 1.4vw, 1.06rem); line-height: 1.65; } @media (max-width: 620px) { .ds-stack-field { min-height: 540px; gap: 92px 12px; padding: 42px 20px; } .ds-node { width: 100%; padding: 14px 6px; } .ds-node-right { text-align: right; } .ds-node p { font-size: 0.76rem; line-height: 1.6; } }"
     },
     {
       "name": "Project Row",
@@ -311,7 +306,7 @@
       "Cold blue illumination balanced by sparse ember-to-gold signals.",
       "IBM Plex Sans Condensed structure, Sora prose, and IBM Plex Mono metadata.",
       "Fine orbit lines, 18-pixel panels, pill controls, and flat information rows.",
-      "One radial skill map and one extremely slow, image-native accretion drift."
+      "One spectral stack field and one slow, image-native accretion drift."
     ],
     "rules": [
       {
@@ -331,7 +326,7 @@
       },
       {
         "name": "The Orbital Evidence Rule",
-        "body": "Present the current stack once in the radial map; supporting sections use rows or a typography field instead of repeating technology badges or summary tiles.",
+        "body": "Present the current stack once in the spectral field; supporting sections use rows or a typography field instead of repeating technology badges or summary tiles.",
         "section": "layout"
       },
       {
@@ -351,7 +346,7 @@
       "Do use ember and gold as compact luminous signals against void, surface, and blue-white light.",
       "Do keep IBM Plex Sans Condensed, Sora, and IBM Plex Mono in their distinct structural, reading, and metadata roles.",
       "Do preserve two-pixel photon-gold focus outlines with four-pixel offsets and at least 44-pixel targets.",
-      "Do keep the hero drift extremely slow, pause it offscreen or in background tabs, and remove it for reduced motion.",
+      "Do keep the hero drift slow, pause it offscreen or in background tabs, and remove it for reduced motion.",
       "Do preserve flexible English, Finnish, and Swedish copy without clipping or fixed text heights."
     ],
     "donts": [

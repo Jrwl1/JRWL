@@ -38,7 +38,7 @@ Visitors scan the page during candidate research on desktop or mobile. They may 
 - Keep the hero compact enough that the current stack remains close to the first viewport.
 - Present the technical stack once; do not repeat it as badges, highlights, or a separate table.
 - Use the compact JRWL orbital wordmark in navigation; do not use cursor tracking or mouse-following decoration.
-- Keep hero motion extremely slow and image-native; do not add blinking rings, spawned overlays, or other entrance spectacle.
+- Keep hero motion slow and image-native; do not add blinking rings, spawned overlays, or other entrance spectacle.
 - Do not use maritime themes, symbols, logos, charts, or other ship-derived visual language.
 
 ## Evidence on Hand
