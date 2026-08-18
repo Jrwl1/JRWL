@@ -184,6 +184,29 @@
         : 'en',
   );
 
+  const hero = document.querySelector('.hero');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let heroIsVisible = true;
+
+  function updateMatterMotion() {
+    hero?.classList.toggle('matter-motion-active', heroIsVisible && !document.hidden && !reducedMotion.matches);
+  }
+
+  if (hero && 'IntersectionObserver' in window) {
+    const heroObserver = new IntersectionObserver(
+      ([entry]) => {
+        heroIsVisible = entry.isIntersecting;
+        updateMatterMotion();
+      },
+      { threshold: 0.05 },
+    );
+    heroObserver.observe(hero);
+  }
+
+  document.addEventListener('visibilitychange', updateMatterMotion);
+  reducedMotion.addEventListener?.('change', updateMatterMotion);
+  updateMatterMotion();
+
   const sectionLinks = [...document.querySelectorAll('[data-section-link]')];
   const trackedSections = ['skills', 'projects', 'fit']
     .map((id) => document.getElementById(id))

@@ -145,7 +145,7 @@ The system remains multilingual across English, Finnish, and Swedish. It preserv
 - Cold blue illumination balanced by sparse ember-to-gold signals.
 - IBM Plex Sans Condensed structure, Sora prose, and IBM Plex Mono metadata.
 - Fine orbit lines, 18-pixel panels, pill controls, and flat information rows.
-- One radial skill map and one bounded, non-looping horizon-plus-lensing reveal.
+- One radial skill map and one extremely slow, image-native accretion drift.
 
 ## Colors
 
@@ -213,21 +213,19 @@ At 900 pixels and below, the shell narrows to a 720-pixel maximum with 16-pixel 
 
 ## Elevation & Depth
 
-Depth comes from the accretion artwork, transparent dark layers, radial gradients, fine orbit lines, compact beacon glows, and a bounded gravity-lens, photon-ring, and flare overlay. Conventional drop shadows are absent. Panels stay on the page plane; the secondary action and sticky header use translucent surfaces, while hover states adjust color, border, lens intensity, or position without tracking the pointer.
+Depth comes from the accretion artwork, transparent dark layers, radial gradients, fine orbit lines, and compact beacon glows. Conventional drop shadows are absent. Panels stay on the page plane; the secondary action and sticky header use translucent surfaces, while hover states adjust color, border, or position without tracking the pointer.
 
 ### Shadow Vocabulary
 
 - **Gold Beacon:** A compact 14-to-18-pixel photon-gold glow used only on the availability and orbital-center dots.
-- **Photon Ring:** A 24-pixel disk-blue outer glow with an 18-pixel inset gold glow; hover intensifies them to 28 and 24 pixels.
-- **Accretion Flare:** A two-pixel spectral line with 14-pixel blue-white and 34-pixel ember glows during its one-shot pass.
 
 ### Named Rules
 
-**The Light Source Rule.** Glow belongs to tiny luminous sources or the bounded hero lensing overlay; panels, rows, controls, and typography never cast drop shadows.
+**The Light Source Rule.** Glow belongs to tiny luminous sources; panels, rows, controls, and typography never cast drop shadows.
 
 ## Shapes
 
-The form language uses three recurring geometries: 18-pixel rounded panels for the skill map and contact surface, fully rounded pills for actions and language controls, and true circles for orbital lines, the gravity lens, map cores, and status beacons. One-pixel hairlines define structure. Project rows and the Best Fit field stay flat and uncontained so rounded panels remain rare.
+The form language uses three recurring geometries: 18-pixel rounded panels for the skill map and contact surface, fully rounded pills for actions and language controls, and true circles for orbital lines, map cores, and status beacons. One-pixel hairlines define structure. Project rows and the Best Fit field stay flat and uncontained so rounded panels remain rare.
 
 **The Three-Radius Rule.** Use 18-pixel panels, pill controls, and circular orbital geometry deliberately; do not introduce intermediate card radii.
 
@@ -237,7 +235,7 @@ The form language uses three recurring geometries: 18-pixel rounded panels for t
 
 - **Structure:** A full-bleed 1536 by 1024 WebP sits behind content, cropped toward the right-side event horizon and protected by responsive void scrims.
 - **Overlay:** The compact name and `Software developer in Turku.` lead a translated current-work line, translated availability, and two actions in the darker left field. The retained Turku coordinates sit at the lower edge; fine orbit ellipses and faint horizontal calibration lines extend the image language.
-- **Motion:** The 1500-millisecond horizon reveal is layered with a 2600-millisecond gravity wake after 500 milliseconds, a 2300-millisecond photon-ring wake after 650 milliseconds, and a 2200-millisecond flare pass after 900 milliseconds. All run once. Hover can intensify the lens and ring, but nothing follows the cursor; reduced-motion preferences collapse every animation and transition.
+- **Motion:** The artwork drifts between two nearly identical transforms over 80 seconds, alternating around an origin aligned with the black hole. The difference is deliberately small enough to read as moving matter rather than a moving panel. It runs only while the hero is visible and the tab is active; reduced-motion preferences remove it completely.
 
 ### Actions
 
@@ -297,7 +295,7 @@ The form language uses three recurring geometries: 18-pixel rounded panels for t
 - **Do** use ember and gold as compact luminous signals against void, surface, and blue-white light.
 - **Do** keep IBM Plex Sans Condensed, Sora, and IBM Plex Mono in their distinct structural, reading, and metadata roles.
 - **Do** preserve two-pixel photon-gold focus outlines with four-pixel offsets and at least 44-pixel targets.
-- **Do** run the horizon, gravity-lens, photon-ring, and flare reveal once, then leave the page still; collapse the full suite when reduced motion is requested.
+- **Do** keep the hero drift extremely slow, pause it offscreen or in background tabs, and remove it for reduced motion.
 - **Do** preserve flexible English, Finnish, and Swedish copy without clipping or fixed text heights.
 
 ### Don't:
@@ -307,4 +305,4 @@ The form language uses three recurring geometries: 18-pixel rounded panels for t
 - **Don't** use broad warm fills, purple cyberpunk neon, or repeated blue boxes; light should feel sourced and restrained.
 - **Don't** add floating drop-shadow cards or intermediate corner radii.
 - **Don't** repeat the current stack as badges, highlights, or a second inventory.
-- **Don't** add looping, parallax, cursor-following, or ambient motion.
+- **Don't** add other loops, parallax, cursor-following effects, blinking rings, or spawned overlays.

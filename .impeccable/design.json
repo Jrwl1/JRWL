@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-18T08:03:52Z",
+  "generatedAt": "2026-08-18T11:00:00Z",
   "title": "Design System: JRWL",
   "extensions": {
     "colorMeta": {
@@ -199,38 +199,13 @@
         "name": "gold-beacon-orbit",
         "value": "0 0 18px rgb(255 200 87 / 70%)",
         "purpose": "Slightly wider photon glow on the orbital-map center."
-      },
-      {
-        "name": "photon-ring",
-        "value": "0 0 24px rgb(115 170 255 / 30%), inset 0 0 18px rgb(255 200 87 / 18%)",
-        "purpose": "Cold outer and warm inner light around the bounded hero lens; hover intensifies both glows."
-      },
-      {
-        "name": "accretion-flare",
-        "value": "0 0 14px rgb(220 236 255 / 80%), 0 0 34px rgb(255 97 56 / 52%)",
-        "purpose": "Blue-white and ember light on the one-shot spectral flare."
       }
     ],
     "motion": [
       {
-        "name": "horizon-reveal",
-        "value": "1500ms cubic-bezier(0.16, 1, 0.3, 1) both",
-        "purpose": "One non-looping right-to-left reveal of the hero artwork."
-      },
-      {
-        "name": "gravity-wake",
-        "value": "2600ms 500ms cubic-bezier(0.16, 1, 0.3, 1) both",
-        "purpose": "One bounded scale-and-opacity arrival for the gravity lens."
-      },
-      {
-        "name": "photon-wake",
-        "value": "2300ms 650ms cubic-bezier(0.16, 1, 0.3, 1) both",
-        "purpose": "One rotation and compression reveal for the photon ring."
-      },
-      {
-        "name": "flare-pass",
-        "value": "2200ms 900ms cubic-bezier(0.16, 1, 0.3, 1) both",
-        "purpose": "One spectral line expansion that returns to transparent."
+        "name": "accretion-drift",
+        "value": "80s ease-in-out infinite alternate",
+        "purpose": "Extremely slow transform of the hero artwork around the black-hole origin; paused offscreen and in background tabs."
       },
       {
         "name": "direct-state",
@@ -336,7 +311,7 @@
       "Cold blue illumination balanced by sparse ember-to-gold signals.",
       "IBM Plex Sans Condensed structure, Sora prose, and IBM Plex Mono metadata.",
       "Fine orbit lines, 18-pixel panels, pill controls, and flat information rows.",
-      "One radial skill map and one bounded, non-looping horizon-plus-lensing reveal."
+      "One radial skill map and one extremely slow, image-native accretion drift."
     ],
     "rules": [
       {
@@ -361,7 +336,7 @@
       },
       {
         "name": "The Light Source Rule",
-        "body": "Glow belongs to tiny luminous sources or the bounded hero lensing overlay; panels, rows, controls, and typography never cast drop shadows.",
+        "body": "Glow belongs to tiny luminous sources; panels, rows, controls, and typography never cast drop shadows.",
         "section": "elevation"
       },
       {
@@ -376,7 +351,7 @@
       "Do use ember and gold as compact luminous signals against void, surface, and blue-white light.",
       "Do keep IBM Plex Sans Condensed, Sora, and IBM Plex Mono in their distinct structural, reading, and metadata roles.",
       "Do preserve two-pixel photon-gold focus outlines with four-pixel offsets and at least 44-pixel targets.",
-      "Do run the horizon, gravity-lens, photon-ring, and flare reveal once, then leave the page still; collapse the full suite when reduced motion is requested.",
+      "Do keep the hero drift extremely slow, pause it offscreen or in background tabs, and remove it for reduced motion.",
       "Do preserve flexible English, Finnish, and Swedish copy without clipping or fixed text heights."
     ],
     "donts": [
@@ -385,7 +360,7 @@
       "Don't use broad warm fills, purple cyberpunk neon, or repeated blue boxes; light should feel sourced and restrained.",
       "Don't add floating drop-shadow cards or intermediate corner radii.",
       "Don't repeat the current stack as badges, highlights, or a second inventory.",
-      "Don't add looping, parallax, cursor-following, or ambient motion."
+      "Don't add other loops, parallax, cursor-following effects, blinking rings, or spawned overlays."
     ]
   }
 }
