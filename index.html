@@ -38,9 +38,9 @@
     <!--
       THESIS: A compact technical profile inside one orbital visual system, refusing the giant-name hero and repeated stack inventory.
       OWN-WORLD: Void black, blue-white, ember orange, photon gold, fine orbit lines, luminous image-led surfaces, and precise rounded controls.
-      STORY: A hiring visitor identifies John, reads his current stack once, scans secondary personal projects and best-fit signals, then contacts him.
+      STORY: A hiring visitor identifies John, reads his current stack once, scans secondary personal projects, then contacts him.
       FIRST VIEWPORT: A modest name, role and actions sit over the dark left field; authored accretion artwork owns the right; the stack begins immediately below.
-      FORM: Orbital Index, challenger direction, seed 487bd0ee; one spectral stack field and one slow accretion drift carry the interaction grammar.
+      FORM: Orbital Index, challenger direction, seed 487bd0ee; one build-graph stack field and one slow accretion drift carry the interaction grammar.
       FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
     -->
 
@@ -54,7 +54,6 @@
       <nav class="site-nav" aria-label="Primary navigation" data-i18n-aria-label="header.navAria">
         <a href="#skills" data-section-link="skills" data-i18n="nav.skills">Stack</a>
         <a href="#projects" data-section-link="projects" data-i18n="nav.projects">Projects</a>
-        <a href="#fit" data-section-link="fit" data-i18n="nav.fit">Fit</a>
         <a href="#contact" data-section-link="contact" data-i18n="nav.contact">Contact</a>
       </nav>
 
@@ -84,7 +83,7 @@
           <h1 id="hero-title">John Lindström</h1>
           <p class="hero-summary" data-i18n="hero.summary">Software developer in Turku.</p>
           <p class="current-work" data-i18n="hero.currentWork">Currently building greenfield B2B web products.</p>
-          <p class="availability" data-i18n="hero.availability">Open to backend and full-stack roles.</p>
+          <p class="availability" data-i18n="hero.availability">Open to roles with a strong backend focus.</p>
 
           <div class="hero-actions">
             <a class="action action-primary" href="mailto:jrwl@jrwl.io" data-i18n="hero.email">Email me</a>
@@ -107,6 +106,42 @@
         </header>
 
         <div class="skills-orbit">
+          <svg class="stack-trace" viewBox="0 0 1400 540" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="stack-trace-energy" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#73aaff" stop-opacity="0" />
+                <stop offset="0.38" stop-color="#73aaff" stop-opacity="0.7" />
+                <stop offset="0.68" stop-color="#dcecff" stop-opacity="0.72" />
+                <stop offset="1" stop-color="#ffc857" stop-opacity="0.58" />
+              </linearGradient>
+            </defs>
+
+            <g class="stack-trace-paths" fill="none" vector-effect="non-scaling-stroke">
+              <path class="stack-trace-main" d="M54 270H450V220H770V320H1050V270H1346" />
+              <path d="M280 270V174H150" />
+              <path d="M540 220V174H940" />
+              <path d="M650 320V372H180" />
+              <path d="M1050 270V372H980" />
+            </g>
+
+            <g class="stack-trace-nodes">
+              <rect x="276" y="266" width="8" height="8" />
+              <rect x="446" y="216" width="8" height="8" />
+              <rect x="536" y="216" width="8" height="8" />
+              <rect x="646" y="316" width="8" height="8" />
+              <rect x="766" y="316" width="8" height="8" />
+              <rect x="1046" y="266" width="8" height="8" />
+              <rect class="stack-trace-node-hot" x="1342" y="266" width="8" height="8" />
+            </g>
+
+            <g class="stack-trace-labels">
+              <text x="72" y="253">src</text>
+              <text x="462" y="204">runtime</text>
+              <text x="784" y="345">data</text>
+              <text x="1064" y="254">delivery</text>
+            </g>
+          </svg>
+
           <article class="skill-node skill-node-core">
             <h3 data-i18n="skills.core">Core</h3>
             <p>TypeScript · React · Node.js · PostgreSQL</p>
@@ -162,18 +197,6 @@
             <p data-i18n="projects.yhdessa">Multilingual speech therapy site.</p>
             <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" /></svg>
           </a>
-        </div>
-      </section>
-
-      <section id="fit" class="section fit-section" aria-labelledby="fit-title">
-        <header class="section-intro">
-          <h2 id="fit-title" data-i18n="fit.title">Best fit</h2>
-        </header>
-
-        <div class="fit-field">
-          <p data-i18n="fit.products">B2B products with real users.</p>
-          <p data-i18n="fit.work">Backend-heavy full-stack work.</p>
-          <p data-i18n="fit.teams">Small teams with clear ownership.</p>
         </div>
       </section>
 

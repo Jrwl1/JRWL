@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-18T11:30:00Z",
+  "generatedAt": "2026-08-19T09:50:00Z",
   "title": "Design System: JRWL",
   "extensions": {
     "colorMeta": {
@@ -254,7 +254,7 @@
       "kind": "nav",
       "refersTo": "navigation-link",
       "description": "Muted centered links with a warm current-section trace.",
-      "html": "<nav class=\"ds-nav\" aria-label=\"Primary navigation\"><a href=\"#\" aria-current=\"location\">Stack</a><a href=\"#\">Projects</a><a href=\"#\">Fit</a><a href=\"#\">Contact</a></nav>",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Primary navigation\"><a href=\"#\" aria-current=\"location\">Stack</a><a href=\"#\">Projects</a><a href=\"#\">Contact</a></nav>",
       "css": ".ds-nav { display: flex; align-items: center; gap: 4px; } .ds-nav a { position: relative; display: inline-flex; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; padding: 0 13px; color: var(--muted); font-family: 'Sora', sans-serif; font-size: 0.84rem; font-weight: 500; text-decoration: none; transition: color 180ms ease; } .ds-nav a::after { position: absolute; right: 13px; bottom: 7px; left: 13px; height: 1px; content: \"\"; transform: scaleX(0); transform-origin: left; background: linear-gradient(90deg, var(--ember), var(--gold)); transition: transform 180ms ease; } .ds-nav a:hover, .ds-nav a[aria-current=\"location\"] { color: var(--text); } .ds-nav a[aria-current=\"location\"]::after { transform: scaleX(1); } .ds-nav a:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; } @media (max-width: 900px) { .ds-nav { width: 100%; } .ds-nav a { flex: 1; padding: 0 6px; text-align: center; } .ds-nav a::after { right: 22%; left: 22%; } }"
     },
     {
@@ -266,12 +266,12 @@
       "css": ".ds-language-switch { display: flex; width: max-content; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); } .ds-language-switch button { display: inline-flex; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; padding: 0 10px; border: 0; border-radius: 999px; background: transparent; color: var(--muted); cursor: pointer; font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; letter-spacing: 0.06em; } .ds-language-switch button[aria-pressed=\"true\"] { background: var(--text); color: var(--void); } .ds-language-switch button:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }"
     },
     {
-      "name": "Spectral Stack Field",
+      "name": "Build-Graph Stack Field",
       "kind": "custom",
-      "refersTo": "spectral-stack-field",
-      "description": "The signature two-by-two stack field over one asymmetric cold-to-warm spectral wake.",
-      "html": "<section class=\"ds-stack-field\"><article class=\"ds-node\"><h3>Core</h3><p>TypeScript · React · Node.js · PostgreSQL</p></article><article class=\"ds-node ds-node-right\"><h3>Application</h3><p>Hono · TanStack · Prisma · Zod</p></article><article class=\"ds-node ds-node-bottom\"><h3>Testing and delivery</h3><p>Vitest · Playwright · Docker · Coolify</p></article><article class=\"ds-node ds-node-right ds-node-bottom\"><h3>Web and CMS</h3><p>HTML · CSS · WordPress · PHP</p></article></section>",
-      "css": ".ds-stack-field { position: relative; isolation: isolate; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(112px, 13vw, 176px) clamp(72px, 11vw, 156px); min-height: 540px; padding: clamp(62px, 7vw, 94px); overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: radial-gradient(ellipse at 4% 4%, rgb(115 170 255 / 9%), transparent 34%), radial-gradient(ellipse at 96% 96%, rgb(255 97 56 / 7%), transparent 32%), linear-gradient(118deg, #0b0e15 0%, #080b11 48%, #0d1017 100%); color: var(--text); font-family: 'Sora', sans-serif; } .ds-stack-field::before { position: absolute; z-index: -1; inset: 7% -18%; background: linear-gradient(102deg, transparent 13%, rgb(115 170 255 / 2%) 27%, rgb(115 170 255 / 18%) 40%, rgb(220 236 255 / 22%) 49%, rgb(255 200 87 / 13%) 57%, rgb(255 97 56 / 3%) 68%, transparent 82%); content: \"\"; filter: blur(22px); transform: rotate(-8deg) skewX(-8deg); } .ds-stack-field::after { position: absolute; inset: 0; background: linear-gradient(170deg, transparent 49.82%, rgb(115 170 255 / 24%) 49.93%, rgb(220 236 255 / 28%) 50%, rgb(255 200 87 / 22%) 50.08%, transparent 50.2%); content: \"\"; mask-image: linear-gradient(90deg, transparent 2%, black 20% 80%, transparent 98%); } .ds-node { position: relative; z-index: 1; max-width: 470px; padding: 18px 24px; } .ds-node-right { justify-self: end; } .ds-node-bottom { align-self: end; } .ds-node h3 { margin: 0 0 14px; color: var(--gold); font-size: 0.76rem; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; } .ds-node p { margin: 0; color: var(--blue-white); font-size: clamp(0.92rem, 1.4vw, 1.06rem); line-height: 1.65; } @media (max-width: 620px) { .ds-stack-field { min-height: 540px; gap: 92px 12px; padding: 42px 20px; } .ds-node { width: 100%; padding: 14px 6px; } .ds-node-right { text-align: right; } .ds-node p { font-size: 0.76rem; line-height: 1.6; } }"
+      "refersTo": "build-graph-stack-field",
+      "description": "The signature two-by-two stack field over a static source/runtime/data/delivery dependency trace.",
+      "html": "<section class=\"ds-stack-field\"><svg class=\"ds-stack-trace\" viewBox=\"0 0 1400 540\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><path d=\"M54 270H450V220H770V320H1050V270H1346\"/><path d=\"M280 270V174H150M540 220V174H940M650 320V372H180M1050 270V372H980\"/><g><rect x=\"276\" y=\"266\" width=\"8\" height=\"8\"/><rect x=\"766\" y=\"316\" width=\"8\" height=\"8\"/><rect x=\"1342\" y=\"266\" width=\"8\" height=\"8\"/></g><text x=\"72\" y=\"253\">src</text><text x=\"462\" y=\"204\">runtime</text><text x=\"784\" y=\"345\">data</text><text x=\"1064\" y=\"254\">delivery</text></svg><article class=\"ds-node\"><h3>Core</h3><p>TypeScript · React · Node.js · PostgreSQL</p></article><article class=\"ds-node ds-node-right\"><h3>Application</h3><p>Hono · TanStack · Prisma · Zod</p></article><article class=\"ds-node ds-node-bottom\"><h3>Testing and delivery</h3><p>Vitest · Playwright · Docker · Coolify</p></article><article class=\"ds-node ds-node-right ds-node-bottom\"><h3>Web and CMS</h3><p>HTML · CSS · WordPress · PHP</p></article></section>",
+      "css": ".ds-stack-field { position: relative; isolation: isolate; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(112px, 13vw, 176px) clamp(72px, 11vw, 156px); min-height: 540px; padding: clamp(62px, 7vw, 94px); overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: radial-gradient(ellipse at 8% 8%, rgb(115 170 255 / 8%), transparent 32%), radial-gradient(ellipse at 92% 92%, rgb(255 200 87 / 6%), transparent 30%), linear-gradient(118deg, #0b0e15 0%, #080b11 52%, #0d1017 100%); color: var(--text); font-family: 'Sora', sans-serif; } .ds-stack-trace { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; stroke: var(--line-bright); opacity: 0.78; } .ds-stack-trace rect { fill: var(--disk-blue); stroke: none; } .ds-stack-trace text { fill: var(--muted); stroke: none; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; } .ds-node { position: relative; z-index: 1; max-width: 470px; padding: 18px 24px; } .ds-node-right { justify-self: end; } .ds-node-bottom { align-self: end; } .ds-node h3 { margin: 0 0 14px; color: var(--gold); font-size: 0.76rem; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; } .ds-node p { margin: 0; color: var(--blue-white); font-size: clamp(0.92rem, 1.4vw, 1.06rem); line-height: 1.65; } @media (max-width: 620px) { .ds-stack-field { min-height: 540px; gap: 92px 12px; padding: 42px 20px; } .ds-stack-trace text { display: none; } .ds-node { width: 100%; padding: 14px 6px; } .ds-node-right { text-align: right; } .ds-node p { font-size: 0.76rem; line-height: 1.6; } }"
     },
     {
       "name": "Project Row",
@@ -280,14 +280,6 @@
       "description": "A secondary project record presented as a flat ruled row.",
       "html": "<a class=\"ds-project-row\" href=\"#\"><h3>Vesinvest</h3><p>Planning tool for water utilities.</p><span>Live</span><svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M5 11 11 5M6 5h5v5\" /></svg></a>",
       "css": ".ds-project-row { display: grid; grid-template-columns: minmax(160px, 1.2fr) minmax(260px, 2fr) minmax(130px, 0.7fr) 24px; min-height: 92px; align-items: center; gap: 28px; padding: 20px 4px; border-top: 1px solid var(--line-bright); border-bottom: 1px solid var(--line); color: var(--text); font-family: 'Sora', sans-serif; text-decoration: none; transition: color 180ms ease, padding 180ms ease, border-color 180ms ease; } .ds-project-row:hover { padding-right: 12px; padding-left: 12px; border-color: var(--gold); color: var(--gold); } .ds-project-row h3 { margin: 0; font-family: 'IBM Plex Sans Condensed', sans-serif; font-size: clamp(1.45rem, 2vw, 2rem); font-weight: 500; letter-spacing: -0.025em; line-height: 1; } .ds-project-row p { margin: 0; color: var(--muted); } .ds-project-row span { color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; } .ds-project-row svg { width: 16px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; } .ds-project-row:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; } @media (max-width: 620px) { .ds-project-row { grid-template-columns: 1fr auto; grid-template-rows: auto auto; min-height: 0; gap: 10px 18px; padding: 22px 4px; } .ds-project-row h3 { grid-column: 1; grid-row: 1; } .ds-project-row span { grid-column: 2; grid-row: 1; } .ds-project-row p { grid-column: 1; grid-row: 2; } .ds-project-row svg { grid-column: 2; grid-row: 2; } }"
-    },
-    {
-      "name": "Best Fit Field",
-      "kind": "custom",
-      "refersTo": "best-fit-field",
-      "description": "Three recruiter-fit signals arranged as one open orbital typography field.",
-      "html": "<section class=\"ds-fit\"><p>B2B products with real users.</p><p>Backend-heavy full-stack work.</p><p>Small teams with clear ownership.</p></section>",
-      "css": ".ds-fit { position: relative; display: grid; min-height: 390px; align-content: center; gap: 10px; overflow: hidden; padding: clamp(44px, 7vw, 90px) clamp(12px, 4vw, 64px); border-top: 1px solid var(--line-bright); border-bottom: 1px solid var(--line); color: var(--text); isolation: isolate; } .ds-fit::before { position: absolute; z-index: -1; top: 50%; left: 50%; width: min(54vw, 680px); aspect-ratio: 1; border: 1px solid rgb(115 170 255 / 16%); border-radius: 50%; background: radial-gradient(circle, rgb(115 170 255 / 12%), transparent 58%); content: \"\"; transform: translate(-50%, -50%) scaleY(0.36) rotate(-8deg); } .ds-fit::after { position: absolute; z-index: -1; top: 50%; left: -5%; width: 110%; height: 1px; background: linear-gradient(90deg, transparent, var(--ember), var(--gold), transparent); content: \"\"; opacity: 0.45; transform: rotate(-6deg); } .ds-fit p { position: relative; margin: 0; font-family: 'IBM Plex Sans Condensed', sans-serif; font-size: clamp(1.9rem, 4.1vw, 4rem); font-weight: 400; letter-spacing: -0.025em; line-height: 1.06; } .ds-fit p:nth-child(2) { justify-self: center; color: var(--blue-white); } .ds-fit p:nth-child(3) { justify-self: end; color: var(--gold); } @media (max-width: 620px) { .ds-fit { min-height: 360px; gap: 18px; padding: 42px 18px; } .ds-fit p { max-width: 92%; font-size: clamp(2rem, 10vw, 3rem); } .ds-fit p:nth-child(2) { justify-self: start; margin-left: 6%; } .ds-fit p:nth-child(3) { justify-self: start; margin-left: 12%; } }"
     },
     {
       "name": "Contact Panel",
@@ -306,7 +298,7 @@
       "Cold blue illumination balanced by sparse ember-to-gold signals.",
       "IBM Plex Sans Condensed structure, Sora prose, and IBM Plex Mono metadata.",
       "Fine orbit lines, 18-pixel panels, pill controls, and flat information rows.",
-      "One spectral stack field and one slow, image-native accretion drift."
+      "One build-graph stack field and one slow, image-native accretion drift."
     ],
     "rules": [
       {
@@ -326,7 +318,7 @@
       },
       {
         "name": "The Orbital Evidence Rule",
-        "body": "Present the current stack once in the spectral field; supporting sections use rows or a typography field instead of repeating technology badges or summary tiles.",
+        "body": "Present the current stack once in the build-graph field; supporting sections use rows instead of repeating technology badges or summary tiles.",
         "section": "layout"
       },
       {

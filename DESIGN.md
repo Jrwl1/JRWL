@@ -103,7 +103,7 @@ components:
     rounded: "{rounded.pill}"
     height: "44px"
     width: "44px"
-  spectral-stack-field:
+  build-graph-stack-field:
     backgroundColor: "{colors.surface}"
     textColor: "{colors.blue-white}"
     rounded: "{rounded.panel}"
@@ -114,12 +114,6 @@ components:
     typography: "{typography.body}"
     padding: "20px 4px"
     height: "92px"
-  best-fit-field:
-    backgroundColor: "transparent"
-    textColor: "{colors.text}"
-    typography: "{typography.headline}"
-    padding: "clamp(44px, 7vw, 90px) clamp(12px, 4vw, 64px)"
-    height: "390px"
   contact-panel:
     backgroundColor: "{colors.surface}"
     textColor: "{colors.text}"
@@ -145,7 +139,7 @@ The system remains multilingual across English, Finnish, and Swedish. It preserv
 - Cold blue illumination balanced by sparse ember-to-gold signals.
 - IBM Plex Sans Condensed structure, Sora prose, and IBM Plex Mono metadata.
 - Fine orbit lines, 18-pixel panels, pill controls, and flat information rows.
-- One spectral stack field and one slow, image-native accretion drift.
+- One build-graph stack field and one slow, image-native accretion drift.
 
 ## Colors
 
@@ -158,13 +152,13 @@ The palette reads as cold orbital light on near-black surfaces, with a narrow wa
 
 ### Secondary
 
-- **Disk Blue:** Supplies the stack field's cold light and the blue illumination reflected from the hero artwork.
+- **Disk Blue:** Supplies the build graph's active trace and the blue illumination reflected from the hero artwork.
 - **Blue-White:** Keeps lead copy, skill content, and fine orbital details luminous without using pure white everywhere.
 
 ### Neutral
 
 - **Void:** The page ground, hero shadow field, and inverse text color on warm actions.
-- **Orbital Surface:** The shared ground for the spectral stack field, contact panel, and language-switch shell.
+- **Orbital Surface:** The shared ground for the build-graph stack field, contact panel, and language-switch shell.
 - **Text Light:** Primary text and the active language fill.
 - **Muted Steel:** Supporting copy, navigation, metadata, and inactive controls.
 - **Orbit Line:** Quiet section, panel, and control boundaries.
@@ -205,11 +199,11 @@ The palette reads as cold orbital light on near-black surfaces, with a narrow wa
 
 The primary shell is capped at 1440 pixels with 24-pixel desktop gutters. A three-part sticky header centers navigation between the compact JRWL orbital wordmark and the language switch; the hero then spans the viewport, holding compact content in the left field while the authored accretion artwork owns the brighter right side. The hero stays between 600 and 760 pixels tall on wide screens so the stack follows close behind.
 
-Sections use a fluid vertical interval from 88 to 148 pixels. The technical stack is a two-by-two field over one asymmetric cold-to-warm spectral wake rather than a card grid or literal orbit diagram. Personal projects remain secondary as full-width ruled rows; Best Fit is one open typography field with three recruiter-fit signals; contact closes in a two-column luminous panel. The footer contains only a right-aligned © 2026.
+Sections use a fluid vertical interval from 88 to 148 pixels. The technical stack is a two-by-two field over one static build/dependency trace rather than a card grid or literal orbit diagram. Personal projects remain secondary as full-width ruled rows; contact closes in a two-column luminous panel. The footer contains only a right-aligned © 2026.
 
-At 900 pixels and below, the shell narrows to a 720-pixel maximum with 16-pixel gutters, the header becomes two rows, the stack field tightens, and contact becomes one column. At 620 pixels and below, gutters reduce to 12 pixels, the wordmark contracts from 104 to 92 pixels, hero content moves lower over a stronger image scrim, section intros stack, the stack field preserves its two-by-two scan pattern, project rows become two-line records, and the Best Fit signals resolve into a stepped left alignment. Copy and targets must expand for English, Finnish, and Swedish without clipping or fixed text heights.
+At 900 pixels and below, the shell narrows to a 720-pixel maximum with 16-pixel gutters, the header becomes two rows, the stack field tightens, and contact becomes one column. At 620 pixels and below, gutters reduce to 12 pixels, the wordmark contracts from 104 to 92 pixels, hero content moves lower over a stronger image scrim, section intros stack, the stack field preserves its two-by-two scan pattern while hiding its smallest decorative labels, and project rows become two-line records. Copy and targets must expand for English, Finnish, and Swedish without clipping or fixed text heights.
 
-**The Orbital Evidence Rule.** Present the current stack once in the spectral field; supporting sections use rows or a typography field instead of repeating technology badges or summary tiles.
+**The Orbital Evidence Rule.** Present the current stack once in the build-graph field; supporting sections use rows instead of repeating technology badges or summary tiles.
 
 ## Elevation & Depth
 
@@ -225,7 +219,7 @@ Depth comes from the accretion artwork, transparent dark layers, radial gradient
 
 ## Shapes
 
-The form language uses three recurring geometries: 18-pixel rounded panels for the stack field and contact surface, fully rounded pills for actions and language controls, and true circles for hero orbit lines and status beacons. One-pixel hairlines define structure. Project rows and the Best Fit field stay flat and uncontained so rounded panels remain rare.
+The form language uses three recurring geometries: 18-pixel rounded panels for the stack field and contact surface, fully rounded pills for actions and language controls, and true circles for hero orbit lines and status beacons. One-pixel hairlines define structure. Project rows stay flat and uncontained so rounded panels remain rare.
 
 **The Three-Radius Rule.** Use 18-pixel panels, pill controls, and circular orbital geometry deliberately; do not introduce intermediate card radii.
 
@@ -258,23 +252,17 @@ The form language uses three recurring geometries: 18-pixel rounded panels for t
 - **Active:** Light fill with void text and an inner pill.
 - **State:** The selected language is exposed with aria-pressed; keyboard focus keeps the global photon-gold outline.
 
-### Spectral Stack Field
+### Build-Graph Stack Field
 
-- **Structure:** Four factual groups sit in a two-by-two matrix inside an 18-pixel surface panel. An asymmetric blurred wake and one fine cold-to-warm seam supply depth without a literal orbit diagram.
+- **Structure:** Four factual groups sit in a two-by-two matrix inside an 18-pixel surface panel. A static inline SVG connects square nodes with orthogonal source/runtime/data/delivery paths, giving the field a dependency-graph character without becoming a fake terminal.
 - **Content:** Gold uppercase category labels lead blue-white stack text. The groups stay unboxed and the section title is not repeated inside the field.
-- **Responsive:** The two-by-two scan pattern survives on narrow screens; typography, spacing, and padding contract without flattening into badges.
+- **Responsive:** The two-by-two scan pattern survives on narrow screens; typography, spacing, and padding contract, and the smallest trace labels disappear instead of becoming illegible.
 
 ### Project Rows
 
 - **Structure:** Each project is a 92-pixel ruled record aligning title, description, mono status, and an optional external-link mark.
 - **Interaction:** Linked rows gain a small inline inset and photon-gold border/text emphasis on hover; focus remains visibly outlined.
 - **Responsive:** Below 620 pixels, title and status share the first row while description and optional link occupy the second.
-
-### Best Fit Field
-
-- **Structure:** Three recruiter-fit signals occupy one open 390-pixel typography field over a flattened disk-blue orbit and a restrained ember-to-gold line.
-- **Typography:** IBM Plex Sans Condensed scales from 1.9 to 4rem with tight leading; the second signal centers in blue-white and the third aligns right in photon gold.
-- **Responsive:** Below 620 pixels, the field becomes 360 pixels tall and the signals step inward from the left by 0, 6, and 12 percent.
 
 ### Contact Panel
 

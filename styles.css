@@ -479,46 +479,46 @@ button {
   border: 1px solid var(--line);
   border-radius: 18px;
   background:
-    radial-gradient(ellipse at 4% 4%, rgb(115 170 255 / 9%), transparent 34%),
-    radial-gradient(ellipse at 96% 96%, rgb(255 97 56 / 7%), transparent 32%),
-    linear-gradient(118deg, #0b0e15 0%, #080b11 48%, #0d1017 100%);
+    radial-gradient(ellipse at 8% 8%, rgb(115 170 255 / 8%), transparent 32%),
+    radial-gradient(ellipse at 92% 92%, rgb(255 200 87 / 6%), transparent 30%),
+    linear-gradient(118deg, #0b0e15 0%, #080b11 52%, #0d1017 100%);
 }
 
-.skills-orbit::before {
-  position: absolute;
-  z-index: -1;
-  inset: 7% -18%;
-  background: linear-gradient(
-    102deg,
-    transparent 13%,
-    rgb(115 170 255 / 2%) 27%,
-    rgb(115 170 255 / 18%) 40%,
-    rgb(220 236 255 / 22%) 49%,
-    rgb(255 200 87 / 13%) 57%,
-    rgb(255 97 56 / 3%) 68%,
-    transparent 82%
-  );
-  content: "";
-  filter: blur(22px);
-  pointer-events: none;
-  transform: rotate(-8deg) skewX(-8deg);
-}
-
-.skills-orbit::after {
+.stack-trace {
   position: absolute;
   z-index: 0;
   inset: 0;
-  background: linear-gradient(
-    170deg,
-    transparent 49.82%,
-    rgb(115 170 255 / 24%) 49.93%,
-    rgb(220 236 255 / 28%) 50%,
-    rgb(255 200 87 / 22%) 50.08%,
-    transparent 50.2%
-  );
-  content: "";
-  mask-image: linear-gradient(90deg, transparent 2%, black 20% 80%, transparent 98%);
+  width: 100%;
+  height: 100%;
+  color: var(--line-bright);
+  opacity: 0.78;
   pointer-events: none;
+}
+
+.stack-trace-paths {
+  stroke: rgb(70 84 105 / 72%);
+  stroke-width: 1;
+}
+
+.stack-trace-main {
+  stroke: url("#stack-trace-energy");
+  stroke-width: 1.35;
+}
+
+.stack-trace-nodes {
+  fill: var(--disk-blue);
+  opacity: 0.66;
+}
+
+.stack-trace-node-hot {
+  fill: var(--gold);
+}
+
+.stack-trace-labels {
+  fill: rgb(153 165 182 / 72%);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
 }
 
 .skill-node {
@@ -634,71 +634,11 @@ a.project-card:hover {
   justify-self: end;
 }
 
-.fit-field {
-  position: relative;
-  display: grid;
-  min-height: 390px;
-  align-content: center;
-  gap: 10px;
-  overflow: hidden;
-  padding: clamp(44px, 7vw, 90px) clamp(12px, 4vw, 64px);
-  border-top: 1px solid var(--line-bright);
-  border-bottom: 1px solid var(--line);
-  isolation: isolate;
-}
-
-.fit-field::before {
-  position: absolute;
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  width: min(54vw, 680px);
-  aspect-ratio: 1;
-  border: 1px solid rgb(115 170 255 / 16%);
-  border-radius: 50%;
-  background: radial-gradient(circle, rgb(115 170 255 / 12%), transparent 58%);
-  content: "";
-  transform: translate(-50%, -50%) scaleY(0.36) rotate(-8deg);
-}
-
-.fit-field::after {
-  position: absolute;
-  z-index: -1;
-  top: 50%;
-  left: -5%;
-  width: 110%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--ember), var(--gold), transparent);
-  content: "";
-  opacity: 0.45;
-  transform: rotate(-6deg);
-}
-
-.fit-field p {
-  position: relative;
-  margin: 0;
-  font-family: "IBM Plex Sans Condensed", sans-serif;
-  font-size: clamp(1.9rem, 4.1vw, 4rem);
-  font-weight: 400;
-  letter-spacing: -0.025em;
-  line-height: 1.06;
-}
-
-.fit-field p:nth-child(2) {
-  justify-self: center;
-  color: var(--blue-white);
-}
-
-.fit-field p:nth-child(3) {
-  justify-self: end;
-  color: var(--gold);
-}
-
 .contact-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: var(--page);
-  margin: 0 auto var(--section-space);
+  margin: var(--section-space) auto;
   padding: clamp(40px, 7vw, 88px);
   overflow: hidden;
   border: 1px solid rgb(255 97 56 / 54%);
@@ -925,6 +865,10 @@ a.project-card:hover {
     padding: 42px 20px;
   }
 
+  .stack-trace-labels {
+    display: none;
+  }
+
   .skill-node {
     width: 100%;
     padding: 14px 6px;
@@ -980,30 +924,8 @@ a.project-card:hover {
     grid-row: 2;
   }
 
-  .fit-field {
-    min-height: 360px;
-    align-content: center;
-    gap: 18px;
-    padding: 42px 18px;
-  }
-
-  .fit-field p {
-    max-width: 92%;
-    font-size: clamp(2rem, 10vw, 3rem);
-  }
-
-  .fit-field p:nth-child(2) {
-    justify-self: start;
-    margin-left: 6%;
-  }
-
-  .fit-field p:nth-child(3) {
-    justify-self: start;
-    margin-left: 12%;
-  }
-
   .contact-section {
-    margin-bottom: 40px;
+    margin: 76px auto 40px;
     padding: 34px 24px;
   }
 

@@ -29,6 +29,7 @@ Visitors scan the page during candidate research on desktop or mobile. They may 
 - Keep personal projects secondary.
 - Do not add employer, client, or other work projects to the project list.
 - Keep the technical stack current and avoid unsupported proficiency claims.
+- Keep role preferences limited to work with a strong backend focus; do not imply preferences about team size, company type, or product category.
 
 ## Brand Commitments
 
