@@ -199,9 +199,9 @@ The palette reads as cold orbital light on near-black surfaces, with a narrow wa
 
 The primary shell is capped at 1440 pixels with 24-pixel desktop gutters. A three-part sticky header centers navigation between the compact JRWL orbital wordmark and the language switch; the hero then spans the viewport, holding compact content in the left field while the authored accretion artwork owns the brighter right side. The hero stays between 600 and 760 pixels tall on wide screens so the stack follows close behind.
 
-Sections use a fluid vertical interval from 88 to 148 pixels. The technical stack is a two-by-two field over one static build/dependency trace rather than a card grid or literal orbit diagram. Personal projects remain secondary as full-width ruled rows; contact closes in a two-column luminous panel. The footer contains only a right-aligned © 2026.
+Sections use a fluid vertical interval from 88 to 148 pixels. The technical stack is a small system topology rather than a card grid or literal orbit diagram: Core feeds Application, Application and Web/CMS converge into one Testing and delivery rail, and that rail terminates at a gold Production endpoint. Personal projects remain secondary as full-width ruled rows; contact closes in a two-column luminous panel. The footer contains only a right-aligned © 2026.
 
-At 900 pixels and below, the shell narrows to a 720-pixel maximum with 16-pixel gutters, the header becomes two rows, the stack field tightens, and contact becomes one column. At 620 pixels and below, gutters reduce to 12 pixels, the wordmark contracts from 104 to 92 pixels, hero content moves lower over a stronger image scrim, section intros stack, the stack field preserves its two-by-two scan pattern while hiding its smallest decorative labels, and project rows become two-line records. Copy and targets must expand for English, Finnish, and Swedish without clipping or fixed text heights.
+At 900 pixels and below, the shell narrows to a 720-pixel maximum with 16-pixel gutters, the header becomes two rows, the stack field tightens, and contact becomes one column. At 620 pixels and below, gutters reduce to 12 pixels, the wordmark contracts from 104 to 92 pixels, hero content moves lower over a stronger image scrim, section intros stack, the stack topology retains paired Core/Application inputs above Web/CMS and the full-width delivery rail while hiding its smallest trace labels, and project rows become two-line records. Copy and targets must expand for English, Finnish, and Swedish without clipping or fixed text heights.
 
 **The Orbital Evidence Rule.** Present the current stack once in the build-graph field; supporting sections use rows instead of repeating technology badges or summary tiles.
 
@@ -254,9 +254,9 @@ The form language uses three recurring geometries: 18-pixel rounded panels for t
 
 ### Build-Graph Stack Field
 
-- **Structure:** Four factual groups sit in a two-by-two matrix inside an 18-pixel surface panel. A static inline SVG connects square nodes with orthogonal source/runtime/data/delivery paths, giving the field a dependency-graph character without becoming a fake terminal.
+- **Structure:** Core and Application form the primary lane, Web/CMS joins as a parallel implementation path, and both converge into a full-width Testing and delivery rail. A static inline SVG connects square nodes with orthogonal paths and ends at one gold Production node, giving the field real dependency-graph logic without becoming a fake terminal.
 - **Content:** Gold uppercase category labels lead blue-white stack text. The groups stay unboxed and the section title is not repeated inside the field.
-- **Responsive:** The two-by-two scan pattern survives on narrow screens; typography, spacing, and padding contract, and the smallest trace labels disappear instead of becoming illegible.
+- **Responsive:** Core and Application remain paired above Web/CMS and the full-width delivery rail on narrow screens; typography, spacing, and padding contract, and the smallest trace labels disappear instead of becoming illegible.
 
 ### Project Rows
 

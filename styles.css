@@ -472,8 +472,13 @@ button {
   isolation: isolate;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(112px, 13vw, 176px) clamp(72px, 11vw, 156px);
-  min-height: 540px;
+  grid-template-areas:
+    "core application"
+    "cms graph"
+    "delivery delivery";
+  grid-template-rows: auto auto auto;
+  gap: clamp(56px, 7vw, 92px) clamp(72px, 11vw, 156px);
+  min-height: 640px;
   padding: clamp(62px, 7vw, 94px);
   overflow: hidden;
   border: 1px solid var(--line);
@@ -500,6 +505,14 @@ button {
   stroke-width: 1;
 }
 
+.stack-trace-link {
+  stroke: rgb(115 170 255 / 55%);
+}
+
+.stack-trace-lane {
+  stroke: rgb(70 84 105 / 78%);
+}
+
 .stack-trace-main {
   stroke: url("#stack-trace-energy");
   stroke-width: 1.35;
@@ -514,11 +527,20 @@ button {
   fill: var(--gold);
 }
 
+.stack-trace-node-merge {
+  fill: var(--blue-white);
+  opacity: 0.88;
+}
+
 .stack-trace-labels {
   fill: rgb(153 165 182 / 72%);
   font-family: "IBM Plex Mono", monospace;
   font-size: 11px;
   letter-spacing: 0.08em;
+}
+
+.stack-trace-label-hot {
+  fill: rgb(255 200 87 / 82%);
 }
 
 .skill-node {
@@ -530,14 +552,31 @@ button {
   background: transparent;
 }
 
-.skill-node-delivery,
-.skill-node-cms {
-  align-self: end;
+.skill-node-core {
+  grid-area: core;
 }
 
-.skill-node-application,
-.skill-node-cms {
+.skill-node-application {
+  grid-area: application;
   justify-self: end;
+}
+
+.skill-node-cms {
+  grid-area: cms;
+}
+
+.skill-node-delivery {
+  grid-area: delivery;
+  align-self: end;
+  width: 100%;
+  max-width: none;
+  padding-top: 24px;
+  padding-right: clamp(190px, 20vw, 290px);
+  border-top: 1px solid rgb(70 84 105 / 72%);
+}
+
+.skill-node-delivery p {
+  max-width: 760px;
 }
 
 .skill-node::before {
@@ -548,6 +587,10 @@ button {
   height: 1px;
   background: linear-gradient(90deg, var(--ember), var(--gold));
   content: "";
+}
+
+.skill-node-delivery::before {
+  top: -1px;
 }
 
 .skill-node h3 {
@@ -858,10 +901,9 @@ a.project-card:hover {
   }
 
   .skills-orbit {
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 540px;
-    gap: 92px 12px;
+    min-height: 560px;
+    gap: 72px 12px;
     padding: 42px 20px;
   }
 
@@ -875,8 +917,7 @@ a.project-card:hover {
     background: transparent;
   }
 
-  .skill-node-application,
-  .skill-node-cms {
+  .skill-node-application {
     text-align: right;
   }
 
@@ -885,10 +926,13 @@ a.project-card:hover {
     width: 48px;
   }
 
-  .skill-node-application::before,
-  .skill-node-cms::before {
+  .skill-node-application::before {
     right: 6px;
     left: auto;
+  }
+
+  .skill-node-delivery {
+    padding-top: 18px;
   }
 
   .skill-node p {
